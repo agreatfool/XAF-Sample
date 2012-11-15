@@ -1,0 +1,12 @@
+<root>
+    <people>
+        <name>Jonathan</name>
+        <age>28</age>
+        <gender>male</gender>
+    </people>
+    <people>
+        <name>Julia</name>
+        <age>22</age>
+        <gender>female</gender>
+    </people>
+</root>

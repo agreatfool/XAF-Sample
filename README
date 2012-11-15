@@ -1,0 +1,3 @@
+应用：
+Wrapper.as和Resouorces.as是两个文件一组的一个test应用，和Preloader为入口的demo应用无关
+Preloader和AppGame则是demo的入口

@@ -1,0 +1,24 @@
+{
+    'file.game': {
+        url:     'bin-debug/AppGame.swf',
+        type:    'swf',
+        preload: true,
+        main:    true
+    },
+    'file.main': {
+        url:     'assets/swf/main.swf',
+        type:    'swf',
+        preload: true
+    },
+    'file.lisu': {
+        url:     'assets/font/lisu.swf',
+        type:    'font',
+        preload: true,
+        font:    {'LISU1': 'LiSu'}
+    },
+    'file.soldier': {
+        url:    'assets/json/soldier.json',
+        type:   'config',
+        config: 'config.soldier'
+    }
+}
