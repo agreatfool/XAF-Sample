@@ -1,10 +1,10 @@
-package com.xenojoshua.as3demo.view
+package com.xenojoshua.as3demo.mvc.view.item
 {
 	import org.robotlegs.mvcs.Mediator;
 	
-	public class AppGameMediator extends Mediator
+	public class AppItemMediator extends Mediator
 	{
-		public function AppGameMediator() {
+		public function AppItemMediator() {
 			super();
 		}
 		

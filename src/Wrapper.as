@@ -3,7 +3,7 @@ package
 	import com.greensock.events.LoaderEvent;
 	import com.xenojoshua.af.config.XafConfig;
 	import com.xenojoshua.af.constant.XafConst;
-	import com.xenojoshua.af.display.screen.XafScreenManager;
+	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.resource.XafInitLoader;
 	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.af.utils.console.XafConsole;
@@ -20,7 +20,7 @@ package
 	import flash.utils.Dictionary;
 	import flash.utils.getDefinitionByName;
 	
-	import com.xenojoshua.as3demo.view.AppGameView;
+	import com.xenojoshua.as3demo.mvc.view.AppGameView;
 	
 	[SWF(width="760", height="600", frameRate="24", backgroundColor="#FFFFFF")]
 	public class Wrapper extends Sprite

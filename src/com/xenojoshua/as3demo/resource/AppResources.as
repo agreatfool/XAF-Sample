@@ -13,6 +13,7 @@ package com.xenojoshua.as3demo.resource
 		// CLASSES
 		public static const CLASS_GAME:String    = 'AppGame';
 		public static const CLASS_LOADING:String = 'main.loadingUI';
+		public static const CLASS_ITEM:String    = 'main.InventoryUI';
 		
 		// CONFIGS
 		public static const CONF_SOLDIER:String = 'config.soldier';
