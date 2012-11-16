@@ -4,6 +4,7 @@ package com.xenojoshua.as3demo.mvc.view
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.mask.XafLoadingMaskMaker;
+	import com.xenojoshua.as3demo.mvc.view.city.AppCityView;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import org.robotlegs.mvcs.Mediator;
@@ -27,6 +28,8 @@ package com.xenojoshua.as3demo.mvc.view
 			
 			XafConsole.restart();
 			XafLoadingMaskMaker.startup(AppResources.FILE_MAIN, AppResources.CLASS_LOADING);
+			
+			XafScreenManager.instance.getLayer(XafConst.SCREEN_GAME).addChild(new AppCityView());
 		}
 	}
 }

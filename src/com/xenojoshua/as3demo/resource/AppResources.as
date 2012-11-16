@@ -13,6 +13,7 @@ package com.xenojoshua.as3demo.resource
 		// CLASSES
 		public static const CLASS_GAME:String    = 'AppGame';
 		public static const CLASS_LOADING:String = 'main.loadingUI';
+		public static const CLASS_CITY:String    = 'main.TestBg1';
 		public static const CLASS_ITEM:String    = 'main.InventoryUI';
 		
 		// CONFIGS

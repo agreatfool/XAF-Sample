@@ -5,13 +5,12 @@ package
 	import com.xenojoshua.af.resource.XafInitLoader;
 	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.af.utils.console.XafConsole;
+	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	import com.xenojoshua.as3demo.resource.AppResources;
-	
-	[SWF(width="760", height="600", frameRate="30", backgroundColor="#FFFFFF")]
+	[SWF(width="950", height="600", frameRate="30", backgroundColor="#FFFFFF")]
 	public class Preloader extends Sprite implements XafIPreloader
 	{
 		private var _isLocal:Boolean = true;
@@ -69,7 +68,7 @@ package
 		 */
 		public function loadResourceListConfig():void {
 			new XafInitLoader(
-				XafConfig.instance.mediaHost + 'assets/json/resources.json',
+				XafConfig.instance.mediaHost + 'assets/json/resources.json?v=10.' + Math.random(),
 				this.loadPreloadItems
 			);
 		}
@@ -80,6 +79,7 @@ package
 		 */
 		public function loadPreloadItems(loader:XafInitLoader):void {
 			var resources:Object = loader.getJSON();
+			loader.dispose();
 			AppResources.setConfigs(resources);
 			
 			XafRsManager.instance.registerResources(resources);
@@ -91,8 +91,8 @@ package
 		 * Start to load system.
 		 * @return void
 		 */
-		public function loadSystem():void {
-			var gameClass:Class = XafRsManager.instance.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
+		public function loadSystem(rsManager:XafRsManager):void {
+			var gameClass:Class = rsManager.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
 			var game:Sprite = new gameClass();
 			this.stage.addChild(game);
 			this.stage.removeChild(this);

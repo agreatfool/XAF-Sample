@@ -11,6 +11,7 @@ package
 	import com.xenojoshua.af.utils.mask.XafLoadingMaskMaker;
 	import com.xenojoshua.af.utils.time.XafTime;
 	import com.xenojoshua.af.utils.timer.XafTimerManager;
+	import com.xenojoshua.as3demo.mvc.view.AppGameView;
 	
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
@@ -20,9 +21,7 @@ package
 	import flash.utils.Dictionary;
 	import flash.utils.getDefinitionByName;
 	
-	import com.xenojoshua.as3demo.mvc.view.AppGameView;
-	
-	[SWF(width="760", height="600", frameRate="24", backgroundColor="#FFFFFF")]
+	[SWF(width="950", height="600", frameRate="24", backgroundColor="#FFFFFF")]
 	public class Wrapper extends Sprite
 	{
 		/**
@@ -30,6 +29,12 @@ package
 		 * Add one listener, will be triggered when stage initialized.
 		 */
 		public function Wrapper() {
+			var obj:Object = new Object();
+			try {
+				obj.testhasnotexistfunction();
+			} catch (e:Error) {
+				trace('Error ID: ' + e.errorID, ' , MSG: ' + e.message);
+			}
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE, this.init);
 		}
