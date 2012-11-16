@@ -6,7 +6,6 @@ package com.xenojoshua.as3demo.mvc.view.city
 	
 	import flash.events.MouseEvent;
 	
-	import org.osflash.signals.natives.NativeSignal;
 	import org.robotlegs.mvcs.Mediator;
 	
 	public class AppCityMediator extends Mediator

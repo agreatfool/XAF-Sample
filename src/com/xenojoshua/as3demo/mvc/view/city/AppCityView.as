@@ -1,15 +1,11 @@
 package com.xenojoshua.as3demo.mvc.view.city
 {
-	import com.xenojoshua.af.constant.XafConst;
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
-	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
-	
-	import org.osflash.signals.natives.NativeSignal;
 	
 	public class AppCityView extends XafRobotlegsView
 	{
