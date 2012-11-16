@@ -55,7 +55,7 @@ package
 				XafConfig.instance.playerId    = 292514701;
 				XafConfig.instance.mediaHost   = 'http://aslocal.com/';
 				XafConfig.instance.apiHost     = 'http://localhost/';
-				XafConfig.instance.stageWidth  = 760;
+				XafConfig.instance.stageWidth  = 950;
 				XafConfig.instance.stageHeight = 600;
 			}
 			

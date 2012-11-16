@@ -31,19 +31,11 @@ package com.xenojoshua.as3demo.mvc.view.city
 		}
 		
 		/**
-		 * @see org.robotlegs.base.MediatorBase.onRemove()
-		 */
-		override public function onRemove():void {
-			this.view.dispose();
-		}
-		
-		/**
 		 * City view "ITEM" button onclick event.
 		 * @param MouseEvent e
 		 * @return void
 		 */
 		private function onItemButtonClick(e:MouseEvent):void {
-			trace('ITEM CLICK!');
 			XafScreenManager.instance.getLayer(XafConst.SCREEN_UI).addChild(new AppItemView(true));
 		}
 		
@@ -53,8 +45,7 @@ package com.xenojoshua.as3demo.mvc.view.city
 		 * @return void
 		 */
 		private function onShutdownButtonClick(e:MouseEvent):void {
-			trace('SHUTDOWN CLICK!');
-			this.view.parent.removeChild(this.view);
+			this.view.dispose();
 		}
 	}
 }

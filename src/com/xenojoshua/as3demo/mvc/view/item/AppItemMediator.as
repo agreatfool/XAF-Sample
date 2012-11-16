@@ -11,9 +11,5 @@ package com.xenojoshua.as3demo.mvc.view.item
 		override public function onRegister():void {
 			
 		}
-		
-		override public function onRemove():void {
-			
-		}
 	}
 }
