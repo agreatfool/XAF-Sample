@@ -10,8 +10,8 @@ package com.xenojoshua.as3demo.mvc.view.item
 	
 	public class AppItemView extends XafRobotlegsView
 	{
-		public function AppItemView() {
-			super();
+		public function AppItemView(withBgMask:Boolean = true) {
+			super(withBgMask);
 			this.draw();
 		}
 		

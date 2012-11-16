@@ -17,17 +17,20 @@ package com.xenojoshua.as3demo.mvc.view.city
 		public var MV_CITY:String = 'MV_CITY';
 		
 		// COMPONENT NAMES
-		public var CP_BTN_ITEM:String = 'recBtn';
+		public var CP_BTN_ITEM:String     = 'recBtn';
+		public var CP_BTN_SHUTDOWN:String = 'euiBtn';
 		
 		// SIGNAL NAMES
-		public var SIG_BTN_ITEM_CLICK:String = 'SIG_BTN_ITEM_CLICK';
+		public var SIG_BTN_ITEM_CLICK:String     = 'SIG_BTN_ITEM_CLICK';
+		public var SIG_BTN_SHUTDOWN_CLICK:String = 'SIG_BTN_SHUTDOWN_CLICK';
 		
 		/**
 		 * Initialize AppCityView.
+		 * @param Boolean withBgMask default false
 		 * @return void
 		 */
-		public function AppCityView() {
-			super();
+		public function AppCityView(withBgMask:Boolean = false) {
+			super(withBgMask);
 			this.draw();
 		}
 		
@@ -43,8 +46,10 @@ package com.xenojoshua.as3demo.mvc.view.city
 			this.registerMovie(this.MV_CITY, movie);
 			// register components
 			this.registerComponent(this.MV_CITY, this.CP_BTN_ITEM);
+			this.registerComponent(this.MV_CITY, this.CP_BTN_SHUTDOWN);
 			// init signals
 			this.registerSignal(this.MV_CITY, this.CP_BTN_ITEM, this.SIG_BTN_ITEM_CLICK, MouseEvent.CLICK, MouseEvent);
+			this.registerSignal(this.MV_CITY, this.CP_BTN_ITEM, this.SIG_BTN_SHUTDOWN_CLICK, MouseEvent.CLICK, MouseEvent);
 		}
 	}
 }

@@ -3,12 +3,11 @@ package com.xenojoshua.as3demo.mvc.view
 	import flash.display.Sprite;
 	import flash.display.Stage;
 	
-	import org.robotlegs.mvcs.Context;
 	import com.xenojoshua.as3demo.mvc.context.AppGameContext;
 	
 	public class AppGameView extends Sprite
 	{
-		private var _context:Context;
+		private var _context:AppGameContext;
 		
 		/**
 		 * Initialization AppGameView.

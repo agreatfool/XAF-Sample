@@ -93,8 +93,7 @@ package
 		 */
 		public function loadSystem(rsManager:XafRsManager):void {
 			var gameClass:Class = rsManager.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
-			var game:Sprite = new gameClass();
-			this.stage.addChild(game);
+			this.stage.addChild(new gameClass());
 			this.stage.removeChild(this);
 		}
 	}
