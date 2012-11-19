@@ -3,6 +3,7 @@ package com.xenojoshua.as3demo.mvc.view.city
 	import com.xenojoshua.af.constant.XafConst;
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsMediator;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
+	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
 	import com.xenojoshua.as3demo.mvc.view.item.AppItemView;
 	
 	import flash.events.MouseEvent;
@@ -25,6 +26,7 @@ package com.xenojoshua.as3demo.mvc.view.city
 		 */
 		override public function onRegister():void {
 			this.view.getSignal(this.view.SIG_BTN_ITEM_CLICK).add(this.onItemButtonClick);
+			this.view.getSignal(this.view.SIG_BTN_BATTLE_CLICK).add(this.onBattleButtonClick);
 			this.view.getSignal(this.view.SIG_BTN_SHUTDOWN_CLICK).add(this.onShutdownButtonClick);
 		}
 		
@@ -34,7 +36,16 @@ package com.xenojoshua.as3demo.mvc.view.city
 		 * @return void
 		 */
 		private function onItemButtonClick(e:MouseEvent):void {
-			XafScreenManager.instance.getLayer(XafConst.SCREEN_UI).addChild(new AppItemView(true));
+			XafScreenManager.instance.getLayer(XafConst.SCREEN_UI).addChild(new AppItemView());
+		}
+		
+		/**
+		 * City view "BATTLE" button onclick event.
+		 * @param MouseEvent e
+		 * @return void
+		 */
+		private function onBattleButtonClick(e:MouseEvent):void {
+			XafScreenManager.instance.getLayer(XafConst.SCREEN_BATTLE).addChild(new AppBattleView());
 		}
 		
 		/**

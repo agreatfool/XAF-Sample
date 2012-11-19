@@ -23,6 +23,8 @@ package com.xenojoshua.as3demo.mvc.view.item
 		override public function onRegister():void {
 			this.view.registerTabButtonClickFunc(this.onTabButtonClick);
 			this.view.getSignal(this.view.SIG_BTN_CLOSE_CLICK).add(this.onCloseButtonClick);
+			this.view.getButton(this.view.CP_BTN_EXPAND).registerClickCallback(this.onExpandButtonClick);
+			this.view.getButton(this.view.CP_BTN_BLACK_MARKET).registerClickCallback(this.onBlackMarketButtonClick);
 		}
 		
 		/**
@@ -32,6 +34,24 @@ package com.xenojoshua.as3demo.mvc.view.item
 		 */
 		private function onTabButtonClick(tabButtonName:String):void {
 			trace(tabButtonName);
+		}
+		
+		/**
+		 * Item view "EXPAND" button onclick event.
+		 * @param MouseEvent e
+		 * @return void
+		 */
+		private function onExpandButtonClick(e:MouseEvent):void {
+			trace('EXPAND PACKAGE');
+		}
+		
+		/**
+		 * Item view "BLACK MARKET" button onclick event.
+		 * @param MouseEvent e
+		 * @return void
+		 */
+		private function onBlackMarketButtonClick(e:MouseEvent):void {
+			trace('ENTER BLACK MARKET');
 		}
 		
 		/**

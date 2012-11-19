@@ -14,10 +14,12 @@ package com.xenojoshua.as3demo.mvc.view.city
 		
 		// COMPONENT NAMES
 		public var CP_BTN_ITEM:String     = 'recBtn';
+		public var CP_BTN_BATTLE:String   = 'startBtn';
 		public var CP_BTN_SHUTDOWN:String = 'euiBtn';
 		
 		// SIGNAL NAMES
 		public var SIG_BTN_ITEM_CLICK:String     = 'SIG_BTN_ITEM_CLICK';
+		public var SIG_BTN_BATTLE_CLICK:String   = 'SIG_BTN_BATTLE_CLICK';
 		public var SIG_BTN_SHUTDOWN_CLICK:String = 'SIG_BTN_SHUTDOWN_CLICK';
 		
 		/**
@@ -42,9 +44,11 @@ package com.xenojoshua.as3demo.mvc.view.city
 			this.registerMovie(this.MV_CITY, movie);
 			// register components
 			this.registerComponent(this.MV_CITY, this.CP_BTN_ITEM);
+			this.registerComponent(this.MV_CITY, this.CP_BTN_BATTLE);
 			this.registerComponent(this.MV_CITY, this.CP_BTN_SHUTDOWN);
 			// init signals
 			this.registerSignal(this.CP_BTN_ITEM, this.SIG_BTN_ITEM_CLICK, MouseEvent.CLICK, MouseEvent);
+			this.registerSignal(this.CP_BTN_BATTLE, this.SIG_BTN_BATTLE_CLICK, MouseEvent.CLICK, MouseEvent);
 			this.registerSignal(this.CP_BTN_SHUTDOWN, this.SIG_BTN_SHUTDOWN_CLICK, MouseEvent.CLICK, MouseEvent);
 		}
 	}
