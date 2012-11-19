@@ -1,14 +1,13 @@
 package com.xenojoshua.as3demo.mvc.view.city
 {
 	import com.xenojoshua.af.constant.XafConst;
+	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsMediator;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.as3demo.mvc.view.item.AppItemView;
 	
 	import flash.events.MouseEvent;
 	
-	import org.robotlegs.mvcs.Mediator;
-	
-	public class AppCityMediator extends Mediator
+	public class AppCityMediator extends XafRobotlegsMediator
 	{
 		[Inject]
 		public var view:AppCityView;

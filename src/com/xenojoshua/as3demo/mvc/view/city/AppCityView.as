@@ -44,8 +44,8 @@ package com.xenojoshua.as3demo.mvc.view.city
 			this.registerComponent(this.MV_CITY, this.CP_BTN_ITEM);
 			this.registerComponent(this.MV_CITY, this.CP_BTN_SHUTDOWN);
 			// init signals
-			this.registerSignal(this.MV_CITY, this.CP_BTN_ITEM, this.SIG_BTN_ITEM_CLICK, MouseEvent.CLICK, MouseEvent);
-			this.registerSignal(this.MV_CITY, this.CP_BTN_SHUTDOWN, this.SIG_BTN_SHUTDOWN_CLICK, MouseEvent.CLICK, MouseEvent);
+			this.registerSignal(this.CP_BTN_ITEM, this.SIG_BTN_ITEM_CLICK, MouseEvent.CLICK, MouseEvent);
+			this.registerSignal(this.CP_BTN_SHUTDOWN, this.SIG_BTN_SHUTDOWN_CLICK, MouseEvent.CLICK, MouseEvent);
 		}
 	}
 }
