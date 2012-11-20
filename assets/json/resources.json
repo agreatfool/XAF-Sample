@@ -1,24 +1,34 @@
 {
     "file.game": {
         "url":     "bin-debug/AppGame.swf",
+        "size":    102068,
         "type":    "swf",
         "preload": true,
         "main":    true
     },
     "file.main": {
         "url":     "assets/swf/MainUI.swf",
+        "size":    2786143,
         "type":    "swf",
         "preload": true
     },
     "file.lisu": {
         "url":     "assets/swf/Font.swf",
+        "size":    4667865,
         "type":    "font",
         "preload": true,
         "font":    {"LISU1": "LiSu"}
     },
     "file.soldier": {
         "url":    "assets/json/soldier.json",
+        "size":    2255,
         "type":   "config",
         "config": "config.soldier"
+    },
+    "file.dummy": {
+        "url":    "assets/sth/booklet.zip",
+        "size":    57718280,
+        "type":   "xml",
+        "preload": true
     }
 }

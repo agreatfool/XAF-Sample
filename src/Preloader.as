@@ -1,10 +1,13 @@
 package
 {
 	import com.xenojoshua.af.config.XafConfig;
+	import com.xenojoshua.af.constant.XafConst;
+	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.preloader.XafIPreloader;
 	import com.xenojoshua.af.resource.XafInitLoader;
 	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.af.utils.console.XafConsole;
+	import com.xenojoshua.af.utils.mask.XafLoadingMaskMaker;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.Sprite;
@@ -78,10 +81,25 @@ package
 		 * @return void
 		 */
 		public function loadPreloadItems(loader:XafInitLoader):void {
+			// register resources
 			var resources:Object = loader.getJSON();
 			loader.dispose();
 			AppResources.setConfigs(resources);
 			
+			// register sceen layers
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_ROOT, this.stage, true);
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_GAME);
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_UI);
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_BATTLE);
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_POPUP, null, false, false);
+			XafScreenManager.instance.registerLayer(XafConst.SCREEN_CONSOLE);
+			
+			// initialize utility
+			XafConsole.restart();
+			XafLoadingMaskMaker.startup(AppResources.FILE_MAIN, AppResources.CLASS_LOADING);
+			
+			// resource loading
+			XafRsManager.instance.initializeLoadingBar(null, null, 0.7);
 			XafRsManager.instance.registerResources(resources);
 			XafRsManager.instance.registerCompleteSignal(this.loadSystem);
 			XafRsManager.instance.loadPreloads();
@@ -92,6 +110,7 @@ package
 		 * @return void
 		 */
 		public function loadSystem(rsManager:XafRsManager):void {
+			XafRsManager.instance.dispose();
 			var gameClass:Class = rsManager.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
 			this.stage.addChild(new gameClass());
 			this.stage.removeChild(this);

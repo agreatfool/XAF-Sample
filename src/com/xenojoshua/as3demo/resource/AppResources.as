@@ -22,6 +22,9 @@ package com.xenojoshua.as3demo.resource
 		// FONTS
 		public static const FONT_LISU:String = 'LiSu';
 		
+		// DUMMY
+		public static const DUMMY:String = 'file.dummy';
+		
 		private static var _configs:Object;
 		
 		public static function setConfigs(resources:Object):void {
