@@ -99,7 +99,7 @@ package
 			XafLoadingMaskMaker.startup(AppResources.FILE_MAIN, AppResources.CLASS_LOADING);
 			
 			// resource loading
-			XafRsManager.instance.initializeLoadingBar(null, null, 0.7);
+			XafRsManager.instance.initializeLoadingBar(null, null, 1);
 			XafRsManager.instance.registerResources(resources);
 			XafRsManager.instance.registerCompleteSignal(this.loadSystem);
 			XafRsManager.instance.loadPreloads();
