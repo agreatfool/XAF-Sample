@@ -46,7 +46,7 @@ package com.xenojoshua.as3demo.mvc.view.item
 			
 			// register movie
 			this.registerMovie(this.MV_ITEM, movie);
-			XafDisplayUtil.putCenter(this);
+			XafDisplayUtil.putStageCenter(this);
 			// register components
 			this.registerComponent(this.MV_ITEM, this.CP_CONTAINER_ITEM_LIST);
 			this.registerComponent(this.MV_ITEM, this.CP_BTN_CLOSE);
