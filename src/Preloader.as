@@ -1,11 +1,12 @@
 package
 {
-	import com.xenojoshua.af.resource.manager.XafConfigManager;
 	import com.xenojoshua.af.constant.XafConst;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.preloader.XafIPreloader;
 	import com.xenojoshua.af.resource.XafInitLoader;
 	import com.xenojoshua.af.resource.XafRsManager;
+	import com.xenojoshua.af.resource.manager.XafConfigManager;
+	import com.xenojoshua.af.resource.manager.XafSwfManager;
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.mask.XafLoadingMaskMaker;
 	import com.xenojoshua.as3demo.resource.AppResources;
@@ -109,8 +110,8 @@ package
 		 * @return void
 		 */
 		public function loadSystem(rsManager:XafRsManager):void {
-			XafRsManager.instance.dispose();
-			var gameClass:Class = rsManager.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
+			rsManager.dispose();
+			var gameClass:Class = XafSwfManager.instance.getClassDefInSwf(AppResources.FILE_GAME, AppResources.CLASS_GAME);
 			this.stage.addChild(new gameClass());
 			this.stage.removeChild(this);
 		}

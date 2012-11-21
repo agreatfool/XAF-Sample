@@ -68,7 +68,7 @@
     "file.dummy": {
         "url":    "assets/sth/booklet.zip",
         "size":   57718280,
-        "type":   "xml",
+        "type":   "image",
         "preload": false
     }
 }

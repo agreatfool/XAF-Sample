@@ -1,7 +1,7 @@
 package com.xenojoshua.as3demo.mvc.view.city
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
-	import com.xenojoshua.af.resource.XafRsManager;
+	import com.xenojoshua.af.resource.manager.XafSwfManager;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.MovieClip;
@@ -38,7 +38,7 @@ package com.xenojoshua.as3demo.mvc.view.city
 		 */
 		private function draw():void {
 			// get movie
-			var movie:MovieClip = XafRsManager.instance.getMovieClipInSwf(AppResources.FILE_MAIN, AppResources.CLASS_CITY);
+			var movie:MovieClip = XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_MAIN, AppResources.CLASS_CITY);
 			
 			// register movies
 			this.registerMovie(this.MV_CITY, movie);
