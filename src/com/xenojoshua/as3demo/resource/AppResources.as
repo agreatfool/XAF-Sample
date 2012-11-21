@@ -1,6 +1,6 @@
 package com.xenojoshua.as3demo.resource
 {
-	import com.xenojoshua.af.resource.XafIRsConfig;
+	import com.xenojoshua.af.resource.config.XafIRsConfig;
 	
 	public class AppResources implements XafIRsConfig
 	{

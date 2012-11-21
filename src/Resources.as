@@ -1,6 +1,6 @@
 package 
 {
-	import com.xenojoshua.af.resource.XafIRsConfig;
+	import com.xenojoshua.af.resource.config.XafIRsConfig;
 	
 	public class Resources implements XafIRsConfig
 	{

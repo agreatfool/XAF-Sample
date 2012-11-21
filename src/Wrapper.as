@@ -1,7 +1,7 @@
 package
 {
 	import com.greensock.events.LoaderEvent;
-	import com.xenojoshua.af.config.XafConfig;
+	import com.xenojoshua.af.resource.manager.XafConfigManager;
 	import com.xenojoshua.af.constant.XafConst;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.resource.XafInitLoader;
@@ -46,14 +46,14 @@ package
 		private function init(e:Event):void {
 			this.removeEventListener(Event.ADDED_TO_STAGE, this.init);
 			
-			XafConfig.instance.stageWidth  = 760;
-			XafConfig.instance.stageHeight = 600;
-			XafConfig.instance.mediaHost   = 'http://aslocal.com/';
-			XafConfig.instance.apiHost     = 'http://localhost/';
+			XafConfigManager.instance.stageWidth  = 760;
+			XafConfigManager.instance.stageHeight = 600;
+			XafConfigManager.instance.mediaHost   = 'http://aslocal.com/';
+			XafConfigManager.instance.apiHost     = 'http://localhost/';
 			
 			// INIT LOAD
 			new XafInitLoader(
-				XafConfig.instance.mediaHost + 'assets/sth/shark_soldier.json', // json case
+				XafConfigManager.instance.mediaHost + 'assets/sth/shark_soldier.json', // json case
 //				XafConfig.instance.mediaHost + 'assets/sth/sample.xml', // xml case
 //				XafConfig.instance.mediaHost + 'abc.xml', // failed case
 				this.onInitComplete
@@ -81,7 +81,7 @@ package
 		
 		private function onLoadResourceComplete(loader:XafRsManager):void  {
 			// get loaded object config
-			var soldierConfig:Object = XafConfig.instance.loadConfigs(Resources.CONF_SOLDIER);
+			var soldierConfig:Object = XafConfigManager.instance.loadConfigs(Resources.CONF_SOLDIER);
 //			trace(soldierConfig[3]['soldierName']);
 //			trace(soldierConfig[9]['initGrowthRate']);
 			for (var key:String in soldierConfig) {

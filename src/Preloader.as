@@ -1,6 +1,6 @@
 package
 {
-	import com.xenojoshua.af.config.XafConfig;
+	import com.xenojoshua.af.resource.manager.XafConfigManager;
 	import com.xenojoshua.af.constant.XafConst;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.preloader.XafIPreloader;
@@ -38,9 +38,9 @@ package
 		 */
 		public function parseFlashVars(e:Event = null):void {
 			this.removeEventListener(Event.ADDED_TO_STAGE, this.parseFlashVars);
-			XafConfig.instance.isLocal = this._isLocal;
+			XafConfigManager.instance.isLocal = this._isLocal;
 			
-			if (!XafConfig.instance.isLocal) {
+			if (!XafConfigManager.instance.isLocal) {
 				var params:Object = this.loaderInfo.parameters;
 				if (!params.hasOwnProperty('playerId')
 					|| !params.hasOwnProperty('mediaHost')
@@ -49,17 +49,17 @@ package
 					|| !params.hasOwnProperty('stageHeight')) {
 					XafConsole.instance.log(XafConsole.ERROR, 'Preloader: SWF LoaderInfo not provided!');
 				}
-				XafConfig.instance.playerId    = params['playerId'];
-				XafConfig.instance.mediaHost   = params['mediaHost'];
-				XafConfig.instance.apiHost     = params['apiHost'];
-				XafConfig.instance.stageWidth  = params['stageWidth'];
-				XafConfig.instance.stageHeight = params['stageHeight'];
+				XafConfigManager.instance.playerId    = params['playerId'];
+				XafConfigManager.instance.mediaHost   = params['mediaHost'];
+				XafConfigManager.instance.apiHost     = params['apiHost'];
+				XafConfigManager.instance.stageWidth  = params['stageWidth'];
+				XafConfigManager.instance.stageHeight = params['stageHeight'];
 			} else {
-				XafConfig.instance.playerId    = 292514701;
-				XafConfig.instance.mediaHost   = 'http://aslocal.com/';
-				XafConfig.instance.apiHost     = 'http://localhost/';
-				XafConfig.instance.stageWidth  = 950;
-				XafConfig.instance.stageHeight = 600;
+				XafConfigManager.instance.playerId    = 292514701;
+				XafConfigManager.instance.mediaHost   = 'http://aslocal.com/';
+				XafConfigManager.instance.apiHost     = 'http://localhost/';
+				XafConfigManager.instance.stageWidth  = 950;
+				XafConfigManager.instance.stageHeight = 600;
 			}
 			
 			this.loadResourceListConfig();
@@ -71,7 +71,7 @@ package
 		 */
 		public function loadResourceListConfig():void {
 			new XafInitLoader(
-				XafConfig.instance.mediaHost + 'assets/json/resources.json?v=10.' + Math.random(),
+				XafConfigManager.instance.mediaHost + 'assets/json/resources.json?v=10.' + Math.random(),
 				this.loadPreloadItems
 			);
 		}

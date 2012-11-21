@@ -1,6 +1,7 @@
 package com.xenojoshua.as3demo.mvc.view.battle
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
+	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	public class AppBattleView extends XafRobotlegsView
