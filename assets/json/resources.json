@@ -30,24 +30,39 @@
         "size":   180658,
         "type":   "image"
     },
+    "file.battlerole001": {
+        "url":    "assets/swf/battle/roles/role001.swf",
+        "size":   534239,
+        "type":   "swf"
+    },
     "file.battlerole100": {
-        "url":    "assets/swf/battle/roles/100.swf",
-        "size":   1146860,
+        "url":    "assets/swf/battle/roles/role100.swf",
+        "size":   1147024,
         "type":   "swf"
     },
     "file.battlerole101": {
-        "url":    "assets/swf/battle/roles/101.swf",
-        "size":   683917,
+        "url":    "assets/swf/battle/roles/role101.swf",
+        "size":   684267,
         "type":   "swf"
     },
     "file.battlerole102": {
-        "url":    "assets/swf/battle/roles/102.swf",
-        "size":   449488,
+        "url":    "assets/swf/battle/roles/role102.swf",
+        "size":   449504,
         "type":   "swf"
     },
-    "file.battlerole103": {
-        "url":    "assets/swf/battle/roles/103.swf",
-        "size":   677340,
+    "file.battlephyatk": {
+        "url":    "assets/swf/battle/effects/phyAtk.swf",
+        "size":   56879,
+        "type":   "swf"
+    },
+    "file.battlemgkatk": {
+        "url":    "assets/swf/battle/effects/mgkAtk.swf",
+        "size":   180877,
+        "type":   "swf"
+    },
+    "file.battleskills": {
+        "url":    "assets/swf/battle/roles/role102.swf",
+        "size":   761917,
         "type":   "swf"
     },
     "file.dummy": {

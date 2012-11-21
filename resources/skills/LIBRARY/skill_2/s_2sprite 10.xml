@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_2/s_2sprite 10" itemID="4fb37e64-00000516" sourceLibraryItemHRef="sprite 10" lastModified="1337163364">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_2/s_2sprite 10" itemID="4fb37e64-00000516" lastModified="1337163364">
   <timeline>
     <DOMTimeline name="s_2sprite 10">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 9" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 9">
                   <matrix>
                     <Matrix tx="-62.65" ty="-62.65"/>
                   </matrix>

@@ -1,108 +1,108 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 325" majorVersion="11" minorVersion="5" buildNumber="325" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <folders>
-          <DOMFolderItem name="skill_0" itemID="4fb37d57-000002f9"/>
-          <DOMFolderItem name="skill_1" itemID="4fb37d61-000002fe"/>
+          <DOMFolderItem name="skill_0" itemID="4fb37d57-000002f9" isExpanded="true"/>
+          <DOMFolderItem name="skill_1" itemID="4fb37d61-000002fe" isExpanded="true"/>
           <DOMFolderItem name="skill_2" itemID="4fb37ebb-00000571" isExpanded="true"/>
      </folders>
      <media>
-          <DOMBitmapItem name="skill_0/image 1" itemID="4f9a209b-00000001" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 1" bitmapDataHRef="Media 1.dat" frameRight="3180" frameBottom="5220"/>
-          <DOMBitmapItem name="skill_1/image 10" itemID="4f8fa0b0-0000000a" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\image 10" bitmapDataHRef="Media 4.dat" frameRight="3920" frameBottom="4420"/>
-          <DOMBitmapItem name="skill_0/image 11" itemID="4f9a209b-0000000b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 11" bitmapDataHRef="Media 6.dat" frameRight="3700" frameBottom="3820"/>
-          <DOMBitmapItem name="skill_2/image 12" itemID="4f8fa056-0000000c" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 12" bitmapDataHRef="Media 4.dat" frameRight="2880" frameBottom="6360"/>
-          <DOMBitmapItem name="skill_0/image 13" itemID="4f9a209b-0000000d" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 13" bitmapDataHRef="Media 7.dat" frameRight="3680" frameBottom="3360"/>
-          <DOMBitmapItem name="skill_0/image 15" itemID="4f9a209b-0000000f" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 15" bitmapDataHRef="Media 8.dat" frameRight="3480" frameBottom="3080"/>
-          <DOMBitmapItem name="skill_1/image 16" itemID="4f8fa0b0-00000010" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\image 16" bitmapDataHRef="Media 6.dat" frameRight="3900" frameBottom="4460"/>
-          <DOMBitmapItem name="skill_2/image 18" itemID="4f8fa056-00000012" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 18" bitmapDataHRef="Media 6.dat" frameRight="3120" frameBottom="7840"/>
-          <DOMBitmapItem name="skill_1/image 22" itemID="4f8fa0b0-00000016" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\image 22" bitmapDataHRef="Media 8.dat" frameRight="3580" frameBottom="4160"/>
-          <DOMBitmapItem name="skill_2/image 24" itemID="4f8fa056-00000018" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 24" bitmapDataHRef="Media 8.dat" frameRight="2400" frameBottom="8160"/>
-          <DOMBitmapItem name="skill_1/image 28" itemID="4f8fa0b0-0000001c" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\image 28" bitmapDataHRef="Media 10.dat" frameRight="3240" frameBottom="3740"/>
-          <DOMBitmapItem name="skill_0/image 3" itemID="4f9a209b-00000003" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 3" bitmapDataHRef="Media 2.dat" frameRight="3260" frameBottom="5340"/>
-          <DOMBitmapItem name="skill_2/image 30" itemID="4f8fa056-0000001e" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 30" bitmapDataHRef="Media 10.dat" frameRight="2200" frameBottom="3740"/>
-          <DOMBitmapItem name="skill_2/image 36" itemID="4f8fa056-00000024" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 36" bitmapDataHRef="Media 12.dat" frameRight="2260" frameBottom="3740"/>
-          <DOMBitmapItem name="skill_2/image 4" itemID="4f8fa054-00000004" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 4" bitmapDataHRef="Media 2.dat" frameRight="5040" frameBottom="5040"/>
-          <DOMBitmapItem name="skill_1/image 4" itemID="4f8fa0b0-00000004" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\image 4" bitmapDataHRef="Media 2.dat" frameRight="1960" frameBottom="2340"/>
-          <DOMBitmapItem name="skill_0/image 5" itemID="4f9a209b-00000005" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 5" bitmapDataHRef="Media 3.dat" frameRight="3980" frameBottom="3880"/>
-          <DOMBitmapItem name="skill_2/image 7" itemID="4f8fa054-00000007" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\image 7" bitmapDataHRef="Media 3.dat" frameRight="4200" frameBottom="4200"/>
-          <DOMBitmapItem name="skill_0/image 7" itemID="4f9a209b-00000007" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 7" bitmapDataHRef="Media 4.dat" frameRight="3700" frameBottom="4180"/>
-          <DOMBitmapItem name="skill_0/image 9" itemID="4f9a209b-00000009" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0\image 9" bitmapDataHRef="Media 5.dat" frameRight="3720" frameBottom="4140"/>
-          <DOMBitmapItem name="skill_1/s_1image 1" itemID="4fb37d12-000002e6" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1image 1" bitmapDataHRef="Media 1.dat" frameRight="1960" frameBottom="2340"/>
-          <DOMBitmapItem name="skill_1/s_1image 19" itemID="4fb37d12-000002e8" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1image 19" bitmapDataHRef="Media 7.dat" frameRight="3580" frameBottom="4180"/>
-          <DOMBitmapItem name="skill_1/s_1image 31" itemID="4fb37d13-000002ea" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1image 31" bitmapDataHRef="Media 11.dat" frameRight="1860" frameBottom="2640"/>
-          <DOMBitmapItem name="skill_1/s_1s_1image 13" itemID="4fb37d13-000002ec" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1s_1image 13" bitmapDataHRef="Media 5.dat" frameRight="3880" frameBottom="4460"/>
-          <DOMBitmapItem name="skill_1/s_1s_1image 7" itemID="4fb37d13-000002ee" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1s_1image 7" bitmapDataHRef="Media 3.dat" frameRight="3120" frameBottom="4260"/>
-          <DOMBitmapItem name="skill_1/s_1s_1s_1s_1image 25" itemID="4fb37d13-000002f0" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1\s_1s_1s_1s_1image 25" bitmapDataHRef="Media 9.dat" frameRight="3440" frameBottom="4080"/>
-          <DOMBitmapItem name="skill_2/s_2image 15" itemID="4fb37e65-0000052f" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2image 15" bitmapDataHRef="Media 5.dat" frameRight="1540" frameBottom="2140"/>
-          <DOMBitmapItem name="skill_2/s_2image 27" itemID="4fb37e65-00000531" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2image 27" bitmapDataHRef="Media 9.dat" frameRight="2220" frameBottom="4060"/>
-          <DOMBitmapItem name="skill_2/s_2image 39" itemID="4fb37e65-00000533" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2image 39" bitmapDataHRef="Media 13.dat" frameRight="660" frameBottom="6520"/>
-          <DOMBitmapItem name="skill_2/s_2s_2image 1" itemID="4fb37e65-00000535" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2s_2image 1" bitmapDataHRef="Media 1.dat" frameRight="1220" frameBottom="1480"/>
-          <DOMBitmapItem name="skill_2/s_2s_2image 33" itemID="4fb37e65-00000537" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2s_2image 33" bitmapDataHRef="Media 11.dat" frameRight="1120" frameBottom="7160"/>
-          <DOMBitmapItem name="skill_2/s_2s_2s_2image 21" itemID="4fb37e65-00000539" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2s_2s_2image 21" bitmapDataHRef="Media 7.dat" frameRight="2000" frameBottom="3800"/>
-          <DOMBitmapItem name="skill_2/s_2s_2s_2s_2image 42" itemID="4fb37e66-0000053b" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2\s_2s_2s_2s_2image 42" bitmapDataHRef="Media 14.dat" frameRight="440" frameBottom="5260"/>
+          <DOMBitmapItem name="skill_0/image 1" itemID="4f9a209b-00000001" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 1" bitmapDataHRef="Media 1.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_1/image 10" itemID="4f8fa0b0-0000000a" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/image 10" bitmapDataHRef="Media 4.dat" frameRight="3920" frameBottom="4420"/>
+          <DOMBitmapItem name="skill_0/image 11" itemID="4f9a209b-0000000b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 11" bitmapDataHRef="Media 6.dat" frameRight="3900" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_2/image 12" itemID="4f8fa056-0000000c" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 12" bitmapDataHRef="Media 4.dat" frameRight="3920" frameBottom="4420"/>
+          <DOMBitmapItem name="skill_0/image 13" itemID="4f9a209b-0000000d" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 13" bitmapDataHRef="Media 7.dat" frameRight="3580" frameBottom="4180"/>
+          <DOMBitmapItem name="skill_0/image 15" itemID="4f9a209b-0000000f" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 15" bitmapDataHRef="Media 8.dat" frameRight="3580" frameBottom="4160"/>
+          <DOMBitmapItem name="skill_1/image 16" itemID="4f8fa0b0-00000010" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/image 16" bitmapDataHRef="Media 6.dat" frameRight="3900" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_2/image 18" itemID="4f8fa056-00000012" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 18" bitmapDataHRef="Media 6.dat" frameRight="3900" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_1/image 22" itemID="4f8fa0b0-00000016" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/image 22" bitmapDataHRef="Media 8.dat" frameRight="3580" frameBottom="4160"/>
+          <DOMBitmapItem name="skill_2/image 24" itemID="4f8fa056-00000018" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 24" bitmapDataHRef="Media 8.dat" frameRight="3580" frameBottom="4160"/>
+          <DOMBitmapItem name="skill_1/image 28" itemID="4f8fa0b0-0000001c" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/image 28" bitmapDataHRef="Media 10.dat" frameRight="3240" frameBottom="3740"/>
+          <DOMBitmapItem name="skill_0/image 3" itemID="4f9a209b-00000003" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 3" bitmapDataHRef="Media 2.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_2/image 30" itemID="4f8fa056-0000001e" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 30" bitmapDataHRef="Media 10.dat" frameRight="3240" frameBottom="3740"/>
+          <DOMBitmapItem name="skill_2/image 36" itemID="4f8fa056-00000024" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 36" bitmapDataHRef="Media 12.dat" frameRight="2260" frameBottom="3740"/>
+          <DOMBitmapItem name="skill_2/image 4" itemID="4f8fa054-00000004" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 4" bitmapDataHRef="Media 2.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_1/image 4" itemID="4f8fa0b0-00000004" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/image 4" bitmapDataHRef="Media 2.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_0/image 5" itemID="4f9a209b-00000005" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 5" bitmapDataHRef="Media 3.dat" frameRight="3120" frameBottom="4260"/>
+          <DOMBitmapItem name="skill_2/image 7" itemID="4f8fa054-00000007" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/image 7" bitmapDataHRef="Media 3.dat" frameRight="3120" frameBottom="4260"/>
+          <DOMBitmapItem name="skill_0/image 7" itemID="4f9a209b-00000007" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 7" bitmapDataHRef="Media 4.dat" frameRight="3920" frameBottom="4420"/>
+          <DOMBitmapItem name="skill_0/image 9" itemID="4f9a209b-00000009" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="skill_0/image 9" bitmapDataHRef="Media 5.dat" frameRight="3880" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_1/s_1image 1" itemID="4fb37d12-000002e6" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1image 1" bitmapDataHRef="Media 1.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_1/s_1image 19" itemID="4fb37d12-000002e8" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1image 19" bitmapDataHRef="Media 7.dat" frameRight="3580" frameBottom="4180"/>
+          <DOMBitmapItem name="skill_1/s_1image 31" itemID="4fb37d13-000002ea" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1image 31" bitmapDataHRef="Media 11.dat" frameRight="1860" frameBottom="2640"/>
+          <DOMBitmapItem name="skill_1/s_1s_1image 13" itemID="4fb37d13-000002ec" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1s_1image 13" bitmapDataHRef="Media 5.dat" frameRight="3880" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_1/s_1s_1image 7" itemID="4fb37d13-000002ee" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1s_1image 7" bitmapDataHRef="Media 3.dat" frameRight="3120" frameBottom="4260"/>
+          <DOMBitmapItem name="skill_1/s_1s_1s_1s_1image 25" itemID="4fb37d13-000002f0" sourceLastImported="1334812848" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_1/s_1s_1s_1s_1image 25" bitmapDataHRef="Media 9.dat" frameRight="3440" frameBottom="4080"/>
+          <DOMBitmapItem name="skill_2/s_2image 15" itemID="4fb37e65-0000052f" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2image 15" bitmapDataHRef="Media 5.dat" frameRight="3880" frameBottom="4460"/>
+          <DOMBitmapItem name="skill_2/s_2image 27" itemID="4fb37e65-00000531" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2image 27" bitmapDataHRef="Media 9.dat" frameRight="3440" frameBottom="4080"/>
+          <DOMBitmapItem name="skill_2/s_2image 39" itemID="4fb37e65-00000533" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2image 39" bitmapDataHRef="Media 13.dat" frameRight="660" frameBottom="6520"/>
+          <DOMBitmapItem name="skill_2/s_2s_2image 1" itemID="4fb37e65-00000535" sourceLastImported="1334812756" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2s_2image 1" bitmapDataHRef="Media 1.dat" frameRight="1960" frameBottom="2340"/>
+          <DOMBitmapItem name="skill_2/s_2s_2image 33" itemID="4fb37e65-00000537" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2s_2image 33" bitmapDataHRef="Media 11.dat" frameRight="1860" frameBottom="2640"/>
+          <DOMBitmapItem name="skill_2/s_2s_2s_2image 21" itemID="4fb37e65-00000539" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2s_2s_2image 21" bitmapDataHRef="Media 7.dat" frameRight="3580" frameBottom="4180"/>
+          <DOMBitmapItem name="skill_2/s_2s_2s_2s_2image 42" itemID="4fb37e66-0000053b" sourceLastImported="1334812758" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="skill_2/s_2s_2s_2s_2image 42" bitmapDataHRef="Media 14.dat" frameRight="440" frameBottom="5260"/>
      </media>
      <symbols>
-          <Include href="skill_0/S0.xml"/>
-          <Include href="skill_0/shape 2.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 4.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 6.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 8.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 10.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 12.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 14.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_0/shape 16.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 2.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 5.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 8.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 11.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 14.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 17.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 20.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 23.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 26.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 29.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1shape 32.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 3.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 6.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 9.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 12.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 15.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 18.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 21.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 24.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 27.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 30.xml" loadImmediate="false"/>
-          <Include href="skill_1/s_1sprite 33.xml" loadImmediate="false"/>
-          <Include href="skill_1/S1.xml"/>
-          <Include href="skill_2/s_2shape 2.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 5.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 8.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 11.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 13.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 16.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 19.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 22.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 25.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 28.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 31.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 34.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 37.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 40.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2shape 43.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 3.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 6.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 9.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 10.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 14.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 17.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 20.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 23.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 26.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 29.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 32.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 35.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 38.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 41.xml" loadImmediate="false"/>
-          <Include href="skill_2/s_2sprite 44.xml" loadImmediate="false"/>
-          <Include href="skill_2/S2.xml"/>
+          <Include href="skill_0/S0.xml" itemID="4f9a3bf7-000001f7" lastModified="1353485968"/>
+          <Include href="skill_0/shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000002" lastModified="1335500955"/>
+          <Include href="skill_0/shape 4.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000004" lastModified="1335500955"/>
+          <Include href="skill_0/shape 6.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000006" lastModified="1335500955"/>
+          <Include href="skill_0/shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000008" lastModified="1335500955"/>
+          <Include href="skill_0/shape 10.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000000a" lastModified="1335500955"/>
+          <Include href="skill_0/shape 12.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000000c" lastModified="1335500955"/>
+          <Include href="skill_0/shape 14.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000000e" lastModified="1335500955"/>
+          <Include href="skill_0/shape 16.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000010" lastModified="1335500955"/>
+          <Include href="skill_1/s_1shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d0" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 5.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d1" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d2" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 11.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d3" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 14.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d4" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 17.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d5" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 20.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d6" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 23.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d7" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 26.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d8" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 29.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002d9" lastModified="1337163026"/>
+          <Include href="skill_1/s_1shape 32.xml" itemIcon="1" loadImmediate="false" itemID="4fb37d12-000002da" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 3.xml" loadImmediate="false" itemID="4fb37d12-000002db" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 6.xml" loadImmediate="false" itemID="4fb37d12-000002dc" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 9.xml" loadImmediate="false" itemID="4fb37d12-000002dd" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 12.xml" loadImmediate="false" itemID="4fb37d12-000002de" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 15.xml" loadImmediate="false" itemID="4fb37d12-000002df" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 18.xml" loadImmediate="false" itemID="4fb37d12-000002e0" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 21.xml" loadImmediate="false" itemID="4fb37d12-000002e1" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 24.xml" loadImmediate="false" itemID="4fb37d12-000002e2" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 27.xml" loadImmediate="false" itemID="4fb37d12-000002e3" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 30.xml" loadImmediate="false" itemID="4fb37d12-000002e4" lastModified="1337163026"/>
+          <Include href="skill_1/s_1sprite 33.xml" loadImmediate="false" itemID="4fb37d12-000002e5" lastModified="1337163026"/>
+          <Include href="skill_1/S1.xml" itemID="4fb37d8d-00000324" lastModified="1353485929"/>
+          <Include href="skill_2/s_2shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-00000510" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 5.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-00000512" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-00000514" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 11.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-00000517" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 13.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-00000518" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 16.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e64-0000051a" lastModified="1337163364"/>
+          <Include href="skill_2/s_2shape 19.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-0000051c" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 22.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-0000051e" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 25.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-00000520" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 28.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-00000522" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 31.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-00000524" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 34.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-00000526" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 37.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-00000528" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 40.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-0000052a" lastModified="1337163365"/>
+          <Include href="skill_2/s_2shape 43.xml" itemIcon="1" loadImmediate="false" itemID="4fb37e65-0000052c" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 3.xml" loadImmediate="false" itemID="4fb37e64-00000511" lastModified="1337163364"/>
+          <Include href="skill_2/s_2sprite 6.xml" loadImmediate="false" itemID="4fb37e64-00000513" lastModified="1337163364"/>
+          <Include href="skill_2/s_2sprite 9.xml" loadImmediate="false" itemID="4fb37e64-00000515" lastModified="1337163364"/>
+          <Include href="skill_2/s_2sprite 10.xml" loadImmediate="false" itemID="4fb37e64-00000516" lastModified="1337163364"/>
+          <Include href="skill_2/s_2sprite 14.xml" loadImmediate="false" itemID="4fb37e64-00000519" lastModified="1337163364"/>
+          <Include href="skill_2/s_2sprite 17.xml" loadImmediate="false" itemID="4fb37e65-0000051b" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 20.xml" loadImmediate="false" itemID="4fb37e65-0000051d" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 23.xml" loadImmediate="false" itemID="4fb37e65-0000051f" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 26.xml" loadImmediate="false" itemID="4fb37e65-00000521" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 29.xml" loadImmediate="false" itemID="4fb37e65-00000523" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 32.xml" loadImmediate="false" itemID="4fb37e65-00000525" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 35.xml" loadImmediate="false" itemID="4fb37e65-00000527" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 38.xml" loadImmediate="false" itemID="4fb37e65-00000529" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 41.xml" loadImmediate="false" itemID="4fb37e65-0000052b" lastModified="1337163365"/>
+          <Include href="skill_2/s_2sprite 44.xml" loadImmediate="false" itemID="4fb37e65-0000052d" lastModified="1337163365"/>
+          <Include href="skill_2/S2.xml" itemID="4fb37f85-00000604" lastModified="1353485990"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
@@ -111,28 +111,12 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="skill_0/S0" name="" centerPoint3DX="-40.05" centerPoint3DY="104.95">
+                                        <DOMSymbolInstance libraryItemName="skill_2/S2" selected="true" centerPoint3DX="278.95" centerPoint3DY="215.35">
                                              <matrix>
-                                                  <Matrix tx="129.45" ty="268.45"/>
+                                                  <Matrix tx="278.5" ty="305.85"/>
                                              </matrix>
                                              <transformationPoint>
-                                                  <Point x="-182.5" y="-163.5"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="skill_1/S1" name="" centerPoint3DX="349.45" centerPoint3DY="363.5">
-                                             <matrix>
-                                                  <Matrix tx="314.95" ty="324"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="34.5" y="39.5"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="skill_2/S2" name="" centerPoint3DX="460.95" centerPoint3DY="227.35">
-                                             <matrix>
-                                                  <Matrix tx="459.5" ty="316.85"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="-10.65" y="-129.4"/>
+                                                  <Point x="-10.3" y="-144.35"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>

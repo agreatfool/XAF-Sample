@@ -1,46 +1,46 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 325" majorVersion="11" minorVersion="5" buildNumber="325" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <folders>
           <DOMFolderItem name="FaShuFolder" itemID="4f9a33a8-0000034f" isExpanded="true"/>
      </folders>
      <media>
-          <DOMBitmapItem name="FaShuFolder/image 1" itemID="4f9a31e3-00000292" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 1" bitmapDataHRef="Media 1.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 11" itemID="4f9a209b-0000000b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 11" bitmapDataHRef="Media 6.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 13" itemID="4f9a31e3-00000298" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 13" bitmapDataHRef="Media 7.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 17" itemID="4f9a209b-00000011" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 17" bitmapDataHRef="Media 9.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 19" itemID="4f9a31e3-0000029b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 19" bitmapDataHRef="Media 10.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 21" itemID="4f9a209b-00000015" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 21" bitmapDataHRef="Media 11.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 23" itemID="4f9a209b-00000017" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 23" bitmapDataHRef="Media 12.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 25" itemID="4f9a209b-00000019" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 25" bitmapDataHRef="Media 13.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 27" itemID="4f9a209b-0000001b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 27" bitmapDataHRef="Media 14.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 29" itemID="4f9a209b-0000001d" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 29" bitmapDataHRef="Media 15.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 31" itemID="4f9a209b-0000001f" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 31" bitmapDataHRef="Media 16.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 33" itemID="4f9a209b-00000021" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 33" bitmapDataHRef="Media 17.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 35" itemID="4f9a209b-00000023" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 35" bitmapDataHRef="Media 18.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 37" itemID="4f9a209b-00000025" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 37" bitmapDataHRef="Media 19.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 5" itemID="4f9a209b-00000005" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 5" bitmapDataHRef="Media 3.dat" frameRight="6000" frameBottom="5480"/>
-          <DOMBitmapItem name="FaShuFolder/image 7" itemID="4f9a31e3-00000295" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder\image 7" bitmapDataHRef="Media 4.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 1" itemID="4f9a31e3-00000292" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 1" bitmapDataHRef="Media 1.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 11" itemID="4f9a209b-0000000b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 11" bitmapDataHRef="Media 6.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 13" itemID="4f9a31e3-00000298" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 13" bitmapDataHRef="Media 7.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 17" itemID="4f9a209b-00000011" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 17" bitmapDataHRef="Media 9.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 19" itemID="4f9a31e3-0000029b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 19" bitmapDataHRef="Media 10.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 21" itemID="4f9a209b-00000015" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 21" bitmapDataHRef="Media 11.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 23" itemID="4f9a209b-00000017" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 23" bitmapDataHRef="Media 12.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 25" itemID="4f9a209b-00000019" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 25" bitmapDataHRef="Media 13.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 27" itemID="4f9a209b-0000001b" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 27" bitmapDataHRef="Media 14.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 29" itemID="4f9a209b-0000001d" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 29" bitmapDataHRef="Media 15.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 31" itemID="4f9a209b-0000001f" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 31" bitmapDataHRef="Media 16.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 33" itemID="4f9a209b-00000021" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 33" bitmapDataHRef="Media 17.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 35" itemID="4f9a209b-00000023" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 35" bitmapDataHRef="Media 18.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 37" itemID="4f9a209b-00000025" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 37" bitmapDataHRef="Media 19.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 5" itemID="4f9a209b-00000005" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 5" bitmapDataHRef="Media 3.dat" frameRight="6000" frameBottom="5480"/>
+          <DOMBitmapItem name="FaShuFolder/image 7" itemID="4f9a31e3-00000295" sourceLastImported="1335500955" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="FaShuFolder/image 7" bitmapDataHRef="Media 4.dat" frameRight="6000" frameBottom="5480"/>
      </media>
      <symbols>
-          <Include href="FaShuFolder/FaShu.xml"/>
-          <Include href="FaShuFolder/shape 2.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 4.xml" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 6.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 8.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 10.xml" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 12.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 14.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 16.xml" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 18.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 20.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 22.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 24.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 26.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 28.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 30.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 32.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 34.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 36.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="FaShuFolder/shape 38.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="FaShuFolder/FaShu.xml" itemID="4f9a311c-00000211" lastModified="1353485838"/>
+          <Include href="FaShuFolder/shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000291" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 4.xml" loadImmediate="false" itemID="4f9a33a8-00000368" lastModified="1335505832"/>
+          <Include href="FaShuFolder/shape 6.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000293" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000294" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 10.xml" loadImmediate="false" itemID="4f9a33a8-0000036b" lastModified="1335505832"/>
+          <Include href="FaShuFolder/shape 12.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000296" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 14.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000297" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 16.xml" loadImmediate="false" itemID="4f9a33a8-0000036e" lastModified="1335505832"/>
+          <Include href="FaShuFolder/shape 18.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-00000299" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 20.xml" itemIcon="1" loadImmediate="false" itemID="4f9a31e3-0000029a" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 22.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000016" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 24.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000018" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 26.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000001a" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 28.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000001c" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 30.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-0000001e" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 32.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000020" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 34.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000022" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 36.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000024" lastModified="1335500955"/>
+          <Include href="FaShuFolder/shape 38.xml" itemIcon="1" loadImmediate="false" itemID="4f9a209b-00000026" lastModified="1335500955"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
@@ -48,16 +48,7 @@
                     <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements>
-                                        <DOMSymbolInstance libraryItemName="FaShuFolder/FaShu" name="" selected="true" centerPoint3DX="251.95" centerPoint3DY="208.35">
-                                             <matrix>
-                                                  <Matrix tx="249" ty="210.5"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="2.95" y="-2.15"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                   </elements>
+                                   <elements/>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>

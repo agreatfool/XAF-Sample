@@ -84,7 +84,6 @@ package
 			// register resources
 			var resources:Object = loader.getJSON();
 			loader.dispose();
-			AppResources.setConfigs(resources);
 			
 			// register sceen layers
 			XafScreenManager.instance.registerLayer(XafConst.SCREEN_ROOT, this.stage, true);

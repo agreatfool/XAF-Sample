@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Wuli" itemID="4f9a3559-00000201" linkageExportForAS="true" linkageClassName="Wuli" sourceLibraryItemHRef="元件 1" lastModified="1335506545">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Wuli" itemID="4f9a3559-00000201" linkageExportForAS="true" linkageClassName="battle.PhyAttack" lastModified="1353485749">
   <timeline>
-    <DOMTimeline name="Wuli">
+    <DOMTimeline name="Wuli" currentFrame="17">
       <layers>
         <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 2" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 2" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -18,7 +18,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 3" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 3" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -30,7 +30,7 @@
             </DOMFrame>
             <DOMFrame index="2" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 5" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 5" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -42,7 +42,7 @@
             </DOMFrame>
             <DOMFrame index="4" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 7" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 7" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -54,7 +54,7 @@
             </DOMFrame>
             <DOMFrame index="6" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 9" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 9" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -66,7 +66,7 @@
             </DOMFrame>
             <DOMFrame index="8" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 11" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 11" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -78,7 +78,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 13" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 13" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -90,7 +90,7 @@
             </DOMFrame>
             <DOMFrame index="12" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 15" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 15" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -102,7 +102,7 @@
             </DOMFrame>
             <DOMFrame index="14" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 17" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 17" selected="true" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>
@@ -114,7 +114,7 @@
             </DOMFrame>
             <DOMFrame index="16" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="shape 19" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="shape 19" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-0.95" ty="-61.95"/>
                   </matrix>

@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FaShuFolder/FaShu" itemID="4f9a311c-00000211" linkageExportForAS="true" linkageClassName="FaShu" sourceLibraryItemHRef="元件 1" lastModified="1335505215">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FaShuFolder/FaShu" itemID="4f9a311c-00000211" linkageExportForAS="true" linkageClassName="battle.MgkAttack" lastModified="1353485838">
   <timeline>
-    <DOMTimeline name="FaShu">
+    <DOMTimeline name="FaShu" currentFrame="18">
       <layers>
         <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 2" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 2" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -18,7 +18,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 4" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 4" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -30,7 +30,7 @@
             </DOMFrame>
             <DOMFrame index="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 6" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 6" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -42,7 +42,7 @@
             </DOMFrame>
             <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 8" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 8" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -54,7 +54,7 @@
             </DOMFrame>
             <DOMFrame index="4" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 10" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 10" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -66,7 +66,7 @@
             </DOMFrame>
             <DOMFrame index="5" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 12" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 12" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -78,7 +78,7 @@
             </DOMFrame>
             <DOMFrame index="6" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 14" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 14" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -90,7 +90,7 @@
             </DOMFrame>
             <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 16" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 16" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -102,7 +102,7 @@
             </DOMFrame>
             <DOMFrame index="8" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 18" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 18" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -114,7 +114,7 @@
             </DOMFrame>
             <DOMFrame index="9" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 20" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 20" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -126,7 +126,7 @@
             </DOMFrame>
             <DOMFrame index="10" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 22" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 22" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -138,7 +138,7 @@
             </DOMFrame>
             <DOMFrame index="11" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 24" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 24" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -150,7 +150,7 @@
             </DOMFrame>
             <DOMFrame index="12" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 26" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 26" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -162,7 +162,7 @@
             </DOMFrame>
             <DOMFrame index="13" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 28" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 28" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -174,7 +174,7 @@
             </DOMFrame>
             <DOMFrame index="14" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 30" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 30" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -186,7 +186,7 @@
             </DOMFrame>
             <DOMFrame index="15" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 32" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 32" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -198,7 +198,7 @@
             </DOMFrame>
             <DOMFrame index="16" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 34" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 34" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -210,7 +210,7 @@
             </DOMFrame>
             <DOMFrame index="17" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 36" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 36" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>
@@ -222,7 +222,7 @@
             </DOMFrame>
             <DOMFrame index="18" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 38" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="FaShuFolder/shape 38" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix tx="-97.05" ty="-33.05"/>
                   </matrix>

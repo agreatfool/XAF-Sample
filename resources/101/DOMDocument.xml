@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 325" majorVersion="11" minorVersion="5" buildNumber="325" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <media>
           <DOMBitmapItem name="image 1" itemID="4f9a208d-00000001" sourceLastImported="1335500941" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 1" bitmapDataHRef="Media 1.dat" frameRight="1960" frameBottom="2420"/>
           <DOMBitmapItem name="image 11" itemID="4f9a208d-0000000b" sourceLastImported="1335500941" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 11" bitmapDataHRef="Media 6.dat" frameRight="1900" frameBottom="2220"/>
@@ -59,67 +59,67 @@
           <DOMBitmapItem name="image 9" itemID="4f9a208d-00000009" sourceLastImported="1335500941" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 9" bitmapDataHRef="Media 5.dat" frameRight="1820" frameBottom="2600"/>
      </media>
      <symbols>
-          <Include href="Attack.xml"/>
-          <Include href="Hit.xml"/>
-          <Include href="shape 2.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 4.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 6.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 8.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 10.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 12.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 14.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 16.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 18.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 20.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 22.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 24.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 26.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 28.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 30.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 32.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 34.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 36.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 38.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 40.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 42.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 44.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 46.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 48.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 50.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 52.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 54.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 56.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 58.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 60.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 62.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 64.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 66.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 68.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 70.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 72.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 74.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 76.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 78.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 80.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 82.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 84.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 86.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 112.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 114.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 116.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 118.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 120.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 122.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 124.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 126.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 128.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 130.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 132.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 134.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 136.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="shape 138.xml" itemIcon="1" loadImmediate="false"/>
-          <Include href="SkillAttack.xml"/>
-          <Include href="Stand.xml"/>
+          <Include href="Attack.xml" itemID="4fa2549e-0000025f" lastModified="1353485302"/>
+          <Include href="Hit.xml" itemID="4fa254e2-00000287" lastModified="1353485305"/>
+          <Include href="shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000002" lastModified="1335500941"/>
+          <Include href="shape 4.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000004" lastModified="1335500941"/>
+          <Include href="shape 6.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000006" lastModified="1335500941"/>
+          <Include href="shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000008" lastModified="1335500941"/>
+          <Include href="shape 10.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000000a" lastModified="1335500941"/>
+          <Include href="shape 12.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000000c" lastModified="1335500941"/>
+          <Include href="shape 14.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000000e" lastModified="1335500941"/>
+          <Include href="shape 16.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000010" lastModified="1335500941"/>
+          <Include href="shape 18.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000012" lastModified="1335500941"/>
+          <Include href="shape 20.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000014" lastModified="1335500941"/>
+          <Include href="shape 22.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000016" lastModified="1335500941"/>
+          <Include href="shape 24.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000018" lastModified="1335500941"/>
+          <Include href="shape 26.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000001a" lastModified="1335500941"/>
+          <Include href="shape 28.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000001c" lastModified="1335500941"/>
+          <Include href="shape 30.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000001e" lastModified="1335500941"/>
+          <Include href="shape 32.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000020" lastModified="1335500941"/>
+          <Include href="shape 34.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000022" lastModified="1335500941"/>
+          <Include href="shape 36.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000024" lastModified="1335500941"/>
+          <Include href="shape 38.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000026" lastModified="1335500941"/>
+          <Include href="shape 40.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000028" lastModified="1335500941"/>
+          <Include href="shape 42.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000002a" lastModified="1335500941"/>
+          <Include href="shape 44.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000002c" lastModified="1335500941"/>
+          <Include href="shape 46.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000002e" lastModified="1335500941"/>
+          <Include href="shape 48.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000030" lastModified="1335500941"/>
+          <Include href="shape 50.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000032" lastModified="1335500941"/>
+          <Include href="shape 52.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000034" lastModified="1335500941"/>
+          <Include href="shape 54.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000036" lastModified="1335500941"/>
+          <Include href="shape 56.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000038" lastModified="1335500941"/>
+          <Include href="shape 58.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000003a" lastModified="1335500941"/>
+          <Include href="shape 60.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000003c" lastModified="1335500941"/>
+          <Include href="shape 62.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000003e" lastModified="1335500941"/>
+          <Include href="shape 64.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000040" lastModified="1335500941"/>
+          <Include href="shape 66.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000042" lastModified="1335500941"/>
+          <Include href="shape 68.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000044" lastModified="1335500941"/>
+          <Include href="shape 70.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000046" lastModified="1335500941"/>
+          <Include href="shape 72.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000048" lastModified="1335500941"/>
+          <Include href="shape 74.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000004a" lastModified="1335500941"/>
+          <Include href="shape 76.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000004c" lastModified="1335500941"/>
+          <Include href="shape 78.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000004e" lastModified="1335500941"/>
+          <Include href="shape 80.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000050" lastModified="1335500941"/>
+          <Include href="shape 82.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000052" lastModified="1335500941"/>
+          <Include href="shape 84.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000054" lastModified="1335500941"/>
+          <Include href="shape 86.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000056" lastModified="1335500941"/>
+          <Include href="shape 112.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000070" lastModified="1335500941"/>
+          <Include href="shape 114.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000072" lastModified="1335500941"/>
+          <Include href="shape 116.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000074" lastModified="1335500941"/>
+          <Include href="shape 118.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000076" lastModified="1335500941"/>
+          <Include href="shape 120.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000078" lastModified="1335500941"/>
+          <Include href="shape 122.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000007a" lastModified="1335500941"/>
+          <Include href="shape 124.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000007c" lastModified="1335500941"/>
+          <Include href="shape 126.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000007e" lastModified="1335500941"/>
+          <Include href="shape 128.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000080" lastModified="1335500941"/>
+          <Include href="shape 130.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000082" lastModified="1335500941"/>
+          <Include href="shape 132.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000084" lastModified="1335500941"/>
+          <Include href="shape 134.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000086" lastModified="1335500941"/>
+          <Include href="shape 136.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-00000088" lastModified="1335500941"/>
+          <Include href="shape 138.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208d-0000008a" lastModified="1335500941"/>
+          <Include href="SkillAttack.xml" itemID="4fa25545-000002c9" lastModified="1353485314"/>
+          <Include href="Stand.xml" itemID="4fa25512-000002a4" lastModified="1353485319"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
@@ -127,40 +127,7 @@
                     <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements>
-                                        <DOMSymbolInstance libraryItemName="Attack" name="" selected="true" centerPoint3DX="201.95" centerPoint3DY="211">
-                                             <matrix>
-                                                  <Matrix tx="154.95" ty="173"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="47" y="38"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Hit" name="" centerPoint3DX="366.5" centerPoint3DY="236.95">
-                                             <matrix>
-                                                  <Matrix tx="289" ty="171"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="77.5" y="65.95"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Stand" name="" centerPoint3DX="481.95" centerPoint3DY="216">
-                                             <matrix>
-                                                  <Matrix tx="413.95" ty="171"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="68" y="45"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="SkillAttack" name="" centerPoint3DX="238.45" centerPoint3DY="338">
-                                             <matrix>
-                                                  <Matrix tx="179" ty="308"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="59.45" y="30"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
-                                   </elements>
+                                   <elements/>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>

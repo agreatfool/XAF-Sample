@@ -4,8 +4,14 @@ package com.xenojoshua.as3demo.mvc.view.battle
 	
 	public class AppBattleMediator extends XafRobotlegsMediator
 	{
-		public function AppBattleMediator()
-		{
+		[Inject]
+		private var view:AppBattleView;
+		
+		/**
+		 * Initialize AppBattleMediator.
+		 * @return void
+		 */
+		public function AppBattleMediator() {
 			super();
 		}
 	}

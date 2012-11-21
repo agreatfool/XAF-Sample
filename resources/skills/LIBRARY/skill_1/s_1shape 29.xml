@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_1/s_1shape 29" itemID="4fb37d12-000002d9" sourceLibraryItemHRef="shape 29" symbolType="graphic" lastModified="1337163026">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_1/s_1shape 29" itemID="4fb37d12-000002d9" symbolType="graphic" lastModified="1337163026">
   <timeline>
     <DOMTimeline name="s_1shape 29">
       <layers>
@@ -17,7 +17,7 @@
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle1="1" edges="!2818 -397|2818 3343!2818 3343|-422 3343!-422 3343|-422 -397!-422 -397|2818 -397"/>
+                    <Edge fillStyle1="1" edges="!2818 3343|-422 3343!-422 3343|-422 -397!-422 -397|2818 -397!2818 -397|2818 3343"/>
                   </edges>
                 </DOMShape>
               </elements>

@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_1/s_1sprite 21" itemID="4fb37d12-000002e1" sourceLibraryItemHRef="sprite 21" lastModified="1337163026">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_1/s_1sprite 21" itemID="4fb37d12-000002e1" lastModified="1337163026">
   <timeline>
     <DOMTimeline name="s_1sprite 21">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_1/s_1shape 20" name="" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="skill_1/s_1shape 20" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

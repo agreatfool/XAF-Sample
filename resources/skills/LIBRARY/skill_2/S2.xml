@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_2/S2" itemID="4fb37f85-00000604" linkageExportForAS="true" linkageClassName="S2" sourceLibraryItemHRef="元件 1" lastModified="1337163891">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_2/S2" itemID="4fb37f85-00000604" linkageExportForAS="true" linkageClassName="battle.Skill02" lastModified="1353485990" lastUniqueIdentifier="2">
   <timeline>
-    <DOMTimeline name="S2" currentFrame="8">
+    <DOMTimeline name="S2" currentFrame="15">
       <layers>
-        <DOMLayer name="图层 15" color="#4F80FF" current="true" isSelected="true">
+        <DOMLayer name="图层 15" color="#4F80FF">
           <frames>
             <DOMFrame index="0" duration="8" keyMode="9728">
               <elements/>
@@ -19,7 +19,7 @@
             </DOMFrame>
             <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="51.8" ty="-9.35"/>
                   </matrix>
@@ -31,7 +31,7 @@
             </DOMFrame>
             <DOMFrame index="4" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="53.35" ty="8.75"/>
                   </matrix>
@@ -43,7 +43,7 @@
             </DOMFrame>
             <DOMFrame index="5" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="53.45" ty="7.25"/>
                   </matrix>
@@ -58,7 +58,7 @@
             </DOMFrame>
             <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" name="" centerPoint3DX="46.45" centerPoint3DY="-63.35">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" centerPoint3DX="46.45" centerPoint3DY="-63.35">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="53.95" ty="7.8"/>
                   </matrix>
@@ -80,7 +80,7 @@
             </DOMFrame>
             <DOMFrame index="2" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.181655883789063" d="0.0591888427734375" tx="48.45" ty="7.4"/>
                   </matrix>
@@ -95,7 +95,7 @@
             </DOMFrame>
             <DOMFrame index="3" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="48.4" ty="7.4"/>
                   </matrix>
@@ -110,7 +110,7 @@
             </DOMFrame>
             <DOMFrame index="6" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="48.4" ty="7.4"/>
                   </matrix>
@@ -122,7 +122,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="48.4" ty="7.4"/>
                   </matrix>
@@ -137,7 +137,7 @@
             </DOMFrame>
             <DOMFrame index="14" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="48.4" ty="7.4"/>
                   </matrix>
@@ -162,7 +162,7 @@
             </DOMFrame>
             <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-10.7" ty="4.35"/>
                   </matrix>
@@ -174,7 +174,7 @@
             </DOMFrame>
             <DOMFrame index="4" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-9.15" ty="22.45"/>
                   </matrix>
@@ -186,7 +186,7 @@
             </DOMFrame>
             <DOMFrame index="5" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-9.05" ty="20.95"/>
                   </matrix>
@@ -201,7 +201,7 @@
             </DOMFrame>
             <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" name="" centerPoint3DX="-16.05" centerPoint3DY="-49.65">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" centerPoint3DX="-16.05" centerPoint3DY="-49.65">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-8.55" ty="21.5"/>
                   </matrix>
@@ -220,7 +220,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="49.5" ty="-125.6"/>
                   </matrix>
@@ -232,7 +232,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="50.85" ty="-92.6"/>
                   </matrix>
@@ -244,7 +244,7 @@
             </DOMFrame>
             <DOMFrame index="2" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.181655883789063" d="0.0591888427734375" tx="-14.05" ty="21.1"/>
                   </matrix>
@@ -259,7 +259,7 @@
             </DOMFrame>
             <DOMFrame index="3" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-14.1" ty="21.1"/>
                   </matrix>
@@ -274,7 +274,7 @@
             </DOMFrame>
             <DOMFrame index="6" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-14.1" ty="21.1"/>
                   </matrix>
@@ -286,7 +286,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-14.1" ty="21.1"/>
                   </matrix>
@@ -301,7 +301,7 @@
             </DOMFrame>
             <DOMFrame index="14" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-14.1" ty="21.1"/>
                   </matrix>
@@ -323,7 +323,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-13" ty="-111.9"/>
                   </matrix>
@@ -335,7 +335,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-11.65" ty="-78.9"/>
                   </matrix>
@@ -350,7 +350,7 @@
             </DOMFrame>
             <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-42.5" ty="-21.05"/>
                   </matrix>
@@ -362,7 +362,7 @@
             </DOMFrame>
             <DOMFrame index="4" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-40.95" ty="-2.95"/>
                   </matrix>
@@ -374,7 +374,7 @@
             </DOMFrame>
             <DOMFrame index="5" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-40.85" ty="-4.45"/>
                   </matrix>
@@ -389,7 +389,7 @@
             </DOMFrame>
             <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" name="" centerPoint3DX="-47.85" centerPoint3DY="-75.05">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" centerPoint3DX="-47.85" centerPoint3DY="-75.05">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-40.35" ty="-3.9"/>
                   </matrix>
@@ -408,7 +408,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-44.8" ty="-137.3"/>
                   </matrix>
@@ -420,7 +420,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17">
                   <matrix>
                     <Matrix a="-0.220016479492188" b="-0.001953125" c="0.0014190673828125" d="-0.99407958984375" tx="-43.45" ty="-104.3"/>
                   </matrix>
@@ -432,7 +432,7 @@
             </DOMFrame>
             <DOMFrame index="2" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.181655883789063" d="0.0591888427734375" tx="-45.85" ty="-4.3"/>
                   </matrix>
@@ -447,7 +447,7 @@
             </DOMFrame>
             <DOMFrame index="3" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="" selected="true">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" selected="true">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-45.9" ty="-4.3"/>
                   </matrix>
@@ -462,7 +462,7 @@
             </DOMFrame>
             <DOMFrame index="6" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-45.9" ty="-4.3"/>
                   </matrix>
@@ -474,7 +474,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-45.9" ty="-4.3"/>
                   </matrix>
@@ -489,7 +489,7 @@
             </DOMFrame>
             <DOMFrame index="14" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.21624755859375" d="0.0704498291015625" tx="-45.9" ty="-4.3"/>
                   </matrix>
@@ -511,7 +511,7 @@
           <frames>
             <DOMFrame index="0" duration="16" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2shape 11" name="" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2shape 11" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.477386474609375" d="0.722457885742188" tx="0.65" ty="0.4"/>
                   </matrix>
@@ -527,7 +527,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 14" name="" centerPoint3DX="0.6" centerPoint3DY="-66.8">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 14" centerPoint3DX="0.6" centerPoint3DY="-66.8">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-13.85" ty="-113.55"/>
                   </matrix>
@@ -539,7 +539,7 @@
             </DOMFrame>
             <DOMFrame index="1" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 20" name="" selected="true">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 20">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-16.7" ty="-170.95"/>
                   </matrix>
@@ -551,7 +551,7 @@
             </DOMFrame>
             <DOMFrame index="3" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 26" name="" selected="true">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 26">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-9.05" ty="-191.25"/>
                   </matrix>
@@ -563,7 +563,7 @@
             </DOMFrame>
             <DOMFrame index="5" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 35" name="" selected="true">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 35">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-4.05" ty="-205.5"/>
                   </matrix>
@@ -575,7 +575,7 @@
             </DOMFrame>
             <DOMFrame index="7" duration="2" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 41" name="" selected="true">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 41">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-1.25" ty="-214.8"/>
                   </matrix>
@@ -587,7 +587,7 @@
             </DOMFrame>
             <DOMFrame index="9" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 44" name="" selected="true" centerPoint3DX="0.6" centerPoint3DY="-128.3">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 44" centerPoint3DX="0.6" centerPoint3DY="-128.3">
                   <matrix>
                     <Matrix a="0.447769165039063" d="0.677627563476563" tx="-0.7" ty="-208.6"/>
                   </matrix>
@@ -609,7 +609,7 @@
             </DOMFrame>
             <DOMFrame index="4" duration="8" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.383148193359375" d="0.148117065429688" tx="-0.7" ty="1.5"/>
                   </matrix>
@@ -621,7 +621,7 @@
             </DOMFrame>
             <DOMFrame index="12" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.063140869140625" d="0.0244140625" tx="-1.3" ty="1.5"/>
                   </matrix>
@@ -636,14 +636,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="图层 10" color="#9933CC">
+        <DOMLayer name="图层 10" color="#9933CC" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="2" motionTweenScale="false" keyMode="8192">
               <elements/>
             </DOMFrame>
             <DOMFrame index="2" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.1607666015625" d="0.0796051025390625" tx="-0.75" ty="1.45"/>
                   </matrix>
@@ -655,7 +655,7 @@
             </DOMFrame>
             <DOMFrame index="5" duration="2" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.434112548828125" d="0.174789428710938" tx="-0.75" ty="1.45"/>
                   </matrix>
@@ -667,7 +667,7 @@
             </DOMFrame>
             <DOMFrame index="7" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.616317749023438" d="0.238235473632813" tx="-0.65" ty="1.45"/>
                   </matrix>
@@ -678,19 +678,7 @@
               </elements>
             </DOMFrame>
             <DOMFrame index="14" duration="2" motionTweenScale="false" keyMode="8192">
-              <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
-                  <matrix>
-                    <Matrix a="0.733551025390625" d="0.283538818359375" tx="-0.5" ty="1.45"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point/>
-                  </transformationPoint>
-                  <color>
-                    <Color alphaMultiplier="0.12890625"/>
-                  </color>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
@@ -698,7 +686,7 @@
           <frames>
             <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.217697143554688" d="0.1077880859375" tx="-1.3" ty="0.2"/>
                   </matrix>
@@ -710,7 +698,7 @@
             </DOMFrame>
             <DOMFrame index="1" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.341064453125" d="0.150741577148438" tx="-1.3" ty="0.2"/>
                   </matrix>
@@ -722,7 +710,7 @@
             </DOMFrame>
             <DOMFrame index="5" duration="8" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="0.834548950195313" d="0.322601318359375" tx="-1.15" ty="0.2"/>
                   </matrix>
@@ -734,7 +722,7 @@
             </DOMFrame>
             <DOMFrame index="13" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 10">
                   <matrix>
                     <Matrix a="1.01597595214844" d="0.3927001953125" tx="-0.9" ty="0.2"/>
                   </matrix>
@@ -756,7 +744,7 @@
           <frames>
             <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.427139282226563" d="0.139144897460938" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -771,7 +759,7 @@
             </DOMFrame>
             <DOMFrame index="1" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.508438110351563" d="0.165634155273438" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -786,7 +774,7 @@
             </DOMFrame>
             <DOMFrame index="4" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.508438110351563" d="0.165634155273438" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -798,7 +786,7 @@
             </DOMFrame>
             <DOMFrame index="8" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.508438110351563" d="0.165634155273438" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -813,7 +801,7 @@
             </DOMFrame>
             <DOMFrame index="11" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="0.508438110351563" d="0.165634155273438" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -828,7 +816,7 @@
             </DOMFrame>
             <DOMFrame index="12" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="" centerPoint3DX="0.75" centerPoint3DY="2.55">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" centerPoint3DX="0.75" centerPoint3DY="2.55">
                   <matrix>
                     <Matrix a="0.508438110351563" d="0.165634155273438" tx="-0.15" ty="2.25"/>
                   </matrix>
@@ -853,7 +841,7 @@
             </DOMFrame>
             <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 23">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="9.25" ty="-32.95"/>
                   </matrix>
@@ -865,7 +853,7 @@
             </DOMFrame>
             <DOMFrame index="4" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 29">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="7.7" ty="-14.85"/>
                   </matrix>
@@ -877,7 +865,7 @@
             </DOMFrame>
             <DOMFrame index="5" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 32">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="7.6" ty="-16.35"/>
                   </matrix>
@@ -892,7 +880,7 @@
             </DOMFrame>
             <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" name="" centerPoint3DX="14.55" centerPoint3DY="-86.95">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 38" centerPoint3DX="14.55" centerPoint3DY="-86.95">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="7.1" ty="-15.8"/>
                   </matrix>
@@ -911,7 +899,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 3">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="11.55" ty="-149.2"/>
                   </matrix>
@@ -923,7 +911,7 @@
             </DOMFrame>
             <DOMFrame index="1" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 17">
                   <matrix>
                     <Matrix a="0.220016479492188" b="-0.001953125" c="-0.0014190673828125" d="-0.99407958984375" tx="10.2" ty="-116.2"/>
                   </matrix>
@@ -935,7 +923,7 @@
             </DOMFrame>
             <DOMFrame index="2" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="-0.181655883789063" d="0.0591888427734375" tx="12.6" ty="-16.2"/>
                   </matrix>
@@ -950,7 +938,7 @@
             </DOMFrame>
             <DOMFrame index="3" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="-0.21624755859375" d="0.0704498291015625" tx="12.65" ty="-16.2"/>
                   </matrix>
@@ -965,7 +953,7 @@
             </DOMFrame>
             <DOMFrame index="6" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="-0.21624755859375" d="0.0704498291015625" tx="12.65" ty="-16.2"/>
                   </matrix>
@@ -977,7 +965,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="-0.21624755859375" d="0.0704498291015625" tx="12.65" ty="-16.2"/>
                   </matrix>
@@ -992,7 +980,7 @@
             </DOMFrame>
             <DOMFrame index="13" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6">
                   <matrix>
                     <Matrix a="-0.21624755859375" d="0.0704498291015625" tx="12.65" ty="-16.2"/>
                   </matrix>
@@ -1007,7 +995,7 @@
             </DOMFrame>
             <DOMFrame index="14" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" name="" centerPoint3DX="12.25" centerPoint3DY="-16.1">
+                <DOMSymbolInstance libraryItemName="skill_2/s_2sprite 6" centerPoint3DX="12.25" centerPoint3DY="-16.1">
                   <matrix>
                     <Matrix a="-0.21624755859375" d="0.0704498291015625" tx="12.65" ty="-16.2"/>
                   </matrix>
