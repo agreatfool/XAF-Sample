@@ -21,13 +21,38 @@
     },
     "file.soldier": {
         "url":    "assets/json/soldier.json",
-        "size":    2255,
+        "size":   2255,
         "type":   "config",
         "config": "config.soldier"
     },
+    "file.battlebg": {
+        "url":    "assets/image/bg/WarBG_0.jpg",
+        "size":   180658,
+        "type":   "image"
+    },
+    "file.battlerole100": {
+        "url":    "assets/swf/battle/roles/100.swf",
+        "size":   1146860,
+        "type":   "swf"
+    },
+    "file.battlerole101": {
+        "url":    "assets/swf/battle/roles/101.swf",
+        "size":   683917,
+        "type":   "swf"
+    },
+    "file.battlerole102": {
+        "url":    "assets/swf/battle/roles/102.swf",
+        "size":   449488,
+        "type":   "swf"
+    },
+    "file.battlerole103": {
+        "url":    "assets/swf/battle/roles/103.swf",
+        "size":   677340,
+        "type":   "swf"
+    },
     "file.dummy": {
         "url":    "assets/sth/booklet.zip",
-        "size":    57718280,
+        "size":   57718280,
         "type":   "xml",
         "preload": false
     }

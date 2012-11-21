@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="skill_1/s_1shape 5" itemID="4fb37d12-000002d1" sourceLibraryItemHRef="shape 5" symbolType="graphic" lastModified="1337163026">
+  <timeline>
+    <DOMTimeline name="s_1shape 5">
+      <layers>
+        <DOMLayer name="Layer 1" color="#FFFF00" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <BitmapFill bitmapPath="skill_1/image 4" bitmapIsClipped="true">
+                        <matrix>
+                          <Matrix a="20" d="20" tx="-26.15" ty="-12.25"/>
+                        </matrix>
+                      </BitmapFill>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-523 -245|1437 -245!1437 -245|1437 2095!1437 2095|-523 2095!-523 2095|-523 -245"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

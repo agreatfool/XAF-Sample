@@ -1,0 +1,479 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 325" majorVersion="11" minorVersion="5" buildNumber="325" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <media>
+          <DOMBitmapItem name="image 1" itemID="4f9a208e-00000001" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 1" bitmapDataHRef="Media 1.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 100" itemID="4f9a208e-00000064" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 100" bitmapDataHRef="Media 51.dat" frameRight="1900" frameBottom="2140"/>
+          <DOMBitmapItem name="image 101" itemID="4f9a208e-00000065" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 101" bitmapDataHRef="Media 52.dat" frameRight="3120" frameBottom="2320"/>
+          <DOMBitmapItem name="image 103" itemID="4f9a208e-00000067" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 103" bitmapDataHRef="Media 53.dat" frameRight="5640" frameBottom="5800"/>
+          <DOMBitmapItem name="image 104" itemID="4f9a208e-00000068" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 104" bitmapDataHRef="Media 54.dat" frameRight="1700" frameBottom="2640"/>
+          <DOMBitmapItem name="image 105" itemID="4f9a208e-00000069" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 105" bitmapDataHRef="Media 55.dat" frameRight="3060" frameBottom="2080"/>
+          <DOMBitmapItem name="image 107" itemID="4f9a208e-0000006b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 107" bitmapDataHRef="Media 56.dat" frameRight="3860" frameBottom="1980"/>
+          <DOMBitmapItem name="image 109" itemID="4f9a208e-0000006d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 109" bitmapDataHRef="Media 57.dat" frameRight="1640" frameBottom="2680"/>
+          <DOMBitmapItem name="image 11" itemID="4f9a208e-0000000b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 11" bitmapDataHRef="Media 6.dat" frameRight="1860" frameBottom="2740"/>
+          <DOMBitmapItem name="image 111" itemID="4f9a208e-0000006f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 111" bitmapDataHRef="Media 58.dat" frameRight="5140" frameBottom="5160"/>
+          <DOMBitmapItem name="image 113" itemID="4f9a208e-00000071" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 113" bitmapDataHRef="Media 59.dat" frameRight="5480" frameBottom="2880"/>
+          <DOMBitmapItem name="image 115" itemID="4f9a2090-00000073" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 115" bitmapDataHRef="Media 60.dat" frameRight="6340" frameBottom="3060"/>
+          <DOMBitmapItem name="image 117" itemID="4f9a2090-00000075" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 117" bitmapDataHRef="Media 61.dat" frameRight="4700" frameBottom="4780"/>
+          <DOMBitmapItem name="image 119" itemID="4f9a2090-00000077" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 119" bitmapDataHRef="Media 62.dat" frameRight="6300" frameBottom="3360"/>
+          <DOMBitmapItem name="image 121" itemID="4f9a2090-00000079" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 121" bitmapDataHRef="Media 63.dat" frameRight="6440" frameBottom="3580"/>
+          <DOMBitmapItem name="image 123" itemID="4f9a2090-0000007b" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 123" bitmapDataHRef="Media 64.dat" frameRight="6660" frameBottom="5580"/>
+          <DOMBitmapItem name="image 125" itemID="4f9a2090-0000007d" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 125" bitmapDataHRef="Media 65.dat" frameRight="6820" frameBottom="3720"/>
+          <DOMBitmapItem name="image 127" itemID="4f9a2090-0000007f" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 127" bitmapDataHRef="Media 66.dat" frameRight="7240" frameBottom="3840"/>
+          <DOMBitmapItem name="image 129" itemID="4f9a2090-00000081" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 129" bitmapDataHRef="Media 67.dat" frameRight="5760" frameBottom="5100"/>
+          <DOMBitmapItem name="image 13" itemID="4f9a208e-0000000d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 13" bitmapDataHRef="Media 7.dat" frameRight="1960" frameBottom="2940"/>
+          <DOMBitmapItem name="image 131" itemID="4f9a2090-00000083" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 131" bitmapDataHRef="Media 68.dat" frameRight="6200" frameBottom="2940"/>
+          <DOMBitmapItem name="image 133" itemID="4f9a2090-00000085" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 133" bitmapDataHRef="Media 69.dat" frameRight="6460" frameBottom="1900"/>
+          <DOMBitmapItem name="image 135" itemID="4f9a2090-00000087" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 135" bitmapDataHRef="Media 70.dat" frameRight="4420" frameBottom="2740"/>
+          <DOMBitmapItem name="image 137" itemID="4f9a2090-00000089" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 137" bitmapDataHRef="Media 71.dat" frameRight="5720" frameBottom="880"/>
+          <DOMBitmapItem name="image 139" itemID="4f9a2090-0000008b" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 139" bitmapDataHRef="Media 72.dat" frameRight="1820" frameBottom="2760"/>
+          <DOMBitmapItem name="image 141" itemID="4f9a2090-0000008d" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 141" bitmapDataHRef="Media 73.dat" frameRight="2140" frameBottom="2740"/>
+          <DOMBitmapItem name="image 143" itemID="4f9a2090-0000008f" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 143" bitmapDataHRef="Media 74.dat" frameRight="2200" frameBottom="2760"/>
+          <DOMBitmapItem name="image 145" itemID="4f9a2090-00000091" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 145" bitmapDataHRef="Media 75.dat" frameRight="2240" frameBottom="2560"/>
+          <DOMBitmapItem name="image 147" itemID="4f9a2090-00000093" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 147" bitmapDataHRef="Media 76.dat" frameRight="1960" frameBottom="2480"/>
+          <DOMBitmapItem name="image 149" itemID="4f9a2090-00000095" sourceLastImported="1335500944" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 149" bitmapDataHRef="Media 77.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 15" itemID="4f9a208e-0000000f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 15" bitmapDataHRef="Media 8.dat" frameRight="1960" frameBottom="2860"/>
+          <DOMBitmapItem name="image 17" itemID="4f9a208e-00000011" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 17" bitmapDataHRef="Media 9.dat" frameRight="3620" frameBottom="2860"/>
+          <DOMBitmapItem name="image 19" itemID="4f9a208e-00000013" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 19" bitmapDataHRef="Media 10.dat" frameRight="5880" frameBottom="2840"/>
+          <DOMBitmapItem name="image 21" itemID="4f9a208e-00000015" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 21" bitmapDataHRef="Media 11.dat" frameRight="1940" frameBottom="2840"/>
+          <DOMBitmapItem name="image 23" itemID="4f9a208e-00000017" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 23" bitmapDataHRef="Media 12.dat" frameRight="2020" frameBottom="2860"/>
+          <DOMBitmapItem name="image 25" itemID="4f9a208e-00000019" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 25" bitmapDataHRef="Media 13.dat" frameRight="2060" frameBottom="2600"/>
+          <DOMBitmapItem name="image 27" itemID="4f9a208e-0000001b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 27" bitmapDataHRef="Media 14.dat" frameRight="1980" frameBottom="2600"/>
+          <DOMBitmapItem name="image 29" itemID="4f9a208e-0000001d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 29" bitmapDataHRef="Media 15.dat" frameRight="1800" frameBottom="2600"/>
+          <DOMBitmapItem name="image 3" itemID="4f9a208e-00000003" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 3" bitmapDataHRef="Media 2.dat" frameRight="1440" frameBottom="2520"/>
+          <DOMBitmapItem name="image 31" itemID="4f9a208e-0000001f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 31" bitmapDataHRef="Media 16.dat" frameRight="1580" frameBottom="2600"/>
+          <DOMBitmapItem name="image 33" itemID="4f9a208e-00000021" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 33" bitmapDataHRef="Media 17.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 35" itemID="4f9a208e-00000023" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 35" bitmapDataHRef="Media 18.dat" frameRight="1800" frameBottom="2140"/>
+          <DOMBitmapItem name="image 37" itemID="4f9a208e-00000025" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 37" bitmapDataHRef="Media 19.dat" frameRight="1860" frameBottom="2420"/>
+          <DOMBitmapItem name="image 39" itemID="4f9a208e-00000027" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 39" bitmapDataHRef="Media 20.dat" frameRight="1880" frameBottom="2580"/>
+          <DOMBitmapItem name="image 41" itemID="4f9a208e-00000029" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 41" bitmapDataHRef="Media 21.dat" frameRight="1920" frameBottom="2620"/>
+          <DOMBitmapItem name="image 43" itemID="4f9a208e-0000002b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 43" bitmapDataHRef="Media 22.dat" frameRight="1860" frameBottom="2600"/>
+          <DOMBitmapItem name="image 45" itemID="4f9a208e-0000002d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 45" bitmapDataHRef="Media 23.dat" frameRight="1760" frameBottom="2580"/>
+          <DOMBitmapItem name="image 47" itemID="4f9a208e-0000002f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 47" bitmapDataHRef="Media 24.dat" frameRight="1640" frameBottom="2600"/>
+          <DOMBitmapItem name="image 49" itemID="4f9a208e-00000031" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 49" bitmapDataHRef="Media 25.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 5" itemID="4f9a208e-00000005" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 5" bitmapDataHRef="Media 3.dat" frameRight="1520" frameBottom="2440"/>
+          <DOMBitmapItem name="image 51" itemID="4f9a208e-00000033" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 51" bitmapDataHRef="Media 26.dat" frameRight="1520" frameBottom="2600"/>
+          <DOMBitmapItem name="image 53" itemID="4f9a208e-00000035" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 53" bitmapDataHRef="Media 27.dat" frameRight="1520" frameBottom="2600"/>
+          <DOMBitmapItem name="image 55" itemID="4f9a208e-00000037" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 55" bitmapDataHRef="Media 28.dat" frameRight="1520" frameBottom="2600"/>
+          <DOMBitmapItem name="image 57" itemID="4f9a208e-00000039" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 57" bitmapDataHRef="Media 29.dat" frameRight="1500" frameBottom="2600"/>
+          <DOMBitmapItem name="image 59" itemID="4f9a208e-0000003b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 59" bitmapDataHRef="Media 30.dat" frameRight="1520" frameBottom="2600"/>
+          <DOMBitmapItem name="image 61" itemID="4f9a208e-0000003d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 61" bitmapDataHRef="Media 31.dat" frameRight="1540" frameBottom="2600"/>
+          <DOMBitmapItem name="image 63" itemID="4f9a208e-0000003f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 63" bitmapDataHRef="Media 32.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 65" itemID="4f9a208e-00000041" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 65" bitmapDataHRef="Media 33.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 67" itemID="4f9a208e-00000043" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 67" bitmapDataHRef="Media 34.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 69" itemID="4f9a208e-00000045" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 69" bitmapDataHRef="Media 35.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 7" itemID="4f9a208e-00000007" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 7" bitmapDataHRef="Media 4.dat" frameRight="1540" frameBottom="2460"/>
+          <DOMBitmapItem name="image 71" itemID="4f9a208e-00000047" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 71" bitmapDataHRef="Media 36.dat" frameRight="1580" frameBottom="2600"/>
+          <DOMBitmapItem name="image 73" itemID="4f9a208e-00000049" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 73" bitmapDataHRef="Media 37.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 75" itemID="4f9a208e-0000004b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 75" bitmapDataHRef="Media 38.dat" frameRight="1540" frameBottom="2600"/>
+          <DOMBitmapItem name="image 77" itemID="4f9a208e-0000004d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 77" bitmapDataHRef="Media 39.dat" frameRight="1540" frameBottom="2600"/>
+          <DOMBitmapItem name="image 79" itemID="4f9a208e-0000004f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 79" bitmapDataHRef="Media 40.dat" frameRight="1560" frameBottom="2600"/>
+          <DOMBitmapItem name="image 81" itemID="4f9a208e-00000051" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 81" bitmapDataHRef="Media 41.dat" frameRight="2140" frameBottom="2080"/>
+          <DOMBitmapItem name="image 83" itemID="4f9a208e-00000053" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 83" bitmapDataHRef="Media 42.dat" frameRight="2220" frameBottom="1880"/>
+          <DOMBitmapItem name="image 85" itemID="4f9a208e-00000055" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 85" bitmapDataHRef="Media 43.dat" frameRight="1960" frameBottom="1920"/>
+          <DOMBitmapItem name="image 87" itemID="4f9a208e-00000057" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 87" bitmapDataHRef="Media 44.dat" frameRight="1860" frameBottom="2540"/>
+          <DOMBitmapItem name="image 89" itemID="4f9a208e-00000059" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 89" bitmapDataHRef="Media 45.dat" frameRight="1640" frameBottom="2560"/>
+          <DOMBitmapItem name="image 9" itemID="4f9a208e-00000009" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 9" bitmapDataHRef="Media 5.dat" frameRight="1680" frameBottom="2560"/>
+          <DOMBitmapItem name="image 91" itemID="4f9a208e-0000005b" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 91" bitmapDataHRef="Media 46.dat" frameRight="1240" frameBottom="2500"/>
+          <DOMBitmapItem name="image 93" itemID="4f9a208e-0000005d" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 93" bitmapDataHRef="Media 47.dat" frameRight="1800" frameBottom="2260"/>
+          <DOMBitmapItem name="image 95" itemID="4f9a208e-0000005f" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 95" bitmapDataHRef="Media 48.dat" frameRight="2060" frameBottom="2120"/>
+          <DOMBitmapItem name="image 96" itemID="4f9a208e-00000060" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 96" bitmapDataHRef="Media 49.dat" frameRight="2980" frameBottom="2240"/>
+          <DOMBitmapItem name="image 98" itemID="4f9a208e-00000062" sourceLastImported="1335500942" allowSmoothing="true" useImportedJPEGData="false" originalCompressionType="lossless" quality="100" href="image 98" bitmapDataHRef="Media 50.dat" frameRight="5840" frameBottom="5800"/>
+     </media>
+     <symbols>
+          <Include href="Attack.xml" itemID="4f9a2acf-0000049f" lastModified="1353484603"/>
+          <Include href="Hit.xml" itemID="4f9a2b4d-000004c7" lastModified="1353484610"/>
+          <Include href="shape 2.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000002" lastModified="1335500942"/>
+          <Include href="shape 4.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000004" lastModified="1335500942"/>
+          <Include href="shape 6.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000006" lastModified="1335500942"/>
+          <Include href="shape 8.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000008" lastModified="1335500942"/>
+          <Include href="shape 10.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000000a" lastModified="1335500942"/>
+          <Include href="shape 12.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000000c" lastModified="1335500942"/>
+          <Include href="shape 14.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000000e" lastModified="1335500942"/>
+          <Include href="shape 16.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000010" lastModified="1335500942"/>
+          <Include href="shape 18.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000012" lastModified="1335500942"/>
+          <Include href="shape 20.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000014" lastModified="1335500942"/>
+          <Include href="shape 22.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000016" lastModified="1335500942"/>
+          <Include href="shape 24.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000018" lastModified="1335500942"/>
+          <Include href="shape 26.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000001a" lastModified="1335500942"/>
+          <Include href="shape 28.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000001c" lastModified="1335500942"/>
+          <Include href="shape 30.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000001e" lastModified="1335500942"/>
+          <Include href="shape 32.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000020" lastModified="1335500942"/>
+          <Include href="shape 34.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000022" lastModified="1335500942"/>
+          <Include href="shape 36.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000024" lastModified="1335500942"/>
+          <Include href="shape 38.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000026" lastModified="1335500942"/>
+          <Include href="shape 40.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000028" lastModified="1335500942"/>
+          <Include href="shape 42.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000002a" lastModified="1335500942"/>
+          <Include href="shape 44.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000002c" lastModified="1335500942"/>
+          <Include href="shape 46.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000002e" lastModified="1335500942"/>
+          <Include href="shape 48.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000030" lastModified="1335500942"/>
+          <Include href="shape 50.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000032" lastModified="1335500942"/>
+          <Include href="shape 52.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000034" lastModified="1335500942"/>
+          <Include href="shape 54.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000036" lastModified="1335500942"/>
+          <Include href="shape 56.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000038" lastModified="1335500942"/>
+          <Include href="shape 58.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000003a" lastModified="1335500942"/>
+          <Include href="shape 60.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000003c" lastModified="1335500942"/>
+          <Include href="shape 62.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000003e" lastModified="1335500942"/>
+          <Include href="shape 64.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000040" lastModified="1335500942"/>
+          <Include href="shape 66.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000042" lastModified="1335500942"/>
+          <Include href="shape 68.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000044" lastModified="1335500942"/>
+          <Include href="shape 70.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000046" lastModified="1335500942"/>
+          <Include href="shape 72.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000048" lastModified="1335500942"/>
+          <Include href="shape 74.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000004a" lastModified="1335500942"/>
+          <Include href="shape 76.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000004c" lastModified="1335500942"/>
+          <Include href="shape 78.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000004e" lastModified="1335500942"/>
+          <Include href="shape 80.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000050" lastModified="1335500942"/>
+          <Include href="shape 82.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000052" lastModified="1335500942"/>
+          <Include href="shape 84.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000054" lastModified="1335500942"/>
+          <Include href="shape 86.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000056" lastModified="1335500942"/>
+          <Include href="shape 88.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000058" lastModified="1335500942"/>
+          <Include href="shape 90.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000005a" lastModified="1335500942"/>
+          <Include href="shape 92.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000005c" lastModified="1335500942"/>
+          <Include href="shape 94.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000005e" lastModified="1335500942"/>
+          <Include href="shape 97.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000061" lastModified="1335500942"/>
+          <Include href="shape 99.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000063" lastModified="1335500942"/>
+          <Include href="shape 102.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000066" lastModified="1335500942"/>
+          <Include href="shape 106.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000006a" lastModified="1335500942"/>
+          <Include href="shape 108.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000006c" lastModified="1335500942"/>
+          <Include href="shape 110.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-0000006e" lastModified="1335500942"/>
+          <Include href="shape 112.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000070" lastModified="1335500942"/>
+          <Include href="shape 114.xml" itemIcon="1" loadImmediate="false" itemID="4f9a208e-00000072" lastModified="1335500942"/>
+          <Include href="shape 116.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000074" lastModified="1335500944"/>
+          <Include href="shape 118.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000076" lastModified="1335500944"/>
+          <Include href="shape 120.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000078" lastModified="1335500944"/>
+          <Include href="shape 122.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000007a" lastModified="1335500944"/>
+          <Include href="shape 124.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000007c" lastModified="1335500944"/>
+          <Include href="shape 126.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000007e" lastModified="1335500944"/>
+          <Include href="shape 128.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000080" lastModified="1335500944"/>
+          <Include href="shape 130.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000082" lastModified="1335500944"/>
+          <Include href="shape 132.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000084" lastModified="1335500944"/>
+          <Include href="shape 134.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000086" lastModified="1335500944"/>
+          <Include href="shape 136.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000088" lastModified="1335500944"/>
+          <Include href="shape 138.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000008a" lastModified="1335500944"/>
+          <Include href="shape 140.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000008c" lastModified="1335500944"/>
+          <Include href="shape 142.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-0000008e" lastModified="1335500944"/>
+          <Include href="shape 144.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000090" lastModified="1335500944"/>
+          <Include href="shape 146.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000092" lastModified="1335500944"/>
+          <Include href="shape 148.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000094" lastModified="1335500944"/>
+          <Include href="shape 150.xml" itemIcon="1" loadImmediate="false" itemID="4f9a2090-00000096" lastModified="1335500944"/>
+          <Include href="SkillAttack.xml" itemID="4f9a2bb0-00000503" lastModified="1353484638"/>
+          <Include href="Stand.xml" itemID="4f9a2b7f-000004de" lastModified="1353484644"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="场景 1">
+               <layers>
+                    <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <swatchLists>
+          <swatchList>
+               <swatches>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#003300" hue="80" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006600" hue="80" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009900" hue="80" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC00" hue="80" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330000" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333300" hue="40" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#336600" hue="60" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#339900" hue="67" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#33CC00" hue="70" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#33FF00" hue="72" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#660000" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663300" hue="20" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#666600" hue="40" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#669900" hue="53" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#66CC00" hue="60" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#66FF00" hue="64" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000033" hue="160" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#003333" hue="120" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006633" hue="100" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009933" hue="93" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC33" hue="90" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF33" hue="88" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330033" hue="200" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem color="#336633" hue="80" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339933" hue="80" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC33" hue="80" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF33" hue="80" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660033" hue="220" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663333" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666633" hue="40" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#669933" hue="60" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#66CC33" hue="67" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#66FF33" hue="70" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000066" hue="160" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#003366" hue="140" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#006666" hue="120" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009966" hue="107" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC66" hue="100" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF66" hue="96" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330066" hue="180" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#333366" hue="160" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#336666" hue="120" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339966" hue="100" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC66" hue="93" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF66" hue="90" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660066" hue="200" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663366" hue="200" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem color="#669966" hue="80" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC66" hue="80" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF66" hue="80" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000099" hue="160" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#003399" hue="147" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#006699" hue="133" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#009999" hue="120" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC99" hue="110" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF99" hue="104" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330099" hue="173" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#333399" hue="160" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#336699" hue="140" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#339999" hue="120" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC99" hue="107" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF99" hue="100" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660099" hue="187" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#663399" hue="180" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#666699" hue="160" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#669999" hue="120" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC99" hue="100" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF99" hue="93" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000CC" hue="160" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0033CC" hue="150" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0066CC" hue="140" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0099CC" hue="130" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00CCCC" hue="120" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FFCC" hue="112" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300CC" hue="170" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#3333CC" hue="160" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3366CC" hue="147" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3399CC" hue="133" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33CCCC" hue="120" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FFCC" hue="110" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600CC" hue="180" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#6633CC" hue="173" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#6666CC" hue="160" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#6699CC" hue="140" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66CCCC" hue="120" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FFCC" hue="107" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0033FF" hue="152" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0066FF" hue="144" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0099FF" hue="136" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00CCFF" hue="128" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300FF" hue="168" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3333FF" hue="160" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3366FF" hue="150" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3399FF" hue="140" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33CCFF" hue="130" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33FFFF" hue="120" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600FF" hue="176" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#6633FF" hue="170" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6666FF" hue="160" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#6699FF" hue="147" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66CCFF" hue="133" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66FFFF" hue="120" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990000" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993300" hue="13" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#996600" hue="27" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#999900" hue="40" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#99CC00" hue="50" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#99FF00" hue="56" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC0000" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3300" hue="10" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC6600" hue="20" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC9900" hue="30" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCCC00" hue="40" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCFF00" hue="48" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3300" hue="8" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF6600" hue="16" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF9900" hue="24" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFCC00" hue="32" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990033" hue="227" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993333" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996633" hue="20" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#999933" hue="40" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#99CC33" hue="53" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#99FF33" hue="60" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC0033" hue="230" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3333" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6633" hue="13" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC9933" hue="27" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCCC33" hue="40" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCFF33" hue="50" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF0033" hue="232" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3333" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6633" hue="10" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF9933" hue="20" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFCC33" hue="30" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFFF33" hue="40" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990066" hue="213" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993366" hue="220" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996666" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999966" hue="40" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#99CC66" hue="60" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#99FF66" hue="67" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC0066" hue="220" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3366" hue="227" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6666" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9966" hue="20" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCCC66" hue="40" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCFF66" hue="53" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF0066" hue="224" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3366" hue="230" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6666" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9966" hue="13" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFCC66" hue="27" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFFF66" hue="40" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990099" hue="200" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993399" hue="200" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996699" hue="200" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem color="#99CC99" hue="80" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FF99" hue="80" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC0099" hue="210" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3399" hue="213" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6699" hue="220" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9999" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCC99" hue="40" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCFF99" hue="60" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FF0099" hue="216" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3399" hue="220" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6699" hue="227" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9999" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCC99" hue="20" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFFF99" hue="40" saturation="239" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900CC" hue="190" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#9933CC" hue="187" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#9966CC" hue="180" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#9999CC" hue="160" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99CCCC" hue="120" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FFCC" hue="100" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00CC" hue="200" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC33CC" hue="200" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC66CC" hue="200" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC99CC" hue="200" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem color="#CCFFCC" hue="80" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00CC" hue="208" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33CC" hue="210" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66CC" hue="213" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99CC" hue="220" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCCC" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFCC" hue="40" saturation="239" brightness="216"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900FF" hue="184" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#9933FF" hue="180" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#9966FF" hue="173" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#9999FF" hue="160" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99CCFF" hue="140" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99FFFF" hue="120" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00FF" hue="192" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC33FF" hue="190" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC66FF" hue="187" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC99FF" hue="180" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CCCCFF" hue="160" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#CCFFFF" hue="120" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33FF" hue="200" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66FF" hue="200" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99FF" hue="200" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCFF" hue="200" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+               </swatches>
+          </swatchList>
+     </swatchLists>
+     <extendedSwatchLists>
+          <swatchList>
+               <swatches>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#FFFFFF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </LinearGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#FFFFFF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#FF0000" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#00FF00" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#0000FF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#0066FD" ratio="0"/>
+                         <GradientEntry color="#FFFFFF" ratio="0.376470588235294"/>
+                         <GradientEntry color="#FFFFFF" ratio="0.47843137254902"/>
+                         <GradientEntry color="#996600" ratio="0.501960784313725"/>
+                         <GradientEntry color="#FFCC00" ratio="0.666666666666667"/>
+                         <GradientEntry color="#FFFFFF" ratio="1"/>
+                    </LinearGradientSwatchItem>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#FF0000" ratio="0"/>
+                         <GradientEntry color="#FFFF00" ratio="0.164705882352941"/>
+                         <GradientEntry color="#00FF00" ratio="0.364705882352941"/>
+                         <GradientEntry color="#00FFFF" ratio="0.498039215686275"/>
+                         <GradientEntry color="#0000FF" ratio="0.666666666666667"/>
+                         <GradientEntry color="#FF00FF" ratio="0.831372549019608"/>
+                         <GradientEntry color="#FF0000" ratio="1"/>
+                    </LinearGradientSwatchItem>
+               </swatches>
+          </swatchList>
+     </extendedSwatchLists>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="1146860" publishTime="1335508610"/>
+          <PublishItem publishSize="1146836" publishTime="1335503875"/>
+     </publishHistory>
+</DOMDocument>

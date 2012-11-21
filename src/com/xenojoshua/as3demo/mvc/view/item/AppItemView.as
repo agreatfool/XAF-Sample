@@ -4,7 +4,7 @@ package com.xenojoshua.as3demo.mvc.view.item
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
 	import com.xenojoshua.af.mvc.view.screen.XafScreenManager;
 	import com.xenojoshua.af.resource.XafRsManager;
-	import com.xenojoshua.af.utils.display.XafDisplayUtil;
+	import com.xenojoshua.af.mvc.view.utils.XafDisplayUtil;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.MovieClip;
