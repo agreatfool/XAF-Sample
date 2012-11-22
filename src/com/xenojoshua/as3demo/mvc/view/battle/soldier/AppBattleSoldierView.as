@@ -11,12 +11,13 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 	
 	public class AppBattleSoldierView extends XafRobotlegsView
 	{
-		private var _hpLayer:Sprite;
+		private var _dataLayer:Sprite;
 		private var _roleLayer:Sprite;
 		private var _effectLayer:Sprite;
 		
 		private var _roleId:String;
 		private var _hp:int;
+		private var _rage:int;
 		private var _attack:int;
 		private var _defence:int;
 		private var _isAttacker:Boolean;
@@ -36,6 +37,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 			
 			this._roleId     = soldierInfo.roleId;
 			this._hp         = soldierInfo.hp;
+			this._rage       = 50;
 			this._attack     = soldierInfo.attack;
 			this._defence    = soldierInfo.defence;
 			this._isAttacker = soldierInfo.isAttacker;
@@ -44,36 +46,41 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 			
 			this._grid = grid;
 			
-			this._hpLayer = new Sprite();
+			this._dataLayer = new Sprite();
 			this._roleLayer = new Sprite();
 			this._effectLayer = new Sprite();
 			
-			this.stand();
+			this.addChild(this._dataLayer);
+			this.addChild(this._roleLayer);
+			this.addChild(this._roleLayer);
+			
+			this._grid.addChild(this);
+			this.playStand();
 		}
 		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* PLAY ANIMATION
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-		public function stand():void {
+		public function playStand():void {
 			this.removeAllLayerAnime();
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(this._roleId);
 			this.scale(movie);
 			this._roleLayer.addChild(movie);
 		}
 		
-		public function attack():void {
+		public function playAttack():void {
 			
 		}
 		
-		public function skill():void {
+		public function playSkill():void {
 			
 		}
 		
-		public function hurt():void {
+		public function playHurt():void {
 			
 		}
 		
-		public function die():void {
+		public function playDie():void {
 			
 		}
 		
@@ -97,7 +104,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 */
 		private function removeAllLayerAnime(includeHp:Boolean = false):void {
 			if (includeHp) {
-				this.removeAllAnime(this._hpLayer);
+				this.removeAllAnime(this._dataLayer);
 			}
 			this.removeAllAnime(this._roleLayer);
 			this.removeAllAnime(this._effectLayer);
@@ -115,5 +122,32 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 				}
 			}
 		}
+		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* GETTER & SETTER
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		public function get roleId():String { return this._roleId; }
+		public function set roleId(val:String):void { this._roleId = val; }
+		
+		public function get hp():int { return this._hp; }
+		public function set hp(val:int):void { this._hp = val; }
+		
+		public function get rage():int { return this._rage; }
+		public function set rage(val:int):void { this._rage = val; }
+		
+		public function get attack():int { return this._attack; }
+		public function set attack(val:int):void { this._attack = val; }
+		
+		public function get defence():int { return this._defence; }
+		public function set defence(val:int):void { this._defence = val; }
+		
+		public function get isAttacker():Boolean { return this._isAttacker; }
+		public function set isAttacker(val:Boolean):void { this._isAttacker = val; }
+		
+		public function get isMagic():Boolean { return this._isMagic; }
+		public function set isMagic(val:Boolean):void { this._isMagic = val; }
+		
+		public function get skillId():int { return this._skillId; }
+		public function set skillId(val:int):void { this._skillId = val; }
 	}
 }

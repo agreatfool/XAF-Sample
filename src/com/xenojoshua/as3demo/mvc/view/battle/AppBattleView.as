@@ -72,17 +72,17 @@ package com.xenojoshua.as3demo.mvc.view.battle
 			// FOR TEST
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldierInfo(0, '102', 10000, 1000, 200, true, false, 0),
+				new AppBattleSoldierInfo(3, '102', 10000, 1000, 200, true, false, 0),
 				new AppBattleSoldierInfo(1, '100', 10000, 1000, 200, true, false, 1),
 				new AppBattleSoldierInfo(2, '101', 10000, 1000, 200, true, true, 2)
 			];
 			var defenders:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldierInfo(0, '001', 10000, 1000, 200, false, false, 0),
+				new AppBattleSoldierInfo(3, '001', 10000, 1000, 200, false, false, 0),
 				new AppBattleSoldierInfo(1, '102', 10000, 1000, 200, false, false, 1),
-				new AppBattleSoldierInfo(2, '101', 10000, 1000, 200, false, true, 2)
+				new AppBattleSoldierInfo(5, '101', 10000, 1000, 200, false, true, 2)
 			];
-			new AppBattleProcessor(attackers, defenders);
+			new AppBattleProcessor(this, attackers, defenders);
 		}
 	}
 }

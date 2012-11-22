@@ -26,6 +26,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.grid
 		 */
 		public function AppBattleGridView() {
 			super();
+			this._grids = new Object();
 		}
 		
 		protected const GRID_PREFIX:String = 'grid';
