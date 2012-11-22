@@ -14,7 +14,7 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	[SWF(width="950", height="600", frameRate="30", backgroundColor="#FFFFFF")]
+	[SWF(width="950", height="600", frameRate="24", backgroundColor="#FFFFFF")]
 	public class Preloader extends Sprite implements XafIPreloader
 	{
 		private var _isLocal:Boolean = true;
@@ -84,6 +84,7 @@ package
 		public function loadPreloadItems(loader:XafInitLoader):void {
 			// register resources
 			var resources:Object = loader.getJSON();
+			XafRsManager.instance.registerResources(resources);
 			loader.dispose();
 			
 			// register sceen layers
@@ -100,7 +101,6 @@ package
 			
 			// resource loading
 			XafRsManager.instance.initializeLoadingBar(null, null, 1);
-			XafRsManager.instance.registerResources(resources);
 			XafRsManager.instance.registerCompleteSignal(this.loadSystem);
 			XafRsManager.instance.loadPreloads();
 		}

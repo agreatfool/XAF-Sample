@@ -15,6 +15,7 @@ package com.xenojoshua.as3demo.resource
 		// FILES IMAGE
 		public static const FILE_BATTLE_BG:String       = 'file.battlebg';
 		// FILES SWF ANIMATION
+		public static const FILE_BATTLE_GRIDS:String    = 'file.battlegrids';
 		public static const FILE_BATTLE_ROLE_001:String = 'file.battlerole001';
 		public static const FILE_BATTLE_ROLE_100:String = 'file.battlerole100';
 		public static const FILE_BATTLE_ROLE_101:String = 'file.battlerole101';
@@ -32,6 +33,7 @@ package com.xenojoshua.as3demo.resource
 		public static const CLASS_CITY:String           = 'main.TestBg1';
 		public static const CLASS_ITEM:String           = 'main.InventoryUI';
 		// CLASSES BATTLE
+		public static const CLASS_BATTLE_GRIDS:String   = 'battle.Grids';
 		public static const CLASS_BATTLE_STAND:String   = 'battle.Stand';
 		public static const CLASS_BATTLE_HIT:String     = 'battle.Hit';
 		public static const CLASS_BATTLE_ATTACK:String  = 'battle.Attack';

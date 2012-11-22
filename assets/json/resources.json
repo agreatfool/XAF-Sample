@@ -30,6 +30,11 @@
         "size":   180658,
         "type":   "image"
     },
+    "file.battlegrids": {
+        "url":    "assets/swf/battle/grids.swf",
+        "size":   852,
+        "type":   "swf"
+    },
     "file.battlerole001": {
         "url":    "assets/swf/battle/roles/role001.swf",
         "size":   534239,

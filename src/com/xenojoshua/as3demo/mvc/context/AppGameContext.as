@@ -2,6 +2,7 @@ package com.xenojoshua.as3demo.mvc.context
 {
 	import com.xenojoshua.as3demo.mvc.robotlegs.BootstrapCommands;
 	import com.xenojoshua.as3demo.mvc.robotlegs.BootstrapMediators;
+	import com.xenojoshua.as3demo.mvc.robotlegs.BootstrapSingleton;
 	
 	import flash.display.DisplayObjectContainer;
 	
@@ -26,6 +27,7 @@ package com.xenojoshua.as3demo.mvc.context
 			super.startup();
 			new BootstrapMediators(this.mediatorMap);
 			new BootstrapCommands(this.commandMap);
+			new BootstrapSingleton(this.injector);
 		}
 	}
 }
