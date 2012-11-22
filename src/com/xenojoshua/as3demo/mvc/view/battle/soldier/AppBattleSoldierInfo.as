@@ -5,11 +5,11 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		public var gridId:int;
 		public var roleId:String;
 		public var hp:int;
-		public var attack:int; // demo: damage = attack - defence
+		public var attack:int; // FIXME demo: damage = attack - defence
 		public var defence:int;
 		public var isAttacker:Boolean;
-		public var isMagic:Boolean; // demo: only affect the effect anime
-		public var skillId:int; // demo: all skills would affect all enemies
+		public var isMagic:Boolean; // FIXME demo: only affect the effect anime
+		public var skillId:int; // FIXME demo: all skills would affect all enemies
 		
 		public function AppBattleSoldierInfo(
 			gridId:int, roleId:String, hp:int, attack:int,

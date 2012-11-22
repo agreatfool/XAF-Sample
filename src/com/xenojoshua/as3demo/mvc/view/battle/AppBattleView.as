@@ -69,20 +69,28 @@ package com.xenojoshua.as3demo.mvc.view.battle
 			AppBattleBackgroundView.instance.registerBgImage(XafImageManager.instance.getImage(AppResources.FILE_BATTLE_BG));
 			AppBattleGridView.instance.registerGrids(XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_GRIDS, AppResources.CLASS_BATTLE_GRIDS));
 			
-			// FOR TEST
+			// FIXME FOR TEST: data shall got form server, not hard coded here
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldierInfo(3, '102', 10000, 1000, 200, true, false, 0),
-				new AppBattleSoldierInfo(1, '100', 10000, 1000, 200, true, false, 1),
-				new AppBattleSoldierInfo(2, '101', 10000, 1000, 200, true, true, 2)
+				new AppBattleSoldierInfo(3, '102', 50000, 1000, 200, true, false, 0),
+				new AppBattleSoldierInfo(1, '100', 50000, 1000, 200, true, false, 1),
+				new AppBattleSoldierInfo(2, '101', 50000, 1000, 200, true, true, 2)
 			];
 			var defenders:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldierInfo(3, '001', 10000, 1000, 200, false, false, 0),
-				new AppBattleSoldierInfo(1, '102', 10000, 1000, 200, false, false, 1),
-				new AppBattleSoldierInfo(5, '101', 10000, 1000, 200, false, true, 2)
+				new AppBattleSoldierInfo(3, '001', 50000, 1000, 200, false, false, 0),
+				new AppBattleSoldierInfo(1, '102', 50000, 1000, 200, false, false, 1),
+				new AppBattleSoldierInfo(5, '101', 50000, 1000, 200, false, true, 2)
 			];
-			new AppBattleProcessor(this, attackers, defenders);
+			new AppBattleProcessor(this, attackers, defenders); // start the battle
+		}
+		
+		/**
+		 * End the battle.
+		 * @return void
+		 */
+		public function endBattle():void {
+			this.dispose();
 		}
 	}
 }

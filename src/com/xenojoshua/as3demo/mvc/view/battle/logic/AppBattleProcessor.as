@@ -25,6 +25,9 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 		private var _attackers:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		private var _defenders:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		
+		// STATUS
+		//TODO
+		
 		
 		/**
 		 * Initialize AppGameProcesser.
@@ -61,7 +64,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 				XafConsole.DEBUG,
 				'AppBattleProcessor: Battle end! Time consumed: [' + (XafTime.getRelativeTimer() - this.startTime) + '] millisecond'
 			);
-			this.battleView.dispose();
+			this.battleView.endBattle();
 		}
 		
 		/**
@@ -123,6 +126,8 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 			var actor:AppBattleSoldierView = isAttacker ? this._attackers[gridId] : this._defenders[gridId];
 			var useSkill:Boolean = (actor.rage >= 100) ? true : false;
 			var targets:Object = this.findTargetInBattle(gridId, isAttacker, useSkill);
+			
+			//TODO
 		}
 		
 		/**
@@ -140,9 +145,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 			// 目标全体
 			if (useSkill) {
 				for (var recpGridId:String in recipients) {
-					if (recipients[recpGridId]) {
-						targets[recpGridId] = recipients[recpGridId];
-					}
+					targets[recpGridId] = recipients[recpGridId];
 				}
 				XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Target found: ' + JSON.stringify(targets));
 				return targets;
