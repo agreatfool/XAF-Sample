@@ -2,7 +2,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
 	import com.xenojoshua.af.resource.manager.XafSwfManager;
-	import com.xenojoshua.as3demo.mvc.view.battle.render.AppBattleAnimeManager;
+	import com.xenojoshua.as3demo.battle.display.render.AppBattleAnimeManager;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.DisplayObjectContainer;

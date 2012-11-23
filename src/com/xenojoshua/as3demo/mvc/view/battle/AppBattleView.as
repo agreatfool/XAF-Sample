@@ -4,9 +4,13 @@ package com.xenojoshua.as3demo.mvc.view.battle
 	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.af.resource.manager.XafImageManager;
 	import com.xenojoshua.af.resource.manager.XafSwfManager;
-	import com.xenojoshua.as3demo.mvc.view.battle.background.AppBattleBackgroundView;
-	import com.xenojoshua.as3demo.mvc.view.battle.grid.AppBattleGridView;
-	import com.xenojoshua.as3demo.mvc.view.battle.logic.AppBattleProcessor;
+	import com.xenojoshua.as3demo.battle.display.layers.AppBattleBgManager;
+	import com.xenojoshua.as3demo.battle.display.layers.AppBattleEffectManager;
+	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
+	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
+	import com.xenojoshua.as3demo.mvc.view.battle.layers.background.AppBattleBackgroundView;
+	import com.xenojoshua.as3demo.mvc.view.battle.layers.effect.AppBattleEffectView;
+	import com.xenojoshua.as3demo.mvc.view.battle.layers.grid.AppBattleGridView;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierInfo;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 	import com.xenojoshua.as3demo.resource.AppResources;
@@ -19,6 +23,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 	{
 		private var _backgroundLayer:AppBattleBackgroundView;
 		private var _gridsLayer:AppBattleGridView;
+		private var _effectLayer:AppBattleEffectView;
 		
 		/**
 		 * Initialize AppBattleView.
@@ -27,11 +32,13 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		public function AppBattleView() {
 			super();
 			
-			this._backgroundLayer = AppBattleBackgroundView.instance;
-			this._gridsLayer      = AppBattleGridView.instance;
+			this._backgroundLayer = new AppBattleBackgroundView();
+			this._gridsLayer      = new AppBattleGridView();
+			this._effectLayer     = new AppBattleEffectView();
 			
 			this.addChild(this._backgroundLayer);
 			this.addChild(this._gridsLayer);
+			this.addChild(this._effectLayer);
 			
 			this.startLoading();
 		}
@@ -66,9 +73,25 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		 */
 		private function endLoading(rsManager:XafRsManager):void {
 			rsManager.dispose();
-			AppBattleBackgroundView.instance.registerBgImage(XafImageManager.instance.getImage(AppResources.FILE_BATTLE_BG));
-			AppBattleGridView.instance.registerGrids(XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_GRIDS, AppResources.CLASS_BATTLE_GRIDS));
-			
+			this.prepareBattle();
+			this.startBattle();
+		}
+		
+		/**
+		 * Prepare battle display.
+		 * @return void
+		 */
+		private function prepareBattle():void {
+			AppBattleBgManager.instance.registerBgView(this._backgroundLayer);
+			AppBattleGridManager.instance.regiterGridView(this._gridsLayer);
+			AppBattleEffectManager.instance.registerBgView(this._effectLayer);
+		}
+		
+		/**
+		 * Get the battle data & start to play the game.
+		 * @return void
+		 */
+		private function startBattle():void {
 			// FIXME FOR TEST: data shall got form server, not hard coded here
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
@@ -83,14 +106,6 @@ package com.xenojoshua.as3demo.mvc.view.battle
 				new AppBattleSoldierInfo(5, '101', 50000, 1000, 200, false, true, 2)
 			];
 			new AppBattleProcessor(this, attackers, defenders); // start the battle
-		}
-		
-		/**
-		 * End the battle.
-		 * @return void
-		 */
-		public function endBattle():void {
-			this.dispose();
 		}
 	}
 }

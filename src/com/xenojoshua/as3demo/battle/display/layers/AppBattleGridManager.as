@@ -1,46 +1,52 @@
-package com.xenojoshua.as3demo.mvc.view.battle.grid
+package com.xenojoshua.as3demo.battle.display.layers
 {
-	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
+	import com.xenojoshua.af.resource.manager.XafSwfManager;
+	import com.xenojoshua.as3demo.mvc.view.battle.layers.grid.AppBattleGridView;
+	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
-	
-	public class AppBattleGridView extends XafRobotlegsView
+
+	public class AppBattleGridManager
 	{
-		private static var _instance:AppBattleGridView;
+		private static var _instance:AppBattleGridManager;
 		
 		/**
 		 * Get instance of AppBattleGridManager.
 		 * @return AppBattleGridManager _mgr
 		 */
-		public static function get instance():AppBattleGridView {
-			if (!AppBattleGridView._instance) {
-				AppBattleGridView._instance = new AppBattleGridView();
+		public static function get instance():AppBattleGridManager {
+			if (!AppBattleGridManager._instance) {
+				AppBattleGridManager._instance = new AppBattleGridManager();
 			}
-			return AppBattleGridView._instance;
+			return AppBattleGridManager._instance;
 		}
 		
 		/**
-		 * Initialize AppBattleGridView.
+		 * Initialize AppBattleGridManager.
 		 * @return void
 		 */
-		public function AppBattleGridView() {
-			super();
+		public function AppBattleGridManager() {
 			this._grids = new Object();
 		}
 		
-		protected const GRID_PREFIX:String = 'grid';
-		protected const GRID_ATK_ID_PREFIX:String = '0';
-		protected const GRID_DEF_ID_PREFIX:String = '1';
+		private const GRID_PREFIX:String = 'grid';
+		private const GRID_ATK_ID_PREFIX:String = '0';
+		private const GRID_DEF_ID_PREFIX:String = '1';
 		
-		protected var _grids:Object; // <name:String, grid:DisplayObjectContainer>
+		private var _view:AppBattleGridView;
+		
+		private var _grids:Object; // <name:String, grid:DisplayObjectContainer>
 		
 		/**
-		 * Register battle background grids.
-		 * @param MovieClip movie
+		 * Register AppBattleGridView into this manager.
+		 * @param AppBattleGridView view
 		 * @return void
 		 */
-		public function registerGrids(movie:MovieClip):void {
+		public function regiterGridView(view:AppBattleGridView):void {
+			this._view = view;
+			
+			var movie:MovieClip = XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_GRIDS, AppResources.CLASS_BATTLE_GRIDS);
 			for (var gridId:int = 0; gridId < 9; ++gridId) {
 				var gridAtkName:String = this.GRID_PREFIX + this.GRID_ATK_ID_PREFIX + gridId.toString();
 				var gridDefName:String = this.GRID_PREFIX + this.GRID_DEF_ID_PREFIX + gridId.toString();
@@ -48,7 +54,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.grid
 				this._grids[gridDefName] = movie[gridDefName] as DisplayObjectContainer;
 			}
 			
-			this.addChild(movie);
+			this._view.addChild(movie);
 		}
 		
 		/**

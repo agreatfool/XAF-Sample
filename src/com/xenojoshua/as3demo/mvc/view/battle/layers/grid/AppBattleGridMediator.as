@@ -1,4 +1,4 @@
-package com.xenojoshua.as3demo.mvc.view.battle.grid
+package com.xenojoshua.as3demo.mvc.view.battle.layers.grid
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsMediator;
 	

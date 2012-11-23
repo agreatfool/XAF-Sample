@@ -1,6 +1,6 @@
 package com.xenojoshua.as3demo.mvc.robotlegs
 {
-	import com.xenojoshua.as3demo.mvc.view.battle.background.AppBattleBackgroundView;
+	import com.xenojoshua.as3demo.mvc.view.battle.layers.background.AppBattleBackgroundView;
 	
 	import org.robotlegs.core.IInjector;
 

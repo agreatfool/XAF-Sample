@@ -1,4 +1,4 @@
-package com.xenojoshua.as3demo.mvc.view.battle.render
+package com.xenojoshua.as3demo.battle.display.render
 {
 	import com.xenojoshua.af.resource.manager.XafSwfManager;
 	import com.xenojoshua.as3demo.resource.AppResources;

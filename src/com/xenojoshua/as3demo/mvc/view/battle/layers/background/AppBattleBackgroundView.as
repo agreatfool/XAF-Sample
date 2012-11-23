@@ -1,4 +1,4 @@
-package com.xenojoshua.as3demo.mvc.view.battle.background
+package com.xenojoshua.as3demo.mvc.view.battle.layers.background
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
 	

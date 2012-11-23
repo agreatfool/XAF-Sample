@@ -1,9 +1,9 @@
-package com.xenojoshua.as3demo.mvc.view.battle.logic
+package com.xenojoshua.as3demo.battle.logic
 {
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.time.XafTime;
+	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
-	import com.xenojoshua.as3demo.mvc.view.battle.grid.AppBattleGridView;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierInfo;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 
@@ -43,10 +43,10 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 			this._defenders = new Object();
 			
 			for each (var atkInfo:AppBattleSoldierInfo in attackers) {
-				this._attackers[atkInfo.gridId] = new AppBattleSoldierView(atkInfo, AppBattleGridView.instance.getAtkGrid(atkInfo.gridId));
+				this._attackers[atkInfo.gridId] = new AppBattleSoldierView(atkInfo, AppBattleGridManager.instance.getAtkGrid(atkInfo.gridId));
 			}
 			for each (var defInfo:AppBattleSoldierInfo in defenders) {
-				this._defenders[defInfo.gridId] = new AppBattleSoldierView(defInfo, AppBattleGridView.instance.getDefGrid(defInfo.gridId));
+				this._defenders[defInfo.gridId] = new AppBattleSoldierView(defInfo, AppBattleGridManager.instance.getDefGrid(defInfo.gridId));
 			}
 			
 			// start to play the game
@@ -64,7 +64,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 				XafConsole.DEBUG,
 				'AppBattleProcessor: Battle end! Time consumed: [' + (XafTime.getRelativeTimer() - this.startTime) + '] millisecond'
 			);
-			this.battleView.endBattle();
+			this.battleView.dispose();
 		}
 		
 		/**
