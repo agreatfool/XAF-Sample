@@ -10,5 +10,15 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		public function AppBattleSoldierMediator() {
 			super();
 		}
+		
+		/**
+		 * Register anime start events.
+		 * @return void
+		 */
+		override public function onRegister():void {
+			super.onRegister();
+			
+			
+		}
 	}
 }

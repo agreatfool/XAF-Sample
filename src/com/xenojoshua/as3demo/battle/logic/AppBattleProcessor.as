@@ -70,6 +70,10 @@ package com.xenojoshua.as3demo.battle.logic
 		private var _attackers:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		private var _defenders:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		
+		// STATUS
+		private var _currGridId:int;
+		private var _currIsAttacker:Boolean;
+		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* INITIALIZATION
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -110,6 +114,15 @@ package com.xenojoshua.as3demo.battle.logic
 			this._startTime = XafTime.getRelativeTimer();
 			XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Battle start!');
 			this.findActor(-1, true);
+		}
+		
+		/**
+		 * Called after animation ends.
+		 * Go on to loop the game logic.
+		 * @return void
+		 */
+		public function loop():void {
+			this.findActor(this._currGridId, this._currIsAttacker);
 		}
 		
 		/**
@@ -171,6 +184,8 @@ package com.xenojoshua.as3demo.battle.logic
 					this.findActor(-1, !isAttacker);
 				}
 			} else {
+				this._currGridId = Number(target);
+				this._currIsAttacker = isAttacker;
 				this.playRound(Number(target), isAttacker);
 			}
 		}
