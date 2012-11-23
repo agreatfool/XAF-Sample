@@ -127,7 +127,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.logic
 			var useSkill:Boolean = (actor.rage >= 100) ? true : false;
 			var targets:Object = this.findTargetInBattle(gridId, isAttacker, useSkill);
 			
-			//TODO
+			// TODO
 		}
 		
 		/**
