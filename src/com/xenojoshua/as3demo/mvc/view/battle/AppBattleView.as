@@ -74,7 +74,6 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		private function endLoading(rsManager:XafRsManager):void {
 			rsManager.dispose();
 			this.prepareBattle();
-			this.startBattle();
 		}
 		
 		/**
@@ -85,27 +84,6 @@ package com.xenojoshua.as3demo.mvc.view.battle
 			AppBattleBgManager.instance.registerBgView(this._backgroundLayer);
 			AppBattleGridManager.instance.regiterGridView(this._gridsLayer);
 			AppBattleEffectManager.instance.registerBgView(this._effectLayer);
-		}
-		
-		/**
-		 * Get the battle data & start to play the game.
-		 * @return void
-		 */
-		private function startBattle():void {
-			// FIXME FOR TEST: data shall got form server, not hard coded here
-			var attackers:Array = [
-				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldier(3, '102', 50000, 1000, 200, true, false, 0),
-				new AppBattleSoldier(1, '100', 50000, 1000, 200, true, false, 1),
-				new AppBattleSoldier(2, '101', 50000, 1000, 200, true, true, 2)
-			];
-			var defenders:Array = [
-				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
-				new AppBattleSoldier(3, '001', 50000, 1000, 200, false, false, 0),
-				new AppBattleSoldier(1, '102', 50000, 1000, 200, false, false, 1),
-				new AppBattleSoldier(5, '101', 50000, 1000, 200, false, true, 2)
-			];
-			new AppBattleProcessor(this, attackers, defenders); // start the battle
 		}
 	}
 }

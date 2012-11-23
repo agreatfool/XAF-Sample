@@ -3,16 +3,61 @@ package com.xenojoshua.as3demo.battle.logic
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.time.XafTime;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
-	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
 	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
+	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;
+	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 
 	public class AppBattleProcessor
 	{
+		private static var _instance:AppBattleProcessor;
+		
+		/**
+		 * Get instance of AppBattleProcessor.
+		 * @return AppBattleProcessor _instance;
+		 */
+		public static function get instance():AppBattleProcessor {
+			if (!AppBattleProcessor._instance) {
+				AppBattleProcessor._instance = new AppBattleProcessor();
+			}
+			return AppBattleProcessor._instance;
+		}
+		
+		/**
+		 * Initialize AppGameProcesser.
+		 * @return void
+		 */
+		public function AppBattleProcessor() {
+			this._attackers = new Object();
+			this._defenders = new Object();
+		}
+		
+		/**
+		 * Destory the battle processor.
+		 * @return void
+		 */
+		public function dispose():void {
+			this._mediator = null;
+			this._startTime = 0;
+			this._round = 0;
+			this._attackers = {};
+			this._defenders = {};
+		}
+		
 		// GLOBAL PARAMS
-		private var battleView:AppBattleView; // battle main view, used to end battle
-		private var startTime:int; // battler start millisecond
-		private var round:int = 0; // 总战斗回合数
+		/**
+		 * Used to control battle view systems, since the battle logic processor is out of the robotlegs system.
+		 * It's impossible to touch the views without the mediator registered in it.
+		 */
+		private var _mediator:AppBattleMediator;
+		/**
+		 * Battler started time (millisecond)
+		 */
+		private var _startTime:int;
+		/**
+		 * Total battle rounds
+		 */
+		private var _round:int = 0;
 		
 		// CONFIG
 		private const BATTLE_TARGET_GRIDS:Array = [ // 默认的战斗目标查找顺序
@@ -25,32 +70,44 @@ package com.xenojoshua.as3demo.battle.logic
 		private var _attackers:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		private var _defenders:Object; // <gridId:int, soldier:AppBattleSoldierView>
 		
-		// STATUS
-		//TODO
-		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* INITIALIZATION
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		/**
+		 * Register battle robotlegs mediator.
+		 * @param AppBattleMediator mediator
+		 * @return AppBattleProcessor processor
+		 */
+		public function registerRobotlegsController(mediator:AppBattleMediator):AppBattleProcessor {
+			this._mediator = mediator;
+			return this;
+		}
 		
 		/**
-		 * Initialize AppGameProcesser.
-		 * @param AppBattleView view
+		 * Register battle data.
 		 * @param Array attackers 'AppBattleSoldierInfo'
 		 * @param Array defenders 'AppBattleSoldierInfo'
-		 * @return void
+		 * @return AppBattleProcessor processor
 		 */
-		public function AppBattleProcessor(view:AppBattleView, attackers:Array, defenders:Array) {
-			this.battleView = view;
-			
-			this._attackers = new Object();
-			this._defenders = new Object();
-			
+		public function registerBattleData(attackers:Array, defenders:Array):AppBattleProcessor {
 			for each (var atkInfo:AppBattleSoldier in attackers) {
 				this._attackers[atkInfo.gridId] = new AppBattleSoldierView(atkInfo, AppBattleGridManager.instance.getAtkGrid(atkInfo.gridId));
 			}
 			for each (var defInfo:AppBattleSoldier in defenders) {
 				this._defenders[defInfo.gridId] = new AppBattleSoldierView(defInfo, AppBattleGridManager.instance.getDefGrid(defInfo.gridId));
 			}
-			
-			// start to play the game
-			this.startTime = XafTime.getRelativeTimer();
+			return this;
+		}
+		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* BATTLE CONTROL
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		/**
+		 * Start the battle.
+		 * @return void
+		 */
+		public function startBattle():void {
+			this._startTime = XafTime.getRelativeTimer();
 			XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Battle start!');
 			this.findActor(-1, true);
 		}
@@ -62,11 +119,15 @@ package com.xenojoshua.as3demo.battle.logic
 		private function endBattle():void {
 			XafConsole.instance.log(
 				XafConsole.DEBUG,
-				'AppBattleProcessor: Battle end! Time consumed: [' + (XafTime.getRelativeTimer() - this.startTime) + '] millisecond'
+				'AppBattleProcessor: Battle end! Time consumed: [' + (XafTime.getRelativeTimer() - this._startTime) + '] millisecond'
 			);
-			this.battleView.dispose();
+			this.dispose();
+			this._mediator.endBattle();
 		}
 		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* BATTLE LOGICS
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
 		 * Find actor soldier, and play battle round.
 		 * @param int previousGridId
@@ -79,8 +140,8 @@ package com.xenojoshua.as3demo.battle.logic
 			var actors:Object = isAttacker ? this._attackers : this._defenders;
 			if (-1 == previousGridId) { // means it's the start of the attackers or defenders
 				if (isAttacker) {
-					++this.round;
-					XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Round: ' + this.round);
+					++this._round;
+					XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Round: ' + this._round);
 				}
 				for (var firstGridId:String in actors) {
 					target = firstGridId;

@@ -1,5 +1,8 @@
 package com.xenojoshua.as3demo.battle.display.render
 {
+	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
+	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;
+	
 	import org.osflash.signals.Signal;
 
 	public class AppBattleRender
@@ -23,7 +26,6 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function AppBattleRender() {
 			this._playingList = new Object();
-			this._animeCompleteSignal = new Signal();
 		}
 		
 		/**
@@ -31,18 +33,25 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return void
 		 */
 		public function dispose():void {
+			this._mediator = null;
 			this._playingList = {};
-			this._animeCompleteSignal.removeAll();
 		}
 		
+		/**
+		 * Used to control battle view systems, since the battle logic processor is out of the robotlegs system.
+		 * It's impossible to touch the views without the mediator registered in it.
+		 */
+		private var _mediator:AppBattleMediator;
+		
 		private var _playingList:Object;
-		private var _animeCompleteSignal:Signal;
 		
 		/**
-		 * Register 
+		 * Register battle robotlegs mediator.
+		 * @param AppBattleMediator mediator
+		 * @return void
 		 */
-		public function registerAnimeCompleteHandler():void {
-			this._animeCompleteSignal.add();
+		public function registerRobotlegsController(mediator:AppBattleMediator):void {
+			this._mediator = mediator;
 		}
 	}
 }
