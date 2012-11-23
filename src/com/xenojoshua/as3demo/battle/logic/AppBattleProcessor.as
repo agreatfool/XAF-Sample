@@ -4,7 +4,7 @@ package com.xenojoshua.as3demo.battle.logic
 	import com.xenojoshua.af.utils.time.XafTime;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
-	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierInfo;
+	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 
 	public class AppBattleProcessor
@@ -42,10 +42,10 @@ package com.xenojoshua.as3demo.battle.logic
 			this._attackers = new Object();
 			this._defenders = new Object();
 			
-			for each (var atkInfo:AppBattleSoldierInfo in attackers) {
+			for each (var atkInfo:AppBattleSoldier in attackers) {
 				this._attackers[atkInfo.gridId] = new AppBattleSoldierView(atkInfo, AppBattleGridManager.instance.getAtkGrid(atkInfo.gridId));
 			}
-			for each (var defInfo:AppBattleSoldierInfo in defenders) {
+			for each (var defInfo:AppBattleSoldier in defenders) {
 				this._defenders[defInfo.gridId] = new AppBattleSoldierView(defInfo, AppBattleGridManager.instance.getDefGrid(defInfo.gridId));
 			}
 			

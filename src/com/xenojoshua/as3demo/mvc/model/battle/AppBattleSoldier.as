@@ -1,6 +1,6 @@
-package com.xenojoshua.as3demo.mvc.view.battle.soldier
+package com.xenojoshua.as3demo.mvc.model.battle
 {
-	public class AppBattleSoldierInfo
+	public class AppBattleSoldier
 	{
 		public var gridId:int;
 		public var roleId:String;
@@ -11,7 +11,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		public var isMagic:Boolean; // FIXME demo: only affect the effect anime
 		public var skillId:int; // FIXME demo: all skills would affect all enemies
 		
-		public function AppBattleSoldierInfo(
+		public function AppBattleSoldier(
 			gridId:int, roleId:String, hp:int, attack:int,
 			defence:int, isAttacker:Boolean, isMagic:Boolean, skillId:int
 		) {

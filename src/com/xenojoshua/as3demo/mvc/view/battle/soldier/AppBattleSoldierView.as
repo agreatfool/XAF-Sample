@@ -8,6 +8,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
 	
 	public class AppBattleSoldierView extends XafRobotlegsView
 	{
@@ -32,7 +33,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @param Sprite grid where soldier stand on it
 		 * @return void
 		 */
-		public function AppBattleSoldierView(soldierInfo:AppBattleSoldierInfo, grid:DisplayObjectContainer) {
+		public function AppBattleSoldierView(soldierInfo:AppBattleSoldier, grid:DisplayObjectContainer) {
 			super();
 			
 			this._roleId     = soldierInfo.roleId;
