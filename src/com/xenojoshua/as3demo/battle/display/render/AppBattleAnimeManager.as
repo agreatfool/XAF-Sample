@@ -73,7 +73,7 @@ package com.xenojoshua.as3demo.battle.display.render
 		/**
 		 * Get skill effect animation.
 		 * @param int skillId e.g. 0
-		 * @param Boolean isAttacker
+		 * @param Boolean isAttacker means is recipient attacker or not
 		 * @return MovieClip movie
 		 */
 		public function getSkillEffect(skillId:int, isAttacker:Boolean):MovieClip {
@@ -84,7 +84,7 @@ package com.xenojoshua.as3demo.battle.display.render
 		/**
 		 * Get attack effect animation.
 		 * @param String attackType e.g. AppBattleAnimeManager.ATTACK_TYPE_PHY
-		 * @param Boolean isAttacker
+		 * @param Boolean isAttacker means is recipient attacker or not
 		 * @return MovieClip movie
 		 */
 		public function getAttackEffect(attackType:String, isAttacker:Boolean):MovieClip {

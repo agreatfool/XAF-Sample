@@ -1,5 +1,8 @@
 package com.xenojoshua.as3demo.battle.display.render
 {
+	import com.greensock.TweenLite;
+	import com.greensock.plugins.AutoAlphaPlugin;
+	import com.greensock.plugins.TweenPlugin;
 	import com.xenojoshua.af.utils.timer.XafTimerManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
 	import com.xenojoshua.as3demo.battle.display.util.AppBattleUtil;
@@ -12,6 +15,7 @@ package com.xenojoshua.as3demo.battle.display.render
 	
 	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
+	import flash.events.Event;
 	
 	import org.osflash.signals.Signal;
 
@@ -220,11 +224,187 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playStand(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
-			view.removeAllLayer();
+			view.removeRoleLayer();
+			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(soldier.roleId, soldier.isAttacker);
 			view.addRoleMovie(movie);
+			
 			movie.gotoAndPlay(1);
 			this.onSingleAnimeEnd();
+		}
+		
+		/**
+		 * Play soldier attack anime.
+		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier target
+		 * @return void
+		 */
+		public function playAttack(soldier:AppBattleSoldier, target:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			view.removeRoleLayer();
+			
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleAttack(soldier.roleId, soldier.isAttacker);
+			view.addRoleMovie(movie);
+			movie.addEventListener(Event.ENTER_FRAME, attackEnd);
+			var attackEnd:Function = function(e:Event):void {
+				var display:MovieClip = e.target as MovieClip;
+				if (display.currentFrame == display.totalFrames) {
+					display.removeEventListener(Event.ENTER_FRAME, attackEnd);
+				}
+				this.playStand();
+				this.onSingleAnimeEnd();
+			};
+			movie.gotoAndPlay(1);
+		}
+		
+		/**
+		 * Play soldier skill anime.
+		 * @param AppBattleSoldier soldier
+		 * @return void
+		 */
+		public function playSkill(soldier:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			view.removeRoleLayer();
+			
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleSkill(soldier.roleId, soldier.isAttacker);
+			view.addRoleMovie(movie);
+			movie.addEventListener(Event.ENTER_FRAME, skillEnd);
+			var skillEnd:Function = function(e:Event):void {
+				var display:MovieClip = e.target as MovieClip;
+				if (display.currentFrame == display.totalFrames) {
+					display.removeEventListener(Event.ENTER_FRAME, skillEnd);
+				}
+				this.playStand();
+				this.onSingleAnimeEnd();
+			};
+			movie.gotoAndPlay(1);
+		}
+		
+		/**
+		 * Play soldier hurt anime.
+		 * @param AppBattleSoldier soldier
+		 * @return void
+		 */
+		public function playHurt(soldier:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			view.removeRoleLayer();
+			
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(soldier.roleId, soldier.isAttacker);
+			view.addRoleMovie(movie);
+			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
+			var hurtEnd:Function = function(e:Event):void {
+				var display:MovieClip = e.target as MovieClip;
+				if (display.currentFrame == display.totalFrames) {
+					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
+				}
+				this.playStand();
+				this.onSingleAnimeEnd();
+			};
+			movie.gotoAndPlay(1);
+		}
+		
+		/**
+		 * Play attack effect on defender (attack hurt recipient).
+		 * @param AppBattleSoldier attacker attack caster
+		 * @param AppBattleSoldier defender attack recipient
+		 * @return void
+		 */
+		public function playAttackEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(defender);
+			view.removeEffectLayer();
+			
+			var movie:MovieClip = AppBattleAnimeManager.instance.getAttackEffect(
+				attacker.isMagic ? AppBattleAnimeManager.ATTACK_TYPE_MGK : AppBattleAnimeManager.ATTACK_TYPE_PHY,
+				defender.isAttacker
+			);
+			view.addEffectMovie(movie);
+			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
+			var effectEnd:Function = function(e:Event):void {
+				var display:MovieClip = e.target as MovieClip;
+				if (display.currentFrame == display.totalFrames) {
+					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
+				}
+				view.removeEffectLayer();
+				this.onSingleAnimeEnd();
+			};
+			movie.gotoAndPlay(1);
+		}
+		
+		/**
+		 * Play skill effect on defender (skill hurt recipient).
+		 * @param AppBattleSoldier attacker skill caster
+		 * @param AppBattleSoldier defender skill recipient
+		 * @return void
+		 */
+		public function playSkillEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(defender);
+			view.removeEffectLayer();
+			
+			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(attacker.skillId, defender.isAttacker);
+			view.addEffectMovie(movie);
+			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
+			var effectEnd:Function = function(e:Event):void {
+				var display:MovieClip = e.target as MovieClip;
+				if (display.currentFrame == display.totalFrames) {
+					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
+				}
+				view.removeEffectLayer();
+				this.onSingleAnimeEnd();
+			};
+			movie.gotoAndPlay(1);
+		}
+		
+		/**
+		 * Play die anime.
+		 * @param AppBattleSoldier soldier
+		 * @return void
+		 */
+		public function playDie(soldier:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			TweenPlugin.activate([AutoAlphaPlugin]);
+			TweenLite.to(view.getRoleMovie(), 0.5, {
+				autoAlpha: 0, onComplete: this.onDieEnd, onCompleteParams: [soldier, view]
+			});
+		}
+		
+		/**
+		 * Callback when die anime ends.
+		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldierView view
+		 * @return void
+		 */
+		private function onDieEnd(soldier:AppBattleSoldier, view:AppBattleSoldierView):void {
+			// dispose the view
+			view.dispose();
+			// remove manager handler
+			if (soldier.isAttacker) {
+				delete this._atkSoldiers[soldier.gridId];
+			} else {
+				delete this._defSoldiers[soldier.gridId];
+			}
+			this.onSingleAnimeEnd();
+		}
+		
+		/**
+		 * Play role move anime.
+		 * @param AppBattleSoldier attacker
+		 * @param AppBattleSoldier defender
+		 * @return void
+		 */
+		public function playMove(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
+			var atkView:AppBattleSoldierView = this.getSoldierView(attacker);
+			var atkMovie:MovieClip = atkView.getRoleMovie();
+			
+			var offsetX:Number = atkView.width / 2;
+			var offsetY:Number = atkView.height / 2;
+			
+			// disapper
+			var targetPosX:Number = 0;
+			var targetPosY:Number = 0;
+			if (attacker.isAttacker) { // means actor is attacker or not
+				
+			}
+			// show
 		}
 		
 		/**

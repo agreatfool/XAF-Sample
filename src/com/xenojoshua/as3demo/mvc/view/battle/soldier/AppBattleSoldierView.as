@@ -21,7 +21,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		private var _effectLayer:Sprite;
 		
 		/**
-		 * Initialize AppSoldierView.
+		 * Initialize AppBattleSoldierView.
 		 * @return void
 		 */
 		public function AppBattleSoldierView() {
@@ -34,6 +34,18 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 			this.addChild(this._dataLayer);
 			this.addChild(this._roleLayer);
 			this.addChild(this._effectLayer);
+		}
+		
+		/**
+		 * Destory the AppBattleSoldierView.
+		 * @return void
+		 */
+		override public function dispose():void {
+			super.dispose();
+			this.removeAllLayer();
+			this._dataLayer = null;
+			this._roleLayer = null;
+			this._effectLayer = null;
 		}
 		
 		/**
@@ -64,15 +76,52 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		}
 		
 		/**
+		 * Get role movie from role layer.
+		 * @return MovieClip movie
+		 */
+		public function getRoleMovie():MovieClip {
+			var movie:MovieClip = null;
+			try {
+				movie = this._roleLayer.getChildAt(0) as MovieClip;
+			} catch (e:Error) {
+				if (e.errorID != 2006) { // throw exception if it's not what we wished
+					throw e;
+				}
+			}
+			return movie;
+		}
+		
+		/**
 		 * Remove all layer animes.
-		 * @param Boolean includeData default false
 		 * @return void
 		 */
-		public function removeAllLayer(includeData:Boolean = false):void {
-			if (includeData) {
-				this.removeLayerChildren(this._dataLayer);
-			}
+		public function removeAllLayer():void {
+			this.removeLayerChildren(this._dataLayer);
 			this.removeLayerChildren(this._roleLayer);
+			this.removeLayerChildren(this._effectLayer);
+		}
+		
+		/**
+		 * Remove all data layer anime.
+		 * @return void
+		 */
+		public function removeDataLayer():void {
+			this.removeLayerChildren(this._dataLayer);
+		}
+		
+		/**
+		 * Remove all role layer anime.
+		 * @return void
+		 */
+		public function removeRoleLayer():void {
+			this.removeLayerChildren(this._roleLayer);
+		}
+		
+		/**
+		 * Remove all effect layer anime.
+		 * @return void
+		 */
+		public function removeEffectLayer():void {
 			this.removeLayerChildren(this._effectLayer);
 		}
 		
@@ -81,126 +130,12 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @param Sprite layer
 		 * @return void
 		 */
-		public function removeLayerChildren(layer:Sprite):void {
-			if (layer.numChildren) {
+		private function removeLayerChildren(layer:Sprite):void {
+			if (layer.numChildren > 0) {
 				for (var i:int; i < layer.numChildren; ++i) {
 					layer.removeChildAt(i);
 				}
 			}
 		}
-		
-		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-		//-* PLAY ANIMATION
-		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-//		public function playStand():void {
-//			this.removeAllLayerAnime();
-//			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(this._roleId, this._isAttacker);
-//			this._roleLayer.addChild(movie);
-//			movie.gotoAndPlay(1);
-//			AppBattleRender.instance.callbackAnimeEnd(
-//				AppBattleUtil.buildGridIdString(this._gridId, this._isAttacker),
-//				AppSoldierAnimeName.STAND
-//			);
-//		}
-//		
-//		public function playAttack():void {
-//			if (this._roleId != '100' //弓手
-//				&& this._roleId != '101') { // 法师
-////				this.move(targetGrid); // 近身单位，需要移动
-//			}
-//			this.removeAllLayerAnime();
-//			var movie:MovieClip = AppBattleAnimeManager.instance.getAttackEffect(
-//				this._isMagic ? AppBattleAnimeManager.ATTACK_TYPE_MGK : AppBattleAnimeManager.ATTACK_TYPE_PHY,
-//				this._isAttacker
-//			);
-//			this._roleLayer.addChild(movie);
-//			movie.addEventListener(Event.ENTER_FRAME, attackEnd);
-//			var attackEnd:Function = function(e:Event):void {
-//				var display:MovieClip = e.target as MovieClip;
-//				if (display.currentFrame == display.totalFrames) {
-//					display.removeEventListener(Event.ENTER_FRAME, attackEnd);
-//				}
-//				AppBattleRender.instance.callbackAnimeEnd(
-//					AppBattleUtil.buildGridIdString(this._gridId, this._isAttacker),
-//					AppSoldierAnimeName.ATTACK
-//				);
-//				this.playStand();
-//			};
-//			movie.gotoAndPlay(1);
-//		}
-//		
-//		public function playSkill():void {
-//			this.removeAllLayerAnime();
-//			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(this._skillId, this._isAttacker);
-//			this._roleLayer.addChild(movie);
-//			movie.addEventListener(Event.ENTER_FRAME, skillEnd);
-//			var skillEnd:Function = function(e:Event):void {
-//				var display:MovieClip = e.target as MovieClip;
-//				if (display.currentFrame == display.totalFrames) {
-//					display.removeEventListener(Event.ENTER_FRAME, skillEnd);
-//				}
-//				AppBattleRender.instance.callbackAnimeEnd(
-//					AppBattleUtil.buildGridIdString(this._gridId, this._isAttacker),
-//					AppSoldierAnimeName.SKILL
-//				);
-//				this.playStand();
-//			};
-//			movie.gotoAndPlay(1);
-//		}
-//		
-//		public function playHurt():void {
-//			this.removeAllLayerAnime();
-//			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(this._roleId, this._isAttacker);
-//			this._roleLayer.addChild(movie);
-//			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
-//			var hurtEnd:Function = function(e:Event):void {
-//				var display:MovieClip = e.target as MovieClip;
-//				if (display.currentFrame == display.totalFrames) {
-//					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
-//				}
-//				AppBattleRender.instance.callbackAnimeEnd(
-//					AppBattleUtil.buildGridIdString(this._gridId, this._isAttacker),
-//					AppSoldierAnimeName.HURT
-//				);
-//				this.playStand();
-//			};
-//			movie.gotoAndPlay(1);
-//		}
-//		
-//		public function playSkillHurt(skillId:):void {
-//			this.removeAllLayerAnime();
-//			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(this._roleId, this._isAttacker);
-//			this._roleLayer.addChild(movie);
-//			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
-//			var hurtEnd:Function = function(e:Event):void {
-//				var display:MovieClip = e.target as MovieClip;
-//				if (display.currentFrame == display.totalFrames) {
-//					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
-//				}
-//				AppBattleRender.instance.callbackAnimeEnd(
-//					AppBattleUtil.buildGridIdString(this._gridId, this._isAttacker),
-//					AppSoldierAnimeName.HURT
-//				);
-//				this.playStand();
-//			};
-//			movie.gotoAndPlay(1);
-//		}
-//		
-//		public function playDie():void {
-//			
-//		}
-//		
-//		private function move(targetGrid:DisplayObjectContainer):void { //FIXME do move later, first play the movie correctly
-//			var offsetX:Number = this.width / 2;
-//			var offsetY:Number = this.height / 2;
-//			
-//			// disapper
-//			var targetPosX:Number = 0;
-//			var targetPosY:Number = 0;
-//			if (this._isAttacker) {
-//				
-//			}
-//			// show
-//		}
 	}
 }
