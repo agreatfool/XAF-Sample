@@ -65,6 +65,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		}
 		
 		private var DELAY_TIMER_NAME:String = 'AppBattleRenderDelayTimer';
+		private var ATK_MV_SIZE_FACTOR:Number = 0.5;
+		private var FADE_MV_SIZE_FACTOR:Number = 0.2;
+		private var FADE_SPEED:Number = 0.5; // fade in x seconds
 		
 		private var _atkSoldiers:Object; // <gridId:int, view:AppBattleSoldierView>
 		private var _defSoldiers:Object; // <gridId:int, view:AppBattleSoldierView>
@@ -92,6 +95,14 @@ package com.xenojoshua.as3demo.battle.display.render
 		private var _playDelay:int;
 		private var _currentQueueIndex:int;
 		
+		// MOVE POINTS
+		private var _moveFadeX:Number;   // fade end point x
+		private var _moveFadeY:Number;   // fade end point y
+		private var _moveAppearX:Number; // appear point x
+		private var _moveAppearY:Number; // appear point y
+		private var _moveEndX:Number;    // end point x
+		private var _moveEndY:Number;    // end point y
+		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* DATA INITIALIZATION
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -107,12 +118,14 @@ package com.xenojoshua.as3demo.battle.display.render
 				var atkGrid:DisplayObjectContainer = AppBattleGridManager.instance.getAtkGrid(atkSoldier.gridId);
 				atkGrid.addChild(atkSoldierView);
 				this._atkSoldiers[atkSoldier.gridId] = atkSoldierView;
+				this.playStand(atkSoldier);
 			}
 			for each (var defSoldier:AppBattleSoldier in defenders) {
 				var defSoldierView:AppBattleSoldierView = new AppBattleSoldierView();
 				var defGrid:DisplayObjectContainer = AppBattleGridManager.instance.getDefGrid(defSoldier.gridId);
 				defGrid.addChild(defSoldierView);
 				this._defSoldiers[defSoldier.gridId] = defSoldierView;
+				this.playStand(defSoldier);
 			}
 			return this;
 		}
@@ -121,14 +134,14 @@ package com.xenojoshua.as3demo.battle.display.render
 		//-* ANIME QUEUE
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
-		 * Register an animation function into queue.
+		 * Push an animation function into queue.
 		 * @param int index
 		 * @param Function animeFunc
 		 * @param Array animeParams
 		 * @param int animeDelay
 		 * @return AppBattleRender render
 		 */
-		public function registerAnimeInQueue(index:int, animeFunc:Function, animeParams:Array, animeDelay:int):AppBattleRender {
+		public function pushAnimeIntoQueue(index:int, animeFunc:Function, animeParams:Array, animeDelay:int):AppBattleRender {
 			if (this._playList.hasOwnProperty(index)) {
 				this._playList[index]       = new Array();
 				this._playListParams[index] = new Array();
@@ -144,6 +157,10 @@ package com.xenojoshua.as3demo.battle.display.render
 			return this;
 		}
 		
+		/**
+		 * Play the anime queue.
+		 * @return void
+		 */
 		public function playQueue():void {
 			this.removeQueueDelay(); // no matter delay timer exists or not, call remove first
 			var isAnyAnimeInQueue:Boolean = false; // mark no anime left first
@@ -160,7 +177,9 @@ package com.xenojoshua.as3demo.battle.display.render
 					var animeFunc:Function = queue[queuePos];
 					var animeFuncParams:Array = queueParams[queuePos];
 					animeFunc.apply(null, animeFuncParams); // play the anmie
-					++this._playingCount;
+					if (animeFunc != this.playStand) { // do not count stand anime
+						++this._playingCount;
+					}
 				}
 				if (queueDelay > 0) {
 					this._playDelay = queueDelay;
@@ -230,7 +249,6 @@ package com.xenojoshua.as3demo.battle.display.render
 			view.addRoleMovie(movie);
 			
 			movie.gotoAndPlay(1);
-			this.onSingleAnimeEnd();
 		}
 		
 		/**
@@ -385,28 +403,160 @@ package com.xenojoshua.as3demo.battle.display.render
 			this.onSingleAnimeEnd();
 		}
 		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* MOVE ANIMATION
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
-		 * Play role move anime.
-		 * @param AppBattleSoldier attacker
-		 * @param AppBattleSoldier defender
+		 * Play role move anime, start to fade.
+		 * @param AppBattleSoldier actor
+		 * @param AppBattleSoldier recipient
 		 * @return void
 		 */
-		public function playMove(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
-			var atkView:AppBattleSoldierView = this.getSoldierView(attacker);
-			var atkMovie:MovieClip = atkView.getRoleMovie();
+		public function playMoveTo(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
+			/**
+			 * There are FIVE concepts on stage
+			 * 1. stage layer: AppBattleView (XafConst.SCREEN_BATTLE)
+			 * 2. battle grid layer: AppBattleGridView (AppBattleGridManager) [Point(0, 0) of AppBattleView]
+			 * 3. battle grids: movies in AppBAttleGridView, those grids has absolute points on stage [Point(x, y) of AppBattleGridView]
+			 * 4. soldier view: AppBattleSoldierView (AppBattleRender) [Point(0, 0) of battle grid movie]
+			 * 5. soldier movie: movies on AppBattleSoldierView._roleLayer [Point(0, 0) of AppBattleSoldierView]
+			 * 
+			 * If you want to move a soldier movie, you have to calculate the relative position of the soldier view,
+			 * from the absolute points of the grids.
+			 */
+			var actMovie:MovieClip = this.getSoldierView(actor).getRoleMovie();
+			var actGrid:DisplayObjectContainer = AppBattleGridManager.instance.getAtkGrid(actor.gridId);
+			var recGrid:DisplayObjectContainer = AppBattleGridManager.instance.getDefGrid(recipient.gridId);
 			
-			var offsetX:Number = atkView.width / 2;
-			var offsetY:Number = atkView.height / 2;
+			// actor start point on stage (absolute point on stage)
+			var absStartX:Number = actGrid.x;
+			var absStartY:Number = actGrid.y;
+			// actor target end point on stage (absolute point on stage)
+			var absTargetX:Number = actor.isAttacker ? (recGrid.x - actMovie.width * this.ATK_MV_SIZE_FACTOR) : (recGrid.x + actMovie.width * this.ATK_MV_SIZE_FACTOR);
+			var absTargetY:Number = recGrid.y;
+			// actor start to appear point on stage (absolute point on stage)
+			var absStartToAppearX:Number = actor.isAttacker ? (absTargetX - actMovie.width * this.FADE_MV_SIZE_FACTOR) : (absTargetX + actMovie.width * this.FADE_MV_SIZE_FACTOR);
+			var absStartToAppearY:Number = absTargetY - actMovie.height * this.FADE_MV_SIZE_FACTOR;
 			
-			// disapper
-			var targetPosX:Number = 0;
-			var targetPosY:Number = 0;
-			if (attacker.isAttacker) { // means actor is attacker or not
-				
-			}
-			// show
+			// actor fade end point (relative point on actor view)
+			this._moveFadeX = actor.isAttacker ? 0 + actMovie.width * this.FADE_MV_SIZE_FACTOR : 0 - actMovie.width * this.FADE_MV_SIZE_FACTOR;
+			this._moveFadeY = 0 - actMovie.height * this.FADE_MV_SIZE_FACTOR;
+			// actor start to appear point
+			this._moveAppearX = absStartToAppearX - absStartX;
+			this._moveAppearY = absStartToAppearY - absStartY;
+			// actor start to end point
+			this._moveEndX = absTargetX - absStartX;
+			this._moveEndY = absTargetY - absStartY;
+			
+			this.startToFade(actor, actMovie);
 		}
 		
+		/**
+		 * Play role move anime, start to fade.
+		 * From START point to FADE point.
+		 * @param AppBattleSoldier actor
+		 * @param MovieClip actMovie
+		 * @return void
+		 */
+		private function startToFade(actor:AppBattleSoldier, actMovie:MovieClip):void {
+			TweenPlugin.activate([AutoAlphaPlugin]);
+			TweenLite.to(
+				actMovie, this.FADE_SPEED, {
+					x: this._moveFadeX, y: this._moveFadeY, autoAlpha: 0,
+					onComplete: this.onMoveStartFadeEnd,
+					onCompleteParams: [actor, actMovie]
+				}
+			);
+		}
+		
+		/**
+		 * Play role move anime, fade end, start to show.
+		 * From APPEAR point to END point.
+		 * @param AppBattleSoldier actor
+		 * @param MovieClip actMovie
+		 * @return void
+		 */
+		private function onMoveStartFadeEnd(actor:AppBattleSoldier, actMovie:MovieClip):void {
+			actMovie.x = this._moveAppearX;
+			actMovie.y = this._moveAppearY;
+			actMovie.alpha = 0;
+			actMovie.visible = true;
+			
+			TweenLite.to(
+				actMovie, this.FADE_SPEED, {
+					x: this._moveEndX, y: this._moveEndY, autoAlpha: 1,
+					onComplete: this.onMoveStartShowEnd,
+					onCompleteParams: [actor, actMovie]
+				}
+			);
+		}
+		
+		/**
+		 * Play role move anime, show end.
+		 * @param AppBattleSoldier actor
+		 * @return void
+		 */
+		private function onMoveStartShowEnd(actor:AppBattleSoldier):void {
+			this.playStand(actor);
+			this.onSingleAnimeEnd();
+		}
+		
+		/**
+		 * Play role movie anime, start to move back.
+		 * From END point to APPEAR point.
+		 * @param AppBattleSoldier actor
+		 * @param MovieClip actMovie
+		 * @return void
+		 */
+		public function playMoveBack(actor:AppBattleSoldier):void {
+			var actMovie:MovieClip = this.getSoldierView(actor).getRoleMovie();
+			TweenLite.to(
+				actMovie, this.FADE_SPEED, {
+					x: this._moveAppearX, y: this._moveAppearY, autoAlpha: 0,
+					onComplete: this.onMoveBackFadeEnd,
+					onCompleteParams: [actor, actMovie]
+				}
+			);
+		}
+		
+		/**
+		 * Play role move anime, fade end, start to back.
+		 * From FADE point to START point.
+		 * @param AppBattleSoldier actor
+		 * @param MovieClip actMovie
+		 * @return void
+		 */
+		private function onMoveBackFadeEnd(actor:AppBattleSoldier, actMovie:MovieClip):void {
+			actMovie.x = this._moveFadeX;
+			actMovie.y = this._moveFadeY;
+			actMovie.alpha = 0;
+			actMovie.visible = true;
+			
+			TweenLite.to(
+				actMovie, this.FADE_SPEED, {
+					x: 0, y: 0, autoAlpha: 1,
+					onComplete: this.onMoveBackShowEnd,
+					onCompleteParams: [actor]
+				}
+			);
+		}
+		
+		/**
+		 * Play role move anime, total end.
+		 * @param AppBattleSoldier actor
+		 * @return void
+		 */
+		private function onMoveBackShowEnd(actor:AppBattleSoldier):void {
+			this._moveFadeX   = this._moveFadeY   = 0;
+			this._moveAppearX = this._moveAppearY = 0;
+			this._moveEndX    = this._moveEndY    = 0;
+			this.playStand(actor);
+			this.onSingleAnimeEnd();
+		}
+		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* UTILITIES
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
 		 * Get soldier view from manager.
 		 * @param AppBattleSoldier soldier
