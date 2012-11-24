@@ -197,35 +197,27 @@ package com.xenojoshua.as3demo.battle.logic
 		 */
 		private function playRound(gridId:int, isAttacker:Boolean):void {
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Actor[' + (isAttacker ? 'ATK' : 'DEF') + '], grid: ' + gridId);
-			
-			var actor:AppBattleSoldier = isAttacker ? this._attackers[gridId] : this._defenders[gridId];
+			var actor:AppBattleSoldier = this.getSoldierViaGridId(gridId, isAttacker);
+			var target:AppBattleSoldier = this.findTargetInBattle(gridId, isAttacker);
 			var useSkill:Boolean = (actor.rage >= 100) ? true : false;
-			var targets:Object = this.findTargetInBattle(gridId, isAttacker, useSkill);
 			
-			// TODO
+			
 		}
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* BATTLE LOGICS: FORMULA
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		//-* UTILITIES
+		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
 		 * Find action target.
 		 * @param int gridId
 		 * @param Boolean isAttacker
-		 * @param Boolean useSkill
-		 * @return Object targets 'gridId:int, soldier:AppBattleSoldierView'
+		 * @return AppBattleSoldier target
 		 */
-		private function findTargetInBattle(gridId:int, isAttacker:Boolean, useSkill:Boolean):Object {
-			var targets:Object = new Object();
-			
+		private function findTargetInBattle(gridId:int, isAttacker:Boolean):AppBattleSoldier {
 			var recipients:Object = isAttacker ? this._attackers : this._defenders;
-			
-			// 目标全体
-			if (useSkill) {
-				for (var recpGridId:String in recipients) {
-					targets[recpGridId] = recipients[recpGridId];
-				}
-				XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Target found: ' + JSON.stringify(targets));
-				return targets;
-			}
-			
 			var target:int = -1; // 将target初始化成-1用来判断目标是否被找到
 			// 查找初始的目标单位
 			var posRowNo:int = gridId % 3; // gridId所在的行号(0-2)
@@ -237,15 +229,28 @@ package com.xenojoshua.as3demo.battle.logic
 				}
 			}
 			if (target == -1) {
-				targets[0] = null;
 				XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Target not found!'); // 初始目标未找到
-			} else {
-				targets[target] = recipients[target];
 			}
 			
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Targets found: ' + JSON.stringify(targets));
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Target gridId found: ' + target);
 			
-			return targets;
+			return this.getSoldierViaGridId(target, !isAttacker);
+		}
+		
+		/**
+		 * Get AppBattleSoldier via grid id.
+		 * @param int gridId
+		 * @param Boolean isAttacker
+		 * @return AppBattleSoldier soldier
+		 */
+		private function getSoldierViaGridId(gridId:int, isAttacker:Boolean):AppBattleSoldier {
+			var recipients:Object = isAttacker ? this._attackers : this._defenders;
+			var soldier:AppBattleSoldier = null;
+			if (recipients.hasOwnProperty(gridId)) {
+				soldier = recipients[gridId];
+			}
+			
+			return soldier;
 		}
 	}
 }

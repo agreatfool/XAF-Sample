@@ -5,9 +5,7 @@ package com.xenojoshua.as3demo.battle.display.render
 	import com.greensock.plugins.TweenPlugin;
 	import com.xenojoshua.af.utils.timer.XafTimerManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
-	import com.xenojoshua.as3demo.battle.display.util.AppBattleUtil;
 	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
-	import com.xenojoshua.as3demo.mvc.event.battle.AppBattleAnimeStartEvent;
 	import com.xenojoshua.as3demo.mvc.model.enum.battle.AppSoldierAnimeName;
 	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;

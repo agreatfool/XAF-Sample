@@ -4,7 +4,6 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 	import com.xenojoshua.af.resource.manager.XafSwfManager;
 	import com.xenojoshua.as3demo.battle.display.render.AppBattleAnimeManager;
 	import com.xenojoshua.as3demo.battle.display.render.AppBattleRender;
-	import com.xenojoshua.as3demo.battle.display.util.AppBattleUtil;
 	import com.xenojoshua.as3demo.mvc.model.enum.battle.AppSoldierAnimeName;
 	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.resource.AppResources;
