@@ -3,7 +3,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsMediator;
 	import com.xenojoshua.as3demo.battle.display.render.AppBattleRender;
 	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
-	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
+	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	
 	import flash.events.Event;
 	
@@ -38,21 +38,10 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		}
 		
 		/**
-		 * Send Event command.
-		 * @param Event e
-		 * @return void
-		 */
-		public function sendCommand(e:Event):void {
-			this.dispatch(e);
-		}
-		
-		/**
 		 * Get the battle data & start to play the game.
 		 * @return void
 		 */
 		private function startBattle():void {
-			AppBattleRender.instance.registerRobotlegsController(this);
-			
 			// FIXME FOR TEST: data shall got form server, not hard coded here
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
@@ -66,6 +55,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 				new AppBattleSoldier(1, '102', 50000, 1000, 200, false, false, 1),
 				new AppBattleSoldier(5, '101', 50000, 1000, 200, false, true, 2)
 			];
+			AppBattleRender.instance.registerBattleSoldierView(attackers, defenders);
 			AppBattleProcessor.instance.registerRobotlegsController(this).registerBattleData(attackers, defenders).startBattle(); // start the battle
 		}
 	}

@@ -4,9 +4,8 @@ package com.xenojoshua.as3demo.mvc.view.battle.layers.effect
 	
 	public class AppBattleEffectView extends XafRobotlegsView
 	{
-		public function AppBattleEffectView(withBgMask:Boolean=false)
-		{
-			super(withBgMask);
+		public function AppBattleEffectView() {
+			super(false);
 		}
 	}
 }

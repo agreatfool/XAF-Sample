@@ -104,7 +104,7 @@ package
 		}
 		
 		private function loadingComplete(e:TimerEvent):void {
-			XafTimerManager.instance.destoryTimer('loading');
+			XafTimerManager.instance.removeTimer('loading');
 			XafTimerManager.instance.registerTimer('closeLoading', 1000, this.closeLoading, 3, this.closeComplete);
 		}
 		
@@ -114,7 +114,7 @@ package
 		}
 		
 		private function closeComplete(e:TimerEvent):void {
-			XafTimerManager.instance.destoryTimer('closeLoading');
+			XafTimerManager.instance.removeTimer('closeLoading');
 			XafConsole.instance.log(XafConsole.NOTICE, 'Loading 3 times & closing 3 times done!');
 		}
 	}

@@ -12,7 +12,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.layers.grid
 		 * @return void
 		 */
 		public function AppBattleGridView() {
-			super();
+			super(false);
 		}
 	}
 }

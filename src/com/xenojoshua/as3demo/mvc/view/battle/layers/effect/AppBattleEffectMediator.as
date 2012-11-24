@@ -4,6 +4,9 @@ package com.xenojoshua.as3demo.mvc.view.battle.layers.effect
 	
 	public class AppBattleEffectMediator extends XafRobotlegsMediator
 	{
+		[Inject]
+		public var view:AppBattleEffectView;
+		
 		public function AppBattleEffectMediator()
 		{
 			super();

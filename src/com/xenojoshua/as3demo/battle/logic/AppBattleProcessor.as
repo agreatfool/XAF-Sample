@@ -3,10 +3,9 @@ package com.xenojoshua.as3demo.battle.logic
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.time.XafTime;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
-	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
+	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
-	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 
 	public class AppBattleProcessor
 	{
@@ -94,11 +93,11 @@ package com.xenojoshua.as3demo.battle.logic
 		 * @return AppBattleProcessor processor
 		 */
 		public function registerBattleData(attackers:Array, defenders:Array):AppBattleProcessor {
-			for each (var atkInfo:AppBattleSoldier in attackers) {
-				this._attackers[atkInfo.gridId] = new AppBattleSoldierView(atkInfo, AppBattleGridManager.instance.getAtkGrid(atkInfo.gridId));
+			for each (var atkSoldier:AppBattleSoldier in attackers) {
+				this._attackers[atkSoldier.gridId] = atkSoldier;
 			}
-			for each (var defInfo:AppBattleSoldier in defenders) {
-				this._defenders[defInfo.gridId] = new AppBattleSoldierView(defInfo, AppBattleGridManager.instance.getDefGrid(defInfo.gridId));
+			for each (var defSoldier:AppBattleSoldier in defenders) {
+				this._defenders[defSoldier.gridId] = defSoldier;
 			}
 			return this;
 		}
@@ -199,7 +198,7 @@ package com.xenojoshua.as3demo.battle.logic
 		private function playRound(gridId:int, isAttacker:Boolean):void {
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Actor[' + (isAttacker ? 'ATK' : 'DEF') + '], grid: ' + gridId);
 			
-			var actor:AppBattleSoldierView = isAttacker ? this._attackers[gridId] : this._defenders[gridId];
+			var actor:AppBattleSoldier = isAttacker ? this._attackers[gridId] : this._defenders[gridId];
 			var useSkill:Boolean = (actor.rage >= 100) ? true : false;
 			var targets:Object = this.findTargetInBattle(gridId, isAttacker, useSkill);
 			

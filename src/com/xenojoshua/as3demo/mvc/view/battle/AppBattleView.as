@@ -2,22 +2,13 @@ package com.xenojoshua.as3demo.mvc.view.battle
 {
 	import com.xenojoshua.af.mvc.view.robotlegs.XafRobotlegsView;
 	import com.xenojoshua.af.resource.XafRsManager;
-	import com.xenojoshua.af.resource.manager.XafImageManager;
-	import com.xenojoshua.af.resource.manager.XafSwfManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleBgManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleEffectManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
-	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.background.AppBattleBackgroundView;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.effect.AppBattleEffectView;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.grid.AppBattleGridView;
-	import com.xenojoshua.as3demo.mvc.model.battle.AppBattleSoldier;
-	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 	import com.xenojoshua.as3demo.resource.AppResources;
-	
-	import flash.display.DisplayObject;
-	import flash.display.DisplayObjectContainer;
-	import flash.display.Sprite;
 	
 	public class AppBattleView extends XafRobotlegsView
 	{
