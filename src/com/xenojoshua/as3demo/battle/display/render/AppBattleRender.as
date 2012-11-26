@@ -136,10 +136,13 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @param int index
 		 * @param Function animeFunc
 		 * @param Array animeParams
-		 * @param int animeDelay
+		 * @param int animeDelay default 0
 		 * @return AppBattleRender render
 		 */
-		public function pushAnimeIntoQueue(index:int, animeFunc:Function, animeParams:Array, animeDelay:int):AppBattleRender {
+		public function pushAnimeIntoQueue(
+			index:int, animeFunc:Function,
+			animeParams:Array, animeDelay:int = 0
+		):AppBattleRender {
 			if (this._playList.hasOwnProperty(index)) {
 				this._playList[index]       = new Array();
 				this._playListParams[index] = new Array();
@@ -252,10 +255,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		/**
 		 * Play soldier attack anime.
 		 * @param AppBattleSoldier soldier
-		 * @param AppBattleSoldier target
 		 * @return void
 		 */
-		public function playAttack(soldier:AppBattleSoldier, target:AppBattleSoldier):void {
+		public function playAttack(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
 			view.removeRoleLayer();
 			

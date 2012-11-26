@@ -40,7 +40,9 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		 */
 		private function startLoading():void {
 			// in production case, this list shall be changeable, since not every battle requires the same resources
-			var started:Boolean = XafRsManager.instance.initializeLoadingBar().prepareLoading([
+			XafRsManager.instance.initializeLoadingBar();
+			XafRsManager.instance.registerCompleteSignal(this.endLoading);
+			XafRsManager.instance.prepareLoading([
 				AppResources.FILE_BATTLE_BG,
 				AppResources.FILE_BATTLE_GRIDS,
 				AppResources.FILE_BATTLE_ROLE_001,
@@ -50,7 +52,8 @@ package com.xenojoshua.as3demo.mvc.view.battle
 				AppResources.FILE_BATTLE_PHY_ATK,
 				AppResources.FILE_BATTLE_MGK_ATK,
 				AppResources.FILE_BATTLE_SKILLS
-			]).registerCompleteSignal(this.endLoading).startLoading();
+			]);
+			var started:Boolean = XafRsManager.instance.startLoading();
 			
 			if (!started) { // not started: resources already loaded
 				this.endLoading(XafRsManager.instance);
@@ -62,7 +65,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		 * @param XafRsManager rsManager
 		 * @return void
 		 */
-		private function endLoading(rsManager:XafRsManager):void {
+		public function endLoading(rsManager:XafRsManager):void {
 			rsManager.dispose();
 			this.prepareBattle();
 		}

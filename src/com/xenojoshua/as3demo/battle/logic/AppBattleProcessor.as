@@ -3,6 +3,7 @@ package com.xenojoshua.as3demo.battle.logic
 	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.time.XafTime;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
+	import com.xenojoshua.as3demo.battle.display.render.AppBattleRender;
 	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
@@ -198,14 +199,58 @@ package com.xenojoshua.as3demo.battle.logic
 		private function playRound(gridId:int, isAttacker:Boolean):void {
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Actor[' + (isAttacker ? 'ATK' : 'DEF') + '], grid: ' + gridId);
 			var actor:AppBattleSoldier = this.getSoldierViaGridId(gridId, isAttacker);
-			var target:AppBattleSoldier = this.findTargetInBattle(gridId, isAttacker);
-			var useSkill:Boolean = (actor.rage >= 100) ? true : false;
+			var useSkill:Boolean = (actor.rage >= 100) ? true : false; // FIXME 简化逻辑，技能永远影响全屏
 			
+			var targets:Object = new Object();
+			var target:AppBattleSoldier = null;
 			
+			// QUEUE 0:移动动作, 1:攻击动作, 2:返回动作, 3:受击动作和特效, 4:死亡动作
+			// '100': 弓手, '101': 法师, 有没有使用技能（使用技能则全屏）
+			var needMove:Boolean = false;
+			if (actor.roleId != '100' && actor.roleId != '101' && !useSkill) { // 因为不是远程职业，且没有释放技能，需要移动的目标对象
+				needMove = true;
+				target = this.findTargetInBattle(gridId, isAttacker);
+				AppBattleRender.instance.pushAnimeIntoQueue(0, AppBattleRender.instance.playMoveTo, [actor, target]);
+			}
+			if (useSkill) {
+				AppBattleRender.instance.pushAnimeIntoQueue(1, AppBattleRender.instance.playSkill, [actor]);
+				targets = isAttacker ? this._defenders : this._attackers;
+			} else {
+				AppBattleRender.instance.pushAnimeIntoQueue(1, AppBattleRender.instance.playAttack, [actor]);
+				if (needMove) {
+					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playMoveBack, [actor]);
+				}
+				targets[target.gridId] = target;
+			}
+			var deadList:Array = new Array(); // [AppBattleSoldier]
+			for (var gridIdKey:String in targets) {
+				var recipient:AppBattleSoldier = targets[gridIdKey];
+				var damage:int = actor.attack - recipient.defence;
+				recipient.hp -= damage;
+				
+				var log:String = 'AppBattleProcessor: ';
+				log += isAttacker ? 'left' : 'right' + '[' + actor.gridId + ']'
+				log += 'deals ' + damage + ' damage on ';
+				log += isAttacker ? 'right' : 'left' + '[' + recipient.gridId + ']'
+				XafConsole.instance.log(XafConsole.DEBUG, log);
+				
+				if (recipient.hp <= 0) {
+					recipient.hp = 0;
+					deadList.push(recipient);
+				}
+				AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playHurt, [recipient]);
+				if (useSkill) {
+					AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playSkillEffect, [actor, recipient]);
+				} else {
+					AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playAttackEffect, [actor, recipient]);
+				}
+			}
+			for each (var deadSoldier:AppBattleSoldier in deadList) {
+				AppBattleRender.instance.pushAnimeIntoQueue(4, AppBattleRender.instance.playDie, [recipient]);
+			}
+			
+			AppBattleRender.instance.playQueue();
 		}
-		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-		//-* BATTLE LOGICS: FORMULA
-		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* UTILITIES
