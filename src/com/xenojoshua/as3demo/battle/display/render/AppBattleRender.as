@@ -173,10 +173,18 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return void
 		 */
 		public function playQueue():void {
+			if (this._playingCount > 0) {
+				return; // still playing, do not continue play the new anime
+			}
+			
 			this.removeQueueDelay(); // no matter delay timer exists or not, call remove first
 			var isAnyAnimeInQueue:Boolean = false; // mark no anime left first
 
 			for (var index:String in this._playList) {
+// FIXME 这里不能一次全部都for掉，因为这一级的循环控制的是几个动画播放先后层级之间的关系，每次playQueue的时候应该将一个index下数组内的所有动画都播掉
+// 它们是应该一起播掉的，然后等它们全部播完(this._playingCount <= 0)，这个时候才进入下一个index播放
+// P.S 改造战场格子，移动的定位以格子定位，不要自己计算位置，然后在AppBattleSoldierView中添加一个层，专门用来放置移动过来的人
+// 将移动动画简化，移动启动和定位的时候没有位移变化，而是简单的渐进渐出
 				isAnyAnimeInQueue = true; // has anime left to play
 				this._currentQueueIndex = Number(index);
 				
