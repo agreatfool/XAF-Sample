@@ -30,6 +30,7 @@ package com.xenojoshua.as3demo.battle.logic
 		public function AppBattleProcessor() {
 			this._attackers = new Object();
 			this._defenders = new Object();
+			this._doesBattleEnd = false;
 		}
 		
 		/**
@@ -73,6 +74,7 @@ package com.xenojoshua.as3demo.battle.logic
 		// STATUS
 		private var _currGridId:int;
 		private var _currIsAttacker:Boolean;
+		private var _doesBattleEnd:Boolean;
 		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* INITIALIZATION
@@ -112,7 +114,7 @@ package com.xenojoshua.as3demo.battle.logic
 		 */
 		public function startBattle():void {
 			this._startTime = XafTime.getRelativeTimer();
-			XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Battle start!');
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Battle start!');
 			this.findActor(-1, true);
 		}
 		
@@ -130,12 +132,16 @@ package com.xenojoshua.as3demo.battle.logic
 		 * @return void
 		 */
 		private function endBattle():void {
+			if (this._doesBattleEnd) {
+				return;
+			}
 			XafConsole.instance.log(
 				XafConsole.DEBUG,
 				'AppBattleProcessor: Battle end! Time consumed: [' + (XafTime.getRelativeTimer() - this._startTime) + '] millisecond'
 			);
-			this.dispose();
+			this._doesBattleEnd = true;
 			this._mediator.endBattle();
+			this.dispose();
 		}
 		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -154,7 +160,7 @@ package com.xenojoshua.as3demo.battle.logic
 			if (-1 == previousGridId) { // means it's the start of the attackers or defenders
 				if (isAttacker) {
 					++this._round;
-					XafConsole.instance.log(XafConsole.ERROR, 'AppBattleProcessor: Round: ' + this._round);
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: Round: ' + this._round);
 				}
 				for (var firstGridId:String in actors) {
 					target = firstGridId;
@@ -213,9 +219,11 @@ package com.xenojoshua.as3demo.battle.logic
 				AppBattleRender.instance.pushAnimeIntoQueue(0, AppBattleRender.instance.playMoveTo, [actor, target]);
 			}
 			if (useSkill) {
+				actor.rage = 0;
 				AppBattleRender.instance.pushAnimeIntoQueue(1, AppBattleRender.instance.playSkill, [actor]);
 				targets = isAttacker ? this._defenders : this._attackers;
 			} else {
+				actor.rage += 25;
 				AppBattleRender.instance.pushAnimeIntoQueue(1, AppBattleRender.instance.playAttack, [actor]);
 				if (needMove) {
 					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playMoveBack, [actor]);
@@ -230,12 +238,9 @@ package com.xenojoshua.as3demo.battle.logic
 				var recipient:AppBattleSoldier = targets[gridIdKey];
 				var damage:int = actor.attack - recipient.defence;
 				recipient.hp -= damage;
+				recipient.rage += 25;
 				
-				var log:String = 'AppBattleProcessor: ';
-				log += isAttacker ? 'left' : 'right' + '[' + actor.gridId + ']'
-				log += 'deals ' + damage + ' damage on ';
-				log += isAttacker ? 'right' : 'left' + '[' + recipient.gridId + ']'
-				XafConsole.instance.log(XafConsole.DEBUG, log);
+				XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleProcessor: ' + (isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + '] ' + 'deals ' + damage + ' damage on ' + (isAttacker ? 'DEF' : 'ATK') + '[' + recipient.gridId + ']');
 				
 				if (recipient.hp <= 0) {
 					recipient.hp = 0;
@@ -258,6 +263,20 @@ package com.xenojoshua.as3demo.battle.logic
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* UTILITIES
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+		/**
+		 * Remove dead soldier from soldier list.
+		 * @param int gridId
+		 * @param Boolean isAttacker
+		 * @return void
+		 */
+		public function removeDeadSoldier(gridId:int, isAttacker:Boolean):void {
+			if (isAttacker) {
+				delete this._attackers[gridId];
+			} else {
+				delete this._defenders[gridId];
+			}
+		}
+		
 		/**
 		 * Find action target.
 		 * @param int gridId

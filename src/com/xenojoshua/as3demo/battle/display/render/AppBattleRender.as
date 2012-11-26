@@ -3,12 +3,14 @@ package com.xenojoshua.as3demo.battle.display.render
 	import com.greensock.TweenLite;
 	import com.greensock.plugins.AutoAlphaPlugin;
 	import com.greensock.plugins.TweenPlugin;
+	import com.xenojoshua.af.utils.console.XafConsole;
 	import com.xenojoshua.af.utils.timer.XafTimerManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
 	import com.xenojoshua.as3demo.battle.logic.AppBattleProcessor;
 	import com.xenojoshua.as3demo.mvc.model.enum.battle.AppSoldierAnimeName;
 	import com.xenojoshua.as3demo.mvc.model.vo.battle.AppBattleSoldier;
 	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleMediator;
+	import com.xenojoshua.as3demo.mvc.view.battle.AppBattleView;
 	import com.xenojoshua.as3demo.mvc.view.battle.soldier.AppBattleSoldierView;
 	
 	import flash.display.DisplayObjectContainer;
@@ -252,6 +254,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playStand(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			if (!view) {
+				return;
+			}
 			view.removeRoleLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(soldier.roleId, soldier.isAttacker);
@@ -266,7 +271,11 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return void
 		 */
 		public function playAttack(soldier:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			if (!view) {
+				return;
+			}
 			view.removeRoleLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleAttack(soldier.roleId, soldier.isAttacker);
@@ -276,9 +285,10 @@ package com.xenojoshua.as3demo.battle.display.render
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, attackEnd);
+					render.playStand(soldier);
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack end: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
+					render.onSingleAnimeEnd();
 				}
-				render.playStand(soldier);
-				render.onSingleAnimeEnd();
 			};
 			movie.addEventListener(Event.ENTER_FRAME, attackEnd);
 			movie.gotoAndPlay(1);
@@ -291,6 +301,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playSkill(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			if (!view) {
+				return;
+			}
 			view.removeRoleLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleSkill(soldier.roleId, soldier.isAttacker);
@@ -300,9 +313,9 @@ package com.xenojoshua.as3demo.battle.display.render
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, skillEnd);
+					render.playStand(soldier);
+					render.onSingleAnimeEnd();
 				}
-				render.playStand(soldier);
-				render.onSingleAnimeEnd();
 			};
 			movie.addEventListener(Event.ENTER_FRAME, skillEnd);
 			movie.gotoAndPlay(1);
@@ -315,6 +328,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playHurt(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			if (!view) {
+				return;
+			}
 			view.removeRoleLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(soldier.roleId, soldier.isAttacker);
@@ -324,9 +340,9 @@ package com.xenojoshua.as3demo.battle.display.render
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
+					render.playStand(soldier);
+					render.onSingleAnimeEnd();
 				}
-				render.playStand(soldier);
-				render.onSingleAnimeEnd();
 			};
 			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
 			movie.gotoAndPlay(1);
@@ -340,6 +356,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playAttackEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(defender);
+			if (!view) {
+				return;
+			}
 			view.removeEffectLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getAttackEffect(
@@ -352,9 +371,9 @@ package com.xenojoshua.as3demo.battle.display.render
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
+					view.removeEffectLayer();
+					render.onSingleAnimeEnd();
 				}
-				view.removeEffectLayer();
-				render.onSingleAnimeEnd();
 			};
 			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
 			movie.gotoAndPlay(1);
@@ -368,6 +387,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playSkillEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(defender);
+			if (!view) {
+				return;
+			}
 			view.removeEffectLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(attacker.skillId, defender.isAttacker);
@@ -377,9 +399,9 @@ package com.xenojoshua.as3demo.battle.display.render
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
+					view.removeEffectLayer();
+					render.onSingleAnimeEnd();
 				}
-				view.removeEffectLayer();
-				render.onSingleAnimeEnd();
 			};
 			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
 			movie.gotoAndPlay(1);
@@ -392,6 +414,9 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playDie(soldier:AppBattleSoldier):void {
 			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			if (!view) {
+				return;
+			}
 			TweenPlugin.activate([AutoAlphaPlugin]);
 			TweenLite.to(view.getRoleMovie(), 0.5, {
 				autoAlpha: 0, onComplete: this.onDieEnd, onCompleteParams: [soldier, view]
@@ -413,6 +438,7 @@ package com.xenojoshua.as3demo.battle.display.render
 			} else {
 				delete this._defSoldiers[soldier.gridId];
 			}
+			AppBattleProcessor.instance.removeDeadSoldier(soldier.gridId, soldier.isAttacker);
 			this.onSingleAnimeEnd();
 		}
 		
@@ -437,7 +463,11 @@ package com.xenojoshua.as3demo.battle.display.render
 			 * If you want to move a soldier movie, you have to calculate the relative position of the soldier view,
 			 * from the absolute points of the grids.
 			 */
-			var actMovie:MovieClip = this.getSoldierView(actor).getRoleMovie();
+			var actView:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!actView) {
+				return;
+			}
+			var actMovie:MovieClip = actView.getRoleMovie();
 			var actGrid:DisplayObjectContainer = AppBattleGridManager.instance.getAtkGrid(actor.gridId);
 			var recGrid:DisplayObjectContainer = AppBattleGridManager.instance.getDefGrid(recipient.gridId);
 			
@@ -499,7 +529,7 @@ package com.xenojoshua.as3demo.battle.display.render
 				actMovie, this.FADE_SPEED, {
 					x: this._moveEndX, y: this._moveEndY, autoAlpha: 1,
 					onComplete: this.onMoveStartShowEnd,
-					onCompleteParams: [actor, actMovie]
+					onCompleteParams: [actor]
 				}
 			);
 		}
@@ -522,7 +552,11 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return void
 		 */
 		public function playMoveBack(actor:AppBattleSoldier):void {
-			var actMovie:MovieClip = this.getSoldierView(actor).getRoleMovie();
+			var actView:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!actView) {
+				return;
+			}
+			var actMovie:MovieClip = actView.getRoleMovie();
 			TweenLite.to(
 				actMovie, this.FADE_SPEED, {
 					x: this._moveAppearX, y: this._moveAppearY, autoAlpha: 0,

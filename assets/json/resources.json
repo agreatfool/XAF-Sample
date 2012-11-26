@@ -66,8 +66,8 @@
         "type":   "swf"
     },
     "file.battleskills": {
-        "url":    "assets/swf/battle/roles/role102.swf",
-        "size":   761917,
+        "url":    "assets/swf/battle/effects/skills.swf",
+        "size":   767702,
         "type":   "swf"
     },
     "file.dummy": {

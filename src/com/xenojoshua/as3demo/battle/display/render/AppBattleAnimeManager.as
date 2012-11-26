@@ -1,6 +1,9 @@
 package com.xenojoshua.as3demo.battle.display.render
 {
+	import com.greensock.loading.SWFLoader;
+	import com.xenojoshua.af.resource.XafRsManager;
 	import com.xenojoshua.af.resource.manager.XafSwfManager;
+	import com.xenojoshua.af.utils.XafUtil;
 	import com.xenojoshua.as3demo.resource.AppResources;
 	
 	import flash.display.MovieClip;
@@ -24,7 +27,6 @@ package com.xenojoshua.as3demo.battle.display.render
 		public static const ATTACK_TYPE_MGK:String = 'ATTACK_TYPE_MGK';
 		
 		private const SOLDIER_FILE_PREFIX:String = 'file.battlerole';
-		private const SKILL_NAME_PREFIX:String = 'S';
 		
 		/**
 		 * Get role stand animation.
@@ -77,7 +79,7 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return MovieClip movie
 		 */
 		public function getSkillEffect(skillId:int, isAttacker:Boolean):MovieClip {
-			var movie:MovieClip = XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_SKILLS, this.SKILL_NAME_PREFIX + skillId);
+			var movie:MovieClip = XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_SKILLS, AppResources.CLASS_BATTLE_SKILLS + '0' + skillId);
 			return this.horizontallyScaleMovie(movie, isAttacker);
 		}
 		

@@ -40,9 +40,7 @@ package com.xenojoshua.as3demo.resource
 		public static const CLASS_BATTLE_SKILL:String   = 'battle.SkillAttack';
 		public static const CLASS_BATTLE_PSY_ATK:String = 'battle.PhyAttack';
 		public static const CLASS_BATTLE_MGK_ATK:String = 'battle.MgkAttack';
-		public static const CLASS_BATTLE_SKILL00:String = 'S0';
-		public static const CLASS_BATTLE_SKILL01:String = 'S1';
-		public static const CLASS_BATTLE_SKILL02:String = 'S2';
+		public static const CLASS_BATTLE_SKILLS:String  = 'battle.Skill';
 		
 		// CONFIGS
 		public static const CONF_SOLDIER:String = 'config.soldier';
