@@ -67,8 +67,8 @@ package com.xenojoshua.as3demo.battle.logic
 		];
 		
 		// DATA
-		private var _attackers:Object; // <gridId:int, soldier:AppBattleSoldierView>
-		private var _defenders:Object; // <gridId:int, soldier:AppBattleSoldierView>
+		private var _attackers:Object; // <gridId:int, soldier:AppBattleSoldier>
+		private var _defenders:Object; // <gridId:int, soldier:AppBattleSoldier>
 		
 		// STATUS
 		private var _currGridId:int;

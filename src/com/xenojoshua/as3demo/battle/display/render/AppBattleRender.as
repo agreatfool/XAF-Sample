@@ -52,11 +52,19 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * @return void
 		 */
 		public function dispose():void {
+			for (var atkGridId:String in this._atkSoldiers) {
+				this._atkSoldiers[atkGridId].dispose();
+			}
 			this._atkSoldiers = {};
+			for (var defGridId:String in this._defSoldiers) {
+				this._atkSoldiers[defGridId].dispose();
+			}
 			this._defSoldiers = {};
+			
 			this._playList = [];
 			this._playListParams = [];
 			this._playListDelay = [];
+			
 			this._playingCount = 0;
 			this._playDelay = 0;
 			this._currentQueueIndex = 0;

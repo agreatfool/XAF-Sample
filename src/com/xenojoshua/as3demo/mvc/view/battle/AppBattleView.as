@@ -5,6 +5,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleBgManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleEffectManager;
 	import com.xenojoshua.as3demo.battle.display.layers.AppBattleGridManager;
+	import com.xenojoshua.as3demo.battle.display.render.AppBattleRender;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.background.AppBattleBackgroundView;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.effect.AppBattleEffectView;
 	import com.xenojoshua.as3demo.mvc.view.battle.layers.grid.AppBattleGridView;
@@ -15,6 +16,8 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		private var _backgroundLayer:AppBattleBackgroundView;
 		private var _gridsLayer:AppBattleGridView;
 		private var _effectLayer:AppBattleEffectView;
+		
+		private var _areResourcesLoaded:Boolean;
 		
 		/**
 		 * Initialize AppBattleView.
@@ -31,7 +34,31 @@ package com.xenojoshua.as3demo.mvc.view.battle
 			this.addChild(this._gridsLayer);
 			this.addChild(this._effectLayer);
 			
+			this._areResourcesLoaded = false;
+			
 			this.startLoading();
+		}
+		
+		/**
+		 * Destory AppBattleView.
+		 * @return void
+		 */
+		override public function dispose():void {
+			AppBattleRender.instance.dispose();
+			
+			this._backgroundLayer.dispose();
+			this._gridsLayer.dispose();
+			this._effectLayer.dispose();
+			
+			super.dispose();
+		}
+		
+		/**
+		 * Get to know are resources loaded.
+		 * @return Boolean _areResourcesLoaded
+		 */
+		public function areResourcesLoaded():Boolean {
+			return this._areResourcesLoaded;
 		}
 		
 		/**
@@ -67,6 +94,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		 */
 		public function endLoading(rsManager:XafRsManager):void {
 			rsManager.dispose();
+			this._areResourcesLoaded = true;
 			this.prepareBattle();
 		}
 		

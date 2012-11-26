@@ -48,8 +48,8 @@ package com.xenojoshua.as3demo.battle.display.layers
 			
 			var movie:MovieClip = XafSwfManager.instance.getMovieClipInSwf(AppResources.FILE_BATTLE_GRIDS, AppResources.CLASS_BATTLE_GRIDS);
 			for (var gridId:int = 0; gridId < 9; ++gridId) {
-				var gridAtkName:String = this.GRID_PREFIX + this.GRID_ATK_ID_PREFIX + gridId.toString();
-				var gridDefName:String = this.GRID_PREFIX + this.GRID_DEF_ID_PREFIX + gridId.toString();
+				var gridAtkName:String = this.GRID_PREFIX + this.GRID_ATK_ID_PREFIX + gridId.toString(); // grid00 - grid08
+				var gridDefName:String = this.GRID_PREFIX + this.GRID_DEF_ID_PREFIX + gridId.toString(); // grid10 - grid18
 				this._grids[gridAtkName] = movie[gridAtkName] as DisplayObjectContainer;
 				this._grids[gridDefName] = movie[gridDefName] as DisplayObjectContainer;
 			}

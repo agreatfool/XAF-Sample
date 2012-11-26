@@ -40,11 +40,13 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @return void
 		 */
 		override public function dispose():void {
-			super.dispose();
 			this.removeAllLayer();
+			
 			this._dataLayer = null;
 			this._roleLayer = null;
 			this._effectLayer = null;
+			
+			super.dispose();
 		}
 		
 		/**
@@ -95,9 +97,9 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @return void
 		 */
 		public function removeAllLayer():void {
-			this.removeLayerChildren(this._dataLayer);
-			this.removeLayerChildren(this._roleLayer);
-			this.removeLayerChildren(this._effectLayer);
+			this.removeAllChildren(this._dataLayer);
+			this.removeAllChildren(this._roleLayer);
+			this.removeAllChildren(this._effectLayer);
 		}
 		
 		/**
@@ -105,7 +107,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @return void
 		 */
 		public function removeDataLayer():void {
-			this.removeLayerChildren(this._dataLayer);
+			this.removeAllChildren(this._dataLayer);
 		}
 		
 		/**
@@ -113,7 +115,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @return void
 		 */
 		public function removeRoleLayer():void {
-			this.removeLayerChildren(this._roleLayer);
+			this.removeAllChildren(this._roleLayer);
 		}
 		
 		/**
@@ -121,20 +123,7 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		 * @return void
 		 */
 		public function removeEffectLayer():void {
-			this.removeLayerChildren(this._effectLayer);
-		}
-		
-		/**
-		 * Remove all children DisplayObject(s).
-		 * @param Sprite layer
-		 * @return void
-		 */
-		private function removeLayerChildren(layer:Sprite):void {
-			if (layer.numChildren > 0) {
-				for (var i:int; i < layer.numChildren; ++i) {
-					layer.removeChildAt(i);
-				}
-			}
+			this.removeAllChildren(this._effectLayer);
 		}
 	}
 }
