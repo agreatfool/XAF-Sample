@@ -151,7 +151,7 @@ package com.xenojoshua.as3demo.battle.display.render
 			index:int, animeFunc:Function,
 			animeParams:Array, animeDelay:int = 0
 		):AppBattleRender {
-			if (this._playList.hasOwnProperty(index)) {
+			if (!this._playList.hasOwnProperty(index)) {
 				this._playList[index]       = new Array();
 				this._playListParams[index] = new Array();
 				this._playListDelay[index]  = 0;
@@ -271,15 +271,16 @@ package com.xenojoshua.as3demo.battle.display.render
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleAttack(soldier.roleId, soldier.isAttacker);
 			view.addRoleMovie(movie);
-			movie.addEventListener(Event.ENTER_FRAME, attackEnd);
+			var render:AppBattleRender = this;
 			var attackEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, attackEnd);
 				}
-				this.playStand();
-				this.onSingleAnimeEnd();
+				render.playStand(soldier);
+				render.onSingleAnimeEnd();
 			};
+			movie.addEventListener(Event.ENTER_FRAME, attackEnd);
 			movie.gotoAndPlay(1);
 		}
 		
@@ -294,15 +295,16 @@ package com.xenojoshua.as3demo.battle.display.render
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleSkill(soldier.roleId, soldier.isAttacker);
 			view.addRoleMovie(movie);
-			movie.addEventListener(Event.ENTER_FRAME, skillEnd);
+			var render:AppBattleRender = this;
 			var skillEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, skillEnd);
 				}
-				this.playStand();
-				this.onSingleAnimeEnd();
+				render.playStand(soldier);
+				render.onSingleAnimeEnd();
 			};
+			movie.addEventListener(Event.ENTER_FRAME, skillEnd);
 			movie.gotoAndPlay(1);
 		}
 		
@@ -317,15 +319,16 @@ package com.xenojoshua.as3demo.battle.display.render
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(soldier.roleId, soldier.isAttacker);
 			view.addRoleMovie(movie);
-			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
+			var render:AppBattleRender = this;
 			var hurtEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
 				}
-				this.playStand();
-				this.onSingleAnimeEnd();
+				render.playStand(soldier);
+				render.onSingleAnimeEnd();
 			};
+			movie.addEventListener(Event.ENTER_FRAME, hurtEnd);
 			movie.gotoAndPlay(1);
 		}
 		
@@ -344,15 +347,16 @@ package com.xenojoshua.as3demo.battle.display.render
 				defender.isAttacker
 			);
 			view.addEffectMovie(movie);
-			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
+			var render:AppBattleRender = this;
 			var effectEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
 				}
 				view.removeEffectLayer();
-				this.onSingleAnimeEnd();
+				render.onSingleAnimeEnd();
 			};
+			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
 			movie.gotoAndPlay(1);
 		}
 		
@@ -368,15 +372,16 @@ package com.xenojoshua.as3demo.battle.display.render
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(attacker.skillId, defender.isAttacker);
 			view.addEffectMovie(movie);
-			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
+			var render:AppBattleRender = this;
 			var effectEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
 				}
 				view.removeEffectLayer();
-				this.onSingleAnimeEnd();
+				render.onSingleAnimeEnd();
 			};
+			movie.addEventListener(Event.ENTER_FRAME, effectEnd);
 			movie.gotoAndPlay(1);
 		}
 		

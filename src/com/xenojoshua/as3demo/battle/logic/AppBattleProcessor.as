@@ -220,6 +220,9 @@ package com.xenojoshua.as3demo.battle.logic
 				if (needMove) {
 					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playMoveBack, [actor]);
 				}
+				if (target == null) { // 虽然没有使用技能，但是远程职业，需要在这里寻找目标
+					target = this.findTargetInBattle(gridId, isAttacker);
+				}
 				targets[target.gridId] = target;
 			}
 			var deadList:Array = new Array(); // [AppBattleSoldier]
@@ -262,7 +265,7 @@ package com.xenojoshua.as3demo.battle.logic
 		 * @return AppBattleSoldier target
 		 */
 		private function findTargetInBattle(gridId:int, isAttacker:Boolean):AppBattleSoldier {
-			var recipients:Object = isAttacker ? this._attackers : this._defenders;
+			var recipients:Object = isAttacker ? this._defenders : this._attackers;
 			var target:int = -1; // 将target初始化成-1用来判断目标是否被找到
 			// 查找初始的目标单位
 			var posRowNo:int = gridId % 3; // gridId所在的行号(0-2)

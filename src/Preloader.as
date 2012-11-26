@@ -14,7 +14,7 @@ package
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
-	[SWF(width="950", height="600", frameRate="24", backgroundColor="#FFFFFF")]
+	[SWF(width="950", height="600", frameRate="30", backgroundColor="#FFFFFF")]
 	public class Preloader extends Sprite implements XafIPreloader
 	{
 		private var _isLocal:Boolean = true;

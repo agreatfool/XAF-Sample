@@ -46,9 +46,10 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		
 		/**
 		 * Wait resources loading to be finished, and then start the battle logic.
+		 * @param Event e
 		 * @return void
 		 */
-		private function waitToStart():void {
+		private function waitToStart(e:Event):void {
 			++this._totalWaitCount;
 			if (this.view.areResourcesLoaded()) {
 				XafTimerManager.instance.removeTimer(this.WAIT_TO_START_TIMER);
@@ -64,6 +65,7 @@ package com.xenojoshua.as3demo.mvc.view.battle
 		private function startBattle():void {
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleMediator: startBattle(), waiting count : ' + this._totalWaitCount);
 			// FIXME FOR TEST: data shall got form server, not hard coded here
+			// ROLES: 001: 剑领剑士, 100: 弓手, 101: 法师, 102: 道术剑士
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
 				new AppBattleSoldier(3, '102', 50000, 1000, 200, true, false, 0),
