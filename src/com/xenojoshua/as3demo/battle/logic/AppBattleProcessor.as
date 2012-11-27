@@ -235,7 +235,6 @@ package com.xenojoshua.as3demo.battle.logic
 				}
 				targets[target.gridId] = target;
 			}
-			var deadList:Array = new Array(); // [AppBattleSoldier]
 			for (var gridIdKey:String in targets) {
 				var recipient:AppBattleSoldier = targets[gridIdKey];
 				var damage:int = actor.attack - recipient.defence;
@@ -260,8 +259,6 @@ package com.xenojoshua.as3demo.battle.logic
 				if (target != null && needMove && target == targets[gridIdKey]) {
 					AppBattleRender.instance.pushAnimeIntoQueue(4, AppBattleRender.instance.playMoveBack, [actor, target]);
 				}
-			}
-			for each (var deadSoldier:AppBattleSoldier in deadList) {
 			}
 			
 			AppBattleRender.instance.playQueue();
