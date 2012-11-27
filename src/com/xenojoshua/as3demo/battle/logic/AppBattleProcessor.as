@@ -61,7 +61,7 @@ package com.xenojoshua.as3demo.battle.logic
 		private var _round:int = 0;
 		
 		// CONFIG
-		private const BATTLE_TARGET_GRIDS:Array = [ // 默认的战斗目标查找顺序
+		private const TARGET_GRIDS:Array = [ // 防守方默认的战斗目标查找顺序
 			[0,3,6,1,4,7,2,5,8], // 行1、行2、行3
 			[1,4,7,0,3,6,2,5,8], // 行2、行1、行3
 			[2,5,8,1,4,7,0,3,6]  // 行3、行2、行1
@@ -210,7 +210,7 @@ package com.xenojoshua.as3demo.battle.logic
 			var targets:Object = new Object();
 			var target:AppBattleSoldier = null;
 			
-			// QUEUE 0:移动动作, 1:攻击动作, 2:返回动作, 3:受击动作和特效, 4:死亡动作
+			// QUEUE 0:移动动作, 1:攻击动作, 2:受击动作和特效, 3:返回动作, 4:死亡动作
 			// '100': 弓手, '101': 法师, 有没有使用技能（使用技能则全屏）
 			var needMove:Boolean = false;
 			if (actor.roleId != '100' && actor.roleId != '101' && !useSkill) { // 因为不是远程职业，且没有释放技能，需要移动的目标对象
@@ -225,9 +225,6 @@ package com.xenojoshua.as3demo.battle.logic
 			} else {
 				actor.rage += 25;
 				AppBattleRender.instance.pushAnimeIntoQueue(1, AppBattleRender.instance.playAttack, [actor]);
-				if (needMove) {
-					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playMoveBack, [actor]);
-				}
 				if (target == null) { // 虽然没有使用技能，但是远程职业，需要在这里寻找目标
 					target = this.findTargetInBattle(gridId, isAttacker);
 				}
@@ -246,11 +243,14 @@ package com.xenojoshua.as3demo.battle.logic
 					recipient.hp = 0;
 					deadList.push(recipient);
 				}
-				AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playHurt, [recipient]);
+				AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playHurt, [recipient]);
 				if (useSkill) {
-					AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playSkillEffect, [actor, recipient]);
+					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playSkillEffect, [actor, recipient]);
 				} else {
-					AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playAttackEffect, [actor, recipient]);
+					AppBattleRender.instance.pushAnimeIntoQueue(2, AppBattleRender.instance.playAttackEffect, [actor, recipient]);
+				}
+				if (target != null && needMove && target == targets[gridIdKey]) {
+					AppBattleRender.instance.pushAnimeIntoQueue(3, AppBattleRender.instance.playMoveBack, [actor, target]);
 				}
 			}
 			for each (var deadSoldier:AppBattleSoldier in deadList) {
@@ -280,7 +280,7 @@ package com.xenojoshua.as3demo.battle.logic
 		/**
 		 * Find action target.
 		 * @param int gridId
-		 * @param Boolean isAttacker
+		 * @param Boolean isAttacker actor is attacker or not
 		 * @return AppBattleSoldier target
 		 */
 		private function findTargetInBattle(gridId:int, isAttacker:Boolean):AppBattleSoldier {
@@ -288,7 +288,7 @@ package com.xenojoshua.as3demo.battle.logic
 			var target:int = -1; // 将target初始化成-1用来判断目标是否被找到
 			// 查找初始的目标单位
 			var posRowNo:int = gridId % 3; // gridId所在的行号(0-2)
-			var grids:Array = this.BATTLE_TARGET_GRIDS[posRowNo]; // 根据行号，查找默认目标搜索顺序
+			var grids:Array = this.TARGET_GRIDS[posRowNo]; // 根据行号，查找默认目标搜索顺序
 			for each (var gridNum:int in grids) {
 				if (recipients.hasOwnProperty(gridNum)) {
 					target = gridNum;

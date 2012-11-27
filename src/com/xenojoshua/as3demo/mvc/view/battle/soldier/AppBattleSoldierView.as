@@ -77,22 +77,6 @@ package com.xenojoshua.as3demo.mvc.view.battle.soldier
 		}
 		
 		/**
-		 * Get role movie from role layer.
-		 * @return MovieClip movie
-		 */
-		public function getRoleMovie():MovieClip {
-			var movie:MovieClip = null;
-			try {
-				movie = this._roleLayer.getChildAt(0) as MovieClip;
-			} catch (e:Error) {
-				if (e.errorID != 2006) { // throw exception if it's not what we wished
-					throw e;
-				}
-			}
-			return movie;
-		}
-		
-		/**
 		 * Remove all layer animes.
 		 * @return void
 		 */

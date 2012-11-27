@@ -73,8 +73,6 @@ package com.xenojoshua.as3demo.battle.display.render
 		}
 		
 		private var DELAY_TIMER_NAME:String = 'AppBattleRenderDelayTimer';
-		private var ATK_MV_SIZE_FACTOR:Number = 0.5;
-		private var FADE_MV_SIZE_FACTOR:Number = 0.2;
 		private var FADE_SPEED:Number = 0.5; // fade in x seconds
 		
 		private var _atkSoldiers:Object; // <gridId:int, view:AppBattleSoldierView>
@@ -103,14 +101,6 @@ package com.xenojoshua.as3demo.battle.display.render
 		private var _playDelay:int;
 		private var _currentQueueIndex:int;
 		
-		// MOVE POINTS
-		private var _moveFadeX:Number;   // fade end point x
-		private var _moveFadeY:Number;   // fade end point y
-		private var _moveAppearX:Number; // appear point x
-		private var _moveAppearY:Number; // appear point y
-		private var _moveEndX:Number;    // end point x
-		private var _moveEndY:Number;    // end point y
-		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		//-* DATA INITIALIZATION
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -123,14 +113,14 @@ package com.xenojoshua.as3demo.battle.display.render
 		public function registerBattleSoldierView(attackers:Array, defenders:Array):AppBattleRender {
 			for each (var atkSoldier:AppBattleSoldier in attackers) {
 				var atkSoldierView:AppBattleSoldierView = new AppBattleSoldierView();
-				var atkGrid:DisplayObjectContainer = AppBattleGridManager.instance.getAtkGrid(atkSoldier.gridId);
+				var atkGrid:DisplayObjectContainer = AppBattleGridManager.instance.getGrid(atkSoldier);
 				atkGrid.addChild(atkSoldierView);
 				this._atkSoldiers[atkSoldier.gridId] = atkSoldierView;
 				this.playStand(atkSoldier);
 			}
 			for each (var defSoldier:AppBattleSoldier in defenders) {
 				var defSoldierView:AppBattleSoldierView = new AppBattleSoldierView();
-				var defGrid:DisplayObjectContainer = AppBattleGridManager.instance.getDefGrid(defSoldier.gridId);
+				var defGrid:DisplayObjectContainer = AppBattleGridManager.instance.getGrid(defSoldier);
 				defGrid.addChild(defSoldierView);
 				this._defSoldiers[defSoldier.gridId] = defSoldierView;
 				this.playStand(defSoldier);
@@ -174,7 +164,7 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		public function playQueue():void {
 			if (this._playingCount > 0) {
-				return; // still playing, do not continue play the new anime
+				return; // still playing, do not continue play the new animes
 			}
 			
 			this.removeQueueDelay(); // no matter delay timer exists or not, call remove first
@@ -203,6 +193,7 @@ package com.xenojoshua.as3demo.battle.display.render
 				if (queueDelay > 0) {
 					this._playDelay = queueDelay;
 				}
+				break;
 			}
 			
 			if (!isAnyAnimeInQueue) {
@@ -258,18 +249,18 @@ package com.xenojoshua.as3demo.battle.display.render
 		/**
 		 * Play soldier stand anime.
 		 * This anime will call anime end at the beginning when it's playing.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		public function playStand(soldier:AppBattleSoldier):void {
+		public function playStand(actor:AppBattleSoldier):void {
 			//XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playStand start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
 			if (!view) {
 				return;
 			}
 			view.removeRoleLayer();
 			
-			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(soldier.roleId, soldier.isAttacker);
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleStand(actor.roleId, actor.isAttacker);
 			view.addRoleMovie(movie);
 			
 			movie.gotoAndPlay(1);
@@ -277,26 +268,26 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play soldier attack anime.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		public function playAttack(soldier:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+		public function playAttack(actor:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
 			if (!view) {
 				return;
 			}
 			view.removeRoleLayer();
 			
-			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleAttack(soldier.roleId, soldier.isAttacker);
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleAttack(actor.roleId, actor.isAttacker);
 			view.addRoleMovie(movie);
 			var render:AppBattleRender = this;
 			var attackEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, attackEnd);
-					render.playStand(soldier);
-					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack end: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
+					render.playStand(actor);
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttack end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
 					render.onSingleAnimeEnd();
 				}
 			};
@@ -306,26 +297,26 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play soldier skill anime.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		public function playSkill(soldier:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playSkill start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+		public function playSkill(actor:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playSkill start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
 			if (!view) {
 				return;
 			}
 			view.removeRoleLayer();
 			
-			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleSkill(soldier.roleId, soldier.isAttacker);
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleSkill(actor.roleId, actor.isAttacker);
 			view.addRoleMovie(movie);
 			var render:AppBattleRender = this;
 			var skillEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, skillEnd);
-					render.playStand(soldier);
-					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playSkill end: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
+					render.playStand(actor);
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playSkill end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
 					render.onSingleAnimeEnd();
 				}
 			};
@@ -335,26 +326,26 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play soldier hurt anime.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		public function playHurt(soldier:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playHurt start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+		public function playHurt(actor:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playHurt start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
 			if (!view) {
 				return;
 			}
 			view.removeRoleLayer();
 			
-			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(soldier.roleId, soldier.isAttacker);
+			var movie:MovieClip = AppBattleAnimeManager.instance.getRoleHit(actor.roleId, actor.isAttacker);
 			view.addRoleMovie(movie);
 			var render:AppBattleRender = this;
 			var hurtEnd:Function = function(e:Event):void {
 				var display:MovieClip = e.target as MovieClip;
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, hurtEnd);
-					render.playStand(soldier);
-					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playHurt end: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
+					render.playStand(actor);
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playHurt end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
 					render.onSingleAnimeEnd();
 				}
 			};
@@ -364,21 +355,21 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play attack effect on defender (attack hurt recipient).
-		 * @param AppBattleSoldier attacker attack caster
-		 * @param AppBattleSoldier defender attack recipient
+		 * @param AppBattleSoldier actor attack caster
+		 * @param AppBattleSoldier recipient attack recipient
 		 * @return void
 		 */
-		public function playAttackEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect start: ' + (attacker.isAttacker ? 'ATK' : 'DEF') + '[' + attacker.gridId + '] deals on ' + (defender.isAttacker ? 'ATK' : 'DEF') + '[' + defender.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(defender);
+		public function playAttackEffect(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + '] deals on ' + (recipient.isAttacker ? 'ATK' : 'DEF') + '[' + recipient.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(recipient);
 			if (!view) {
 				return;
 			}
 			view.removeEffectLayer();
 			
 			var movie:MovieClip = AppBattleAnimeManager.instance.getAttackEffect(
-				attacker.isMagic ? AppBattleAnimeManager.ATTACK_TYPE_MGK : AppBattleAnimeManager.ATTACK_TYPE_PHY,
-				defender.isAttacker
+				actor.isMagic ? AppBattleAnimeManager.ATTACK_TYPE_MGK : AppBattleAnimeManager.ATTACK_TYPE_PHY,
+				recipient.isAttacker
 			);
 			view.addEffectMovie(movie);
 			var render:AppBattleRender = this;
@@ -387,7 +378,7 @@ package com.xenojoshua.as3demo.battle.display.render
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
 					view.removeEffectLayer();
-					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect end: ' + (attacker.isAttacker ? 'ATK' : 'DEF') + '[' + attacker.gridId + '] deals on ' + (defender.isAttacker ? 'ATK' : 'DEF') + '[' + defender.gridId + ']');
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + '] deals on ' + (recipient.isAttacker ? 'ATK' : 'DEF') + '[' + recipient.gridId + ']');
 					render.onSingleAnimeEnd();
 				}
 			};
@@ -397,19 +388,19 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play skill effect on defender (skill hurt recipient).
-		 * @param AppBattleSoldier attacker skill caster
-		 * @param AppBattleSoldier defender skill recipient
+		 * @param AppBattleSoldier actor skill caster
+		 * @param AppBattleSoldier recipient skill recipient
 		 * @return void
 		 */
-		public function playSkillEffect(attacker:AppBattleSoldier, defender:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect start: ' + (attacker.isAttacker ? 'ATK' : 'DEF') + '[' + attacker.gridId + '] deals on ' + (defender.isAttacker ? 'ATK' : 'DEF') + '[' + defender.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(defender);
+		public function playSkillEffect(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + '] deals on ' + (recipient.isAttacker ? 'ATK' : 'DEF') + '[' + recipient.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(recipient);
 			if (!view) {
 				return;
 			}
 			view.removeEffectLayer();
 			
-			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(attacker.skillId, defender.isAttacker);
+			var movie:MovieClip = AppBattleAnimeManager.instance.getSkillEffect(actor.skillId, recipient.isAttacker);
 			view.addEffectMovie(movie);
 			var render:AppBattleRender = this;
 			var effectEnd:Function = function(e:Event):void {
@@ -417,7 +408,7 @@ package com.xenojoshua.as3demo.battle.display.render
 				if (display.currentFrame == display.totalFrames) {
 					display.removeEventListener(Event.ENTER_FRAME, effectEnd);
 					view.removeEffectLayer();
-					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect end: ' + (attacker.isAttacker ? 'ATK' : 'DEF') + '[' + attacker.gridId + '] deals on ' + (defender.isAttacker ? 'ATK' : 'DEF') + '[' + defender.gridId + ']');
+					XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playAttackEffect end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + '] deals on ' + (recipient.isAttacker ? 'ATK' : 'DEF') + '[' + recipient.gridId + ']');
 					render.onSingleAnimeEnd();
 				}
 			};
@@ -427,38 +418,38 @@ package com.xenojoshua.as3demo.battle.display.render
 		
 		/**
 		 * Play die anime.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		public function playDie(soldier:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playDie start: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
-			var view:AppBattleSoldierView = this.getSoldierView(soldier);
+		public function playDie(actor:AppBattleSoldier):void {
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playDie start: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
 			if (!view) {
 				return;
 			}
 			TweenPlugin.activate([AutoAlphaPlugin]);
-			TweenLite.to(view.getRoleMovie(), 0.5, {
-				autoAlpha: 0, onComplete: this.onDieEnd, onCompleteParams: [soldier, view]
+			TweenLite.to(view, 0.5, {
+				autoAlpha: 0, onComplete: this.onDieEnd, onCompleteParams: [actor, view]
 			});
 		}
 		
 		/**
 		 * Callback when die anime ends.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @param AppBattleSoldierView view
 		 * @return void
 		 */
-		private function onDieEnd(soldier:AppBattleSoldier, view:AppBattleSoldierView):void {
+		private function onDieEnd(actor:AppBattleSoldier, view:AppBattleSoldierView):void {
 			// dispose the view
 			view.dispose();
 			// remove manager handler
-			if (soldier.isAttacker) {
-				delete this._atkSoldiers[soldier.gridId];
+			if (actor.isAttacker) {
+				delete this._atkSoldiers[actor.gridId];
 			} else {
-				delete this._defSoldiers[soldier.gridId];
+				delete this._defSoldiers[actor.gridId];
 			}
-			AppBattleProcessor.instance.removeDeadSoldier(soldier.gridId, soldier.isAttacker);
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onDieEnd end: ' + (soldier.isAttacker ? 'ATK' : 'DEF') + '[' + soldier.gridId + ']');
+			AppBattleProcessor.instance.removeDeadSoldier(actor.gridId, actor.isAttacker);
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onDieEnd end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
 			this.onSingleAnimeEnd();
 		}
 		
@@ -466,105 +457,52 @@ package com.xenojoshua.as3demo.battle.display.render
 		//-* MOVE ANIMATION
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
-		 * Play role move anime, start to fade.
+		 * Play role move to target grid anime.
 		 * @param AppBattleSoldier actor
 		 * @param AppBattleSoldier recipient
 		 * @return void
 		 */
 		public function playMoveTo(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
-			/**
-			 * There are FIVE concepts on stage
-			 * 1. stage layer: AppBattleView (XafConst.SCREEN_BATTLE)
-			 * 2. battle grid layer: AppBattleGridView (AppBattleGridManager) [Point(0, 0) of AppBattleView]
-			 * 3. battle grids: movies in AppBAttleGridView, those grids has absolute points on stage [Point(x, y) of AppBattleGridView]
-			 * 4. soldier view: AppBattleSoldierView (AppBattleRender) [Point(0, 0) of battle grid movie]
-			 * 5. soldier movie: movies on AppBattleSoldierView._roleLayer [Point(0, 0) of AppBattleSoldierView]
-			 * 
-			 * If you want to move a soldier movie, you have to calculate the relative position of the soldier view,
-			 * from the absolute points of the grids.
-			 */
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playMoveTo start: FROM: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']' + ', TO: ' + (recipient.isAttacker ? 'ATK' : 'DEF') + '[' + recipient.gridId + ']');
-			var actView:AppBattleSoldierView = this.getSoldierView(actor);
-			if (!actView) {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
 				return;
 			}
-			var actMovie:MovieClip = actView.getRoleMovie();
-			var actGrid:DisplayObjectContainer = AppBattleGridManager.instance.getAtkGrid(actor.gridId);
-			var recGrid:DisplayObjectContainer = AppBattleGridManager.instance.getDefGrid(recipient.gridId);
-			
-			// actor start point on stage (absolute point on stage)
-			var absStartX:Number = actGrid.x;
-			var absStartY:Number = actGrid.y;
-			// actor target end point on stage (absolute point on stage)
-			var absTargetX:Number = actor.isAttacker ? (recGrid.x - actMovie.width * this.ATK_MV_SIZE_FACTOR) : (recGrid.x + actMovie.width * this.ATK_MV_SIZE_FACTOR);
-			var absTargetY:Number = recGrid.y;
-			// actor start to appear point on stage (absolute point on stage)
-			var absStartToAppearX:Number = actor.isAttacker ? (absTargetX - actMovie.width * this.FADE_MV_SIZE_FACTOR) : (absTargetX + actMovie.width * this.FADE_MV_SIZE_FACTOR);
-			var absStartToAppearY:Number = absTargetY - actMovie.height * this.FADE_MV_SIZE_FACTOR;
-			
-			// actor fade end point (relative point on actor view)
-			this._moveFadeX = actor.isAttacker ? 0 + actMovie.width * this.FADE_MV_SIZE_FACTOR : 0 - actMovie.width * this.FADE_MV_SIZE_FACTOR;
-			this._moveFadeY = 0 - actMovie.height * this.FADE_MV_SIZE_FACTOR;
-			// actor start to appear point
-			this._moveAppearX = absStartToAppearX - absStartX;
-			this._moveAppearY = absStartToAppearY - absStartY;
-			// actor start to end point
-			this._moveEndX = absTargetX - absStartX;
-			this._moveEndY = absTargetY - absStartY;
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime Move points: FADE: ' + '(' + this._moveFadeX + ', ' + this._moveFadeY + '), APPEAR: ' + '(' + this._moveAppearX + ', ' + this._moveAppearY + '), END: ' + '(' + this._moveEndX + ', ' + this._moveEndY + ')');
-			
-			this.startToFade(actor, actMovie);
-		}
-		
-		/**
-		 * Play role move anime, start to fade.
-		 * From START point to FADE point.
-		 * @param AppBattleSoldier actor
-		 * @param MovieClip actMovie
-		 * @return void
-		 */
-		private function startToFade(actor:AppBattleSoldier, actMovie:MovieClip):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime startToFade');
 			TweenPlugin.activate([AutoAlphaPlugin]);
-			TweenLite.to(
-				actMovie, this.FADE_SPEED, {
-					x: this._moveFadeX, y: this._moveFadeY, autoAlpha: 0,
-					onComplete: this.onMoveStartFadeEnd,
-					onCompleteParams: [actor, actMovie]
-				}
-			);
+			TweenLite.to(view, 0.5, {
+				autoAlpha: 0, onComplete: this.moveToFadeEnd, onCompleteParams: [actor, recipient]
+			});
 		}
 		
 		/**
-		 * Play role move anime, fade end, start to show.
-		 * From APPEAR point to END point.
+		 * Move to, fade end, change AppBattleSoldierView position.
 		 * @param AppBattleSoldier actor
-		 * @param MovieClip actMovie
+		 * @param AppBattleSoldier recipient
 		 * @return void
 		 */
-		private function onMoveStartFadeEnd(actor:AppBattleSoldier, actMovie:MovieClip):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onMoveStartFadeEnd');
-			actMovie.x = this._moveAppearX;
-			actMovie.y = this._moveAppearY;
-			actMovie.alpha = 0;
-			actMovie.visible = true;
-			
-			TweenLite.to(
-				actMovie, this.FADE_SPEED, {
-					x: this._moveEndX, y: this._moveEndY, autoAlpha: 1,
-					onComplete: this.onMoveStartShowEnd,
-					onCompleteParams: [actor]
-				}
-			);
+		private function moveToFadeEnd(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
+				return;
+			}
+			AppBattleGridManager.instance.getGrid(actor).removeChild(view);
+			AppBattleGridManager.instance.getTargetGrid(recipient).addChild(view);
+			TweenPlugin.activate([AutoAlphaPlugin]);
+			TweenLite.to(view, 0.5, {
+				autoAlpha: 1, onComplete: this.moveToShowEnd, onCompleteParams: [actor]
+			});
 		}
 		
 		/**
-		 * Play role move anime, show end.
+		 * Move to, show end, end the anime playing logic.
 		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		private function onMoveStartShowEnd(actor:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onMoveStartShowEnd');
+		private function moveToShowEnd(actor:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
+				return;
+			}
 			this.playStand(actor);
 			this.onSingleAnimeEnd();
 		}
@@ -573,58 +511,50 @@ package com.xenojoshua.as3demo.battle.display.render
 		 * Play role movie anime, start to move back.
 		 * From END point to APPEAR point.
 		 * @param AppBattleSoldier actor
-		 * @param MovieClip actMovie
+		 * @param AppBattleSoldier recipient
 		 * @return void
 		 */
-		public function playMoveBack(actor:AppBattleSoldier):void {
+		public function playMoveBack(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime playMoveBack');
-			var actView:AppBattleSoldierView = this.getSoldierView(actor);
-			if (!actView) {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
 				return;
 			}
-			var actMovie:MovieClip = actView.getRoleMovie();
-			TweenLite.to(
-				actMovie, this.FADE_SPEED, {
-					x: this._moveAppearX, y: this._moveAppearY, autoAlpha: 0,
-					onComplete: this.onMoveBackFadeEnd,
-					onCompleteParams: [actor, actMovie]
-				}
-			);
+			TweenPlugin.activate([AutoAlphaPlugin]);
+			TweenLite.to(view, 0.5, {
+				autoAlpha: 0, onComplete: this.moveBackFadeEnd, onCompleteParams: [actor, recipient]
+			});
 		}
 		
 		/**
-		 * Play role move anime, fade end, start to back.
-		 * From FADE point to START point.
+		 * Move back, fade end, change AppBattleSoldierView position.
 		 * @param AppBattleSoldier actor
-		 * @param MovieClip actMovie
+		 * @param AppBattleSoldier recipient
 		 * @return void
 		 */
-		private function onMoveBackFadeEnd(actor:AppBattleSoldier, actMovie:MovieClip):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onMoveBackFadeEnd');
-			actMovie.x = this._moveFadeX;
-			actMovie.y = this._moveFadeY;
-			actMovie.alpha = 0;
-			actMovie.visible = true;
-			
-			TweenLite.to(
-				actMovie, this.FADE_SPEED, {
-					x: 0, y: 0, autoAlpha: 1,
-					onComplete: this.onMoveBackShowEnd,
-					onCompleteParams: [actor]
-				}
-			);
+		private function moveBackFadeEnd(actor:AppBattleSoldier, recipient:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
+				return;
+			}
+			AppBattleGridManager.instance.getTargetGrid(recipient).removeChild(view);
+			AppBattleGridManager.instance.getGrid(actor).addChild(view);
+			TweenPlugin.activate([AutoAlphaPlugin]);
+			TweenLite.to(view, 0.5, {
+				autoAlpha: 1, onComplete: this.moveBackShowEnd, onCompleteParams: [actor]
+			});
 		}
 		
 		/**
-		 * Play role move anime, total end.
+		 * Move back, show end, end the anime playing logic.
 		 * @param AppBattleSoldier actor
 		 * @return void
 		 */
-		private function onMoveBackShowEnd(actor:AppBattleSoldier):void {
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onMoveBackShowEnd');
-			this._moveFadeX   = this._moveFadeY   = 0;
-			this._moveAppearX = this._moveAppearY = 0;
-			this._moveEndX    = this._moveEndY    = 0;
+		private function moveBackShowEnd(actor:AppBattleSoldier):void {
+			var view:AppBattleSoldierView = this.getSoldierView(actor);
+			if (!view) {
+				return;
+			}
 			this.playStand(actor);
 			this.onSingleAnimeEnd();
 		}
@@ -634,13 +564,12 @@ package com.xenojoshua.as3demo.battle.display.render
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 		/**
 		 * Get soldier view from manager.
-		 * @param AppBattleSoldier soldier
+		 * @param AppBattleSoldier actor
 		 * @return AppBattleSoldierView view
 		 */
-		private function getSoldierView(soldier:AppBattleSoldier):AppBattleSoldierView {
-			var soldiers:Object = soldier.isAttacker ? this._atkSoldiers : this._defSoldiers;
-			
-			return soldiers[soldier.gridId];
+		private function getSoldierView(actor:AppBattleSoldier):AppBattleSoldierView {
+			var actViews:Object = actor.isAttacker ? this._atkSoldiers : this._defSoldiers;
+			return actViews[actor.gridId];
 		}
 	}
 }

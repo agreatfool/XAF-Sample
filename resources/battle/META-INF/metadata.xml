@@ -5,8 +5,8 @@
             xmlns:xmp="http://ns.adobe.com/xap/1.0/">
          <xmp:CreatorTool>Adobe Flash Professional CS5</xmp:CreatorTool>
          <xmp:CreateDate>2012-02-06T23:06:13+08:00</xmp:CreateDate>
-         <xmp:MetadataDate>2012-11-27T10:05:41+08:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2012-11-27T10:05:41+08:00</xmp:ModifyDate>
+         <xmp:MetadataDate>2012-11-27T16:14:21+08:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2012-11-27T16:14:21+08:00</xmp:ModifyDate>
       </rdf:Description>
       <rdf:Description rdf:about=""
             xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -16,7 +16,7 @@
             xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
             xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
             xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#">
-         <xmpMM:InstanceID>xmp.iid:AD7430F23638E2119DD491C60CA2B2B0</xmpMM:InstanceID>
+         <xmpMM:InstanceID>xmp.iid:C9E6CA726A38E2118AABBF90DC9E7E89</xmpMM:InstanceID>
          <xmpMM:DocumentID>xmp.did:C6DC750AC27BE1119B99BF900557B6DC</xmpMM:DocumentID>
          <xmpMM:OriginalDocumentID>xmp.did:FA405C1DD350E111BF1797F01270B256</xmpMM:OriginalDocumentID>
          <xmpMM:History>
@@ -42,6 +42,12 @@
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>created</stEvt:action>
                   <stEvt:instanceID>xmp.iid:AD7430F23638E2119DD491C60CA2B2B0</stEvt:instanceID>
+                  <stEvt:when>2012-02-06T23:06:13+08:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Flash Professional CS5.5 - build 325</stEvt:softwareAgent>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>created</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:C9E6CA726A38E2118AABBF90DC9E7E89</stEvt:instanceID>
                   <stEvt:when>2012-02-06T23:06:13+08:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Flash Professional CS5.5 - build 325</stEvt:softwareAgent>
                </rdf:li>
