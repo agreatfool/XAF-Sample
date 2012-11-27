@@ -207,7 +207,7 @@ package com.xenojoshua.as3demo.battle.display.render
 		 */
 		private function onSingleAnimeEnd():void {
 			--this._playingCount;
-			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: onSingleAnimeEnd, left playing count: ' + this._playingCount);
+			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: onSingleAnimeEnd, left playing count: ' + this._playingCount + "\n" + '---------------');
 			if (this._playingCount <= 0) { // all animes of this loop has been finished
 				// reset playing count
 				this._playingCount = 0;
@@ -450,7 +450,12 @@ package com.xenojoshua.as3demo.battle.display.render
 			}
 			AppBattleProcessor.instance.removeDeadSoldier(actor.gridId, actor.isAttacker);
 			XafConsole.instance.log(XafConsole.DEBUG, 'AppBattleRender: Anime onDieEnd end: ' + (actor.isAttacker ? 'ATK' : 'DEF') + '[' + actor.gridId + ']');
-			this.onSingleAnimeEnd();
+			// check battle end or not, if end, no need to play later animes
+			if (!AppBattleProcessor.instance.isBattleEnd()) {
+				this.onSingleAnimeEnd();
+			} else {
+				AppBattleProcessor.instance.endBattle();
+			}
 		}
 		
 		//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
