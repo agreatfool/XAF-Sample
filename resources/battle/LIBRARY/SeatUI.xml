@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SeatUI" itemID="4f2fee12-00000206" lastModified="1353565097">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SeatUI" itemID="4f2fee12-00000206" lastModified="1354009089">
   <timeline>
     <DOMTimeline name="SeatUI">
       <layers>
@@ -9,7 +9,7 @@
                 <DOMShape>
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor color="#CCCCCC"/>
+                      <SolidColor color="#D6D6D6" alpha="0"/>
                     </FillStyle>
                   </fills>
                   <edges>

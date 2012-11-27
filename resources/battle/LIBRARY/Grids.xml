@@ -30,7 +30,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="SeatUI" name="grid11" centerPoint3DX="636" centerPoint3DY="454.85">
+                <DOMSymbolInstance libraryItemName="SeatUI" name="grid11" selected="true" centerPoint3DX="636" centerPoint3DY="454.85">
                   <matrix>
                     <Matrix tx="597.9" ty="420"/>
                   </matrix>
@@ -166,7 +166,7 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="SeatUI" name="grid92" selected="true" centerPoint3DX="594.35" centerPoint3DY="524.5">
+                <DOMSymbolInstance libraryItemName="SeatUI" name="grid92" centerPoint3DX="594.35" centerPoint3DY="524.5">
                   <matrix>
                     <Matrix tx="556.5" ty="490"/>
                   </matrix>

@@ -69,14 +69,14 @@ package com.xenojoshua.as3demo.mvc.view.battle
 			var attackers:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
 				new AppBattleSoldier(3, '102', 1000, 1000, 200, true, false, 0),
-				new AppBattleSoldier(1, '100', 1000, 1000, 200, true, false, 1),
-				new AppBattleSoldier(2, '101', 1000, 1000, 200, true, true, 2)
+//				new AppBattleSoldier(1, '100', 1000, 1000, 200, true, false, 1),
+//				new AppBattleSoldier(2, '101', 1000, 1000, 200, true, true, 2)
 			];
 			var defenders:Array = [
 				// griId: roleId, hp, attack, defence, isAttacker, isMagic, skillId
 				new AppBattleSoldier(3, '001', 1000, 1000, 200, false, false, 0),
 				new AppBattleSoldier(1, '102', 1000, 1000, 200, false, false, 1),
-				new AppBattleSoldier(5, '101', 1000, 1000, 200, false, true, 2)
+//				new AppBattleSoldier(5, '101', 1000, 1000, 200, false, true, 2)
 			];
 			AppBattleRender.instance.registerBattleSoldierView(attackers, defenders);
 			AppBattleProcessor.instance.registerRobotlegsController(this).registerBattleData(attackers, defenders).startBattle(); // start the battle

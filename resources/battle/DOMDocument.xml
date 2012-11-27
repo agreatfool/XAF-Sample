@@ -1,7 +1,7 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#666666" width="950" height="600" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 325" majorVersion="11" minorVersion="5" buildNumber="325" viewAngle3D="83.9213020996183" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="Grids.xml" itemID="50adbdc0-000005d3" lastModified="1354004525"/>
-          <Include href="SeatUI.xml" loadImmediate="false" itemID="4f2fee12-00000206" lastModified="1353565097"/>
+          <Include href="SeatUI.xml" loadImmediate="false" itemID="4f2fee12-00000206" lastModified="1354009089"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
@@ -319,6 +319,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="1273" publishTime="1354004556"/>
           <PublishItem publishSize="1345" publishTime="1354004062"/>
           <PublishItem publishSize="1225" publishTime="1353564995"/>
           <PublishItem publishSize="1241" publishTime="1353563969"/>

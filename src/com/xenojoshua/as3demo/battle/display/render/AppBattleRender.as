@@ -59,7 +59,7 @@ package com.xenojoshua.as3demo.battle.display.render
 			}
 			this._atkSoldiers = {};
 			for (var defGridId:String in this._defSoldiers) {
-				this._atkSoldiers[defGridId].dispose();
+				this._defSoldiers[defGridId].dispose();
 			}
 			this._defSoldiers = {};
 			
